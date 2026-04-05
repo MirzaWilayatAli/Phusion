@@ -170,13 +170,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c13a9890a60ea04ea847c61c682ff92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  speed: 5
-  jumpForce: 7
+  moveSpeed: 8
+  jumpForce: 10
   groundCheck: {fileID: 2061685080687195924}
   groundRadius: 0.5
   groundLayer:
     serializedVersion: 2
     m_Bits: 2147483648
+  camScript: {fileID: 0}
+  padding: 0.5
 --- !u!58 &-3539671672953116669
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -225,11 +227,11 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 1.5
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
+  m_GravityScale: 1.5
+  m_Material: {fileID: 6200000, guid: 12666a06395a22945a6114aa8f0026ca, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

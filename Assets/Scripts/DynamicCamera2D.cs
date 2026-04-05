@@ -34,14 +34,18 @@ public class DynamicCamera2D : MonoBehaviour
         distance = Mathf.Max(distance, minDistanceBuffer);
         
         float zoomFactor = Mathf.InverseLerp(0, maxDistance, distance);
-        
         float targetZoom = Mathf.Lerp(minZoom, maxZoom, zoomFactor);
+
         cam.orthographicSize = Mathf.Lerp(cam.orthographicSize, targetZoom, followSpeed * Time.deltaTime);
 
-        // Desired position
         Vector3 desiredPosition = midpoint + offset;
-
-        // Smooth follow
         transform.position = Vector3.Lerp(transform.position, desiredPosition, followSpeed * Time.deltaTime);
+    }
+    
+    public Vector2 GetCameraBounds()
+    {
+        float height = cam.orthographicSize;
+        float width = height * cam.aspect;
+        return new Vector2(width, height);
     }
 }
