@@ -7,9 +7,9 @@ public class DeviceAssigner : MonoBehaviour
     public PlayerInput player1;
     public PlayerInput player2;
 
-    /// <summary>
-    /// Scenario: One uses Keyboard (WASD), One uses Keyboard (Arrows)
-    /// </summary>
+   
+    // One uses WASD and one uses Arrow keys
+    
     public void AssignSharedKeyboard()
     {
         var keyboard = Keyboard.current;
@@ -24,9 +24,8 @@ public class DeviceAssigner : MonoBehaviour
         Debug.Log("Shared Keyboard Assigned.");
     }
 
-    /// <summary>
-    /// Scenario: One uses Keyboard (WASD), One uses a Gamepad
-    /// </summary>
+    // One uses Keyboard and one uses a Gamepad
+
     public void AssignKeyboardAndGamepad()
     {
         var keyboard = Keyboard.current;
@@ -40,10 +39,10 @@ public class DeviceAssigner : MonoBehaviour
 
         Debug.Log("Keyboard and Gamepad Assigned.");
     }
-
-    /// <summary>
-    /// Scenario: Both use Gamepads
-    /// </summary>
+    
+    
+    // Both use Gamepads
+    
     public void AssignTwoGamepads()
     {
         var gamepads = Gamepad.all;
