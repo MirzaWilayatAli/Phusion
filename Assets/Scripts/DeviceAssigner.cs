@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.Users;
 
 public class DeviceAssigner : MonoBehaviour
 {
@@ -14,7 +15,11 @@ public class DeviceAssigner : MonoBehaviour
     {
         var keyboard = Keyboard.current;
         if (keyboard == null) return;
-
+        
+        // keyboard related fix
+        InputUser.PerformPairingWithDevice(keyboard, player1.user);
+        InputUser.PerformPairingWithDevice(keyboard, player2.user);
+        
         // Player 1: Keyboard using WASD scheme
         player1.SwitchCurrentControlScheme("WASD", keyboard);
 

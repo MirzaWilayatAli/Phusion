@@ -153,6 +153,22 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: dd1041a8-3783-4f6a-bd1f-f278d8a2cd50
     m_ActionName: 'Gameplay/Jump[/XInputControllerWindows/buttonSouth,/Keyboard/space]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6846171359095035236}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Ability
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 305c9d58-6bf2-468a-896f-541d275a1b12
+    m_ActionName: 'Gameplay/Ability[/Keyboard/leftShift,/Keyboard/rightShift]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -179,6 +195,7 @@ MonoBehaviour:
     m_Bits: 2147483648
   camScript: {fileID: 0}
   padding: 0.5
+  activateAbility: 0
 --- !u!58 &-3539671672953116669
 CircleCollider2D:
   m_ObjectHideFlags: 0

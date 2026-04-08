@@ -17,6 +17,7 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
+    public bool activateAbility;
     private bool isGrounded;
 
     void Awake()
@@ -34,6 +35,19 @@ public class PlayerController : MonoBehaviour
         if (context.performed && isGrounded)
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+        }
+    }
+
+    public void Ability(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            Debug.Log($"{name}: hold triggered");
+        }
+
+        if (context.canceled)
+        {
+            Debug.Log($"{name}: hold reset");
         }
     }
 
