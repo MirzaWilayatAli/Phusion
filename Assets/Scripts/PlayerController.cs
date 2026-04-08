@@ -1,6 +1,7 @@
 using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Random = System.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,7 +18,10 @@ public class PlayerController : MonoBehaviour
 
     private Rigidbody2D rb;
     private Vector2 moveInput;
-    public bool activateAbility;
+    [Tooltip("true = positive")] public bool activatedAbility;
+    private bool ability;
+    [SerializeField] private Vector2 last;
+    [SerializeField] private LayerMask mask;
     private bool isGrounded;
 
     void Awake()
@@ -42,12 +46,12 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            Debug.Log($"{name}: hold triggered");
+            ability = true;
         }
 
         if (context.canceled)
         {
-            Debug.Log($"{name}: hold reset");
+            ability = false;
         }
     }
 
@@ -56,7 +60,15 @@ public class PlayerController : MonoBehaviour
         // Ground check
         isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
         // Horizontal movement
+        if(moveInput.sqrMagnitude > 0) last = moveInput.normalized;
         rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
+
+        if (ability)
+        {
+            Vector2 dir = last;
+            RaycastHit2D x = Physics2D.Raycast(transform.position, dir, 5);
+            Debug.DrawRay(transform.position, dir, Color.red);
+        }
     }
     
     void LateUpdate()
