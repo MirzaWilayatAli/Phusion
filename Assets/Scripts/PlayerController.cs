@@ -1,7 +1,5 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Random = System.Random;
 
 public class PlayerController : MonoBehaviour
 {
@@ -16,29 +14,30 @@ public class PlayerController : MonoBehaviour
     public DynamicCamera2D camScript;
     public float padding = 0.5f; // prevents clipping
 
-    private Rigidbody2D rb;
-    private Vector2 moveInput;
+    private Rigidbody2D _rb;
+    private Vector2 _moveInput;
     [Tooltip("true = positive")] public bool activatedAbility;
-    private bool ability;
+    private bool _ability;
     [SerializeField] private Vector2 last;
     [SerializeField] private LayerMask mask;
-    private bool isGrounded;
+    private bool _isGrounded;
+    private MechanicTag _controlledObject;
 
     void Awake()
     {
-        rb = GetComponent<Rigidbody2D>();
+        _rb = GetComponent<Rigidbody2D>();
     }
 
     public void Move(InputAction.CallbackContext context)
     {
-        moveInput = context.ReadValue<Vector2>();
+        _moveInput = context.ReadValue<Vector2>();
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && isGrounded)
+        if (context.performed && _isGrounded)
         {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
         }
     }
 
@@ -46,28 +45,48 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
-            ability = true;
+            _ability = true;
         }
 
         if (context.canceled)
         {
-            ability = false;
+            _ability = false;
+            _controlledObject = null;
         }
     }
 
     void FixedUpdate()
     {
         // Ground check
-        isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
         // Horizontal movement
-        if(moveInput.sqrMagnitude > 0) last = moveInput.normalized;
-        rb.linearVelocity = new Vector2(moveInput.x * moveSpeed, rb.linearVelocity.y);
+        if(_moveInput.sqrMagnitude > 0) last = _moveInput.normalized;
+        _rb.linearVelocity = new Vector2(_moveInput.x * moveSpeed, _rb.linearVelocity.y);
 
-        if (ability)
+        if (_ability)
         {
-            Vector2 dir = last;
-            RaycastHit2D x = Physics2D.Raycast(transform.position, dir, 5);
-            Debug.DrawRay(transform.position, dir, Color.red);
+            Debug.Log("Triggered Ability");
+            Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
+            Collider2D x = Physics2D.OverlapCircle(temporary, 2, mask);
+            if (x)
+            {
+                Debug.Log("Object found");
+                if (x.TryGetComponent(out MechanicTag t))
+                {
+                    _controlledObject = t;
+                }
+            }
+            if (_controlledObject)
+            {
+                if (_controlledObject.charge == activatedAbility)
+                {
+                    _controlledObject.Pull(transform);
+                }
+                else
+                {
+                    _controlledObject.Push(transform);
+                }
+            }
         }
     }
     
@@ -94,5 +113,8 @@ public class PlayerController : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
+        Gizmos.color = Color.red;
+        Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
+        Gizmos.DrawWireSphere(temporary, 2);
     }
 }
