@@ -68,7 +68,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("Triggered Ability");
             Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
             Collider2D x = Physics2D.OverlapCircle(temporary, 2, mask);
-            if (x)
+            if (x && !_controlledObject)
             {
                 Debug.Log("Object found");
                 if (x.TryGetComponent(out MechanicTag t))
