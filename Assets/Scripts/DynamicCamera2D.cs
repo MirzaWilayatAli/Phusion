@@ -22,6 +22,11 @@ public class DynamicCamera2D : MonoBehaviour
     {
         cam = GetComponent<Camera>();
         cam.orthographic = true;
+
+        if (player1 == null || player2 == null)
+        {
+            Debug.LogWarning("You forgot to assign Player transforms to the camera");
+        }
     }
 
     void LateUpdate()
