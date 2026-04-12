@@ -26,6 +26,11 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
+
+        if (camScript == null)
+        {
+            camScript = FindFirstObjectByType<DynamicCamera2D>();
+        }
     }
 
     public void Move(InputAction.CallbackContext context)

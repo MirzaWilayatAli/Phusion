@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -3539671672953116669}
   - component: {fileID: 6479230431628320105}
   m_Layer: 0
-  m_Name: Player 1
+  m_Name: Eli
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -87,7 +87,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
-  m_Color: {r: 0.1714133, g: 0.5617785, b: 0.8490566, a: 1}
+  m_Color: {r: 0.16862746, g: 0.56078434, b: 0.8470589, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -195,7 +195,11 @@ MonoBehaviour:
     m_Bits: 2147483648
   camScript: {fileID: 0}
   padding: 0.5
-  activateAbility: 0
+  activatedAbility: 0
+  last: {x: 0, y: 0}
+  mask:
+    serializedVersion: 2
+    m_Bits: 1073741824
 --- !u!58 &-3539671672953116669
 CircleCollider2D:
   m_ObjectHideFlags: 0

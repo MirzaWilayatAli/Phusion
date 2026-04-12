@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
@@ -8,7 +9,13 @@ public class DeviceAssigner : MonoBehaviour
     public PlayerInput player1;
     public PlayerInput player2;
 
-   
+    private void Awake()
+    {
+        if (player1 == null || player2 == null)
+        {
+            Debug.LogWarning("You forgot to assign Player Prefabs to Device Assigner dumbo !");
+        }
+    }
     // One uses WASD and one uses Arrow keys
     
     public void AssignSharedKeyboard()
