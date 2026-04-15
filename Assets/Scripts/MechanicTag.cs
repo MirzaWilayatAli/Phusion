@@ -21,12 +21,14 @@ public class MechanicTag : MonoBehaviour
     {
         Vector3 temp = t.position - transform.position;
         Vector2 temp2 = new Vector2(temp.x, temp.y).normalized;
-        rb.AddForce(temp2 * rb.mass);
+        float dist = 3 * Vector3.Distance(t.position, transform.position);
+        rb.AddForce(temp2 * rb.mass * dist);
     }
     public void Pull(Transform t)
     {
         Vector3 temp = t.position - transform.position;
         Vector2 temp2 = new Vector2(temp.x, temp.y).normalized;
-        rb.AddForce(-temp2 * rb.mass);
+        float dist = 3 / Vector3.Distance(t.position, transform.position);
+        rb.AddForce(-temp2 * rb.mass * dist);
     }
 }

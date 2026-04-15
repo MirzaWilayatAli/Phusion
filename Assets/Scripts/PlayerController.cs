@@ -73,12 +73,10 @@ public class PlayerController : MonoBehaviour
 
         if (_ability)
         {
-            Debug.Log("Triggered Ability");
             Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
-            Collider2D x = Physics2D.OverlapCircle(temporary, 2, mask);
+            Collider2D x = Physics2D.OverlapCircle(temporary, 4, mask);
             if (x && !_controlledObject)
             {
-                Debug.Log("Object found");
                 if (x.TryGetComponent(out MechanicTag t))
                 {
                     _controlledObject = t;
@@ -127,6 +125,6 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         Gizmos.color = Color.red;
         Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
-        Gizmos.DrawWireSphere(temporary, 2);
+        Gizmos.DrawWireSphere(temporary, 4);
     }
 }
