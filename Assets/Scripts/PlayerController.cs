@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -117,7 +118,7 @@ public class PlayerController : MonoBehaviour
 
         transform.position = pos;
     }
-    
+
 
     private void OnDrawGizmos()
     {
@@ -127,4 +128,6 @@ public class PlayerController : MonoBehaviour
         Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
         Gizmos.DrawWireSphere(temporary, 4);
     }
+    
+    
 }
