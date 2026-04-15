@@ -22,11 +22,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask mask;
     private bool _isGrounded;
     private MechanicTag _controlledObject;
-
+    [SerializeField] private FollowTarget followTarget;
+    [SerializeField] private GameObject line;
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-
+        followTarget.origin = this.transform;
         if (camScript == null)
         {
             camScript = FindFirstObjectByType<DynamicCamera2D>();
@@ -57,6 +58,8 @@ public class PlayerController : MonoBehaviour
         {
             _ability = false;
             _controlledObject = null;
+            followTarget.target = null;
+            line.SetActive(false);
         }
     }
 
@@ -79,6 +82,10 @@ public class PlayerController : MonoBehaviour
                 if (x.TryGetComponent(out MechanicTag t))
                 {
                     _controlledObject = t;
+                    followTarget.target = _controlledObject.transform;
+                    _controlledObject.Prep();
+                    line.SetActive(true);
+                    
                 }
             }
             if (_controlledObject)
