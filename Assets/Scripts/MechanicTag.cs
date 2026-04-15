@@ -4,7 +4,7 @@ using UnityEngine;
 public class MechanicTag : MonoBehaviour
 {
     public bool charge; // True is positive, etc
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] public Rigidbody2D rb;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();

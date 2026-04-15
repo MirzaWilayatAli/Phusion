@@ -58,6 +58,7 @@ public class PlayerController : MonoBehaviour
         if (context.canceled)
         {
             _ability = false;
+            if(_controlledObject) _controlledObject.rb.linearVelocity = Vector2.zero;
             _controlledObject = null;
             followTarget.target = null;
             line.SetActive(false);
