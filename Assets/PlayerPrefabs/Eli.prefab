@@ -502,7 +502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FollowTarget
   target: {fileID: 0}
   origin: {fileID: 0}
-  smoothTime: 0.1
+  smoothTime: 0.025
   maxSpeed: 100
 --- !u!114 &8809236763932817001
 MonoBehaviour:

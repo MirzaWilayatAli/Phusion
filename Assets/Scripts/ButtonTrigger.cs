@@ -18,13 +18,16 @@ public class ButtonTrigger : TriggerBase
                 foreach (Collider2D col in _)
                 {
                     Debug.Log("entered");
-                    if (col.CompareTag(triggerTag))
+                    if (col.TryGetComponent(out TriggerTag ttag))
                     {
-                        triggered = true;
-                        onTriggerOn.Invoke();
-                        if (col.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+                        if (ttag.newTag == triggerTag)
                         {
-                            rb.linearVelocity = Vector2.zero;
+                            triggered = true;
+                            onTriggerOn.Invoke();
+                            if (col.TryGetComponent<Rigidbody2D>(out Rigidbody2D rb))
+                            {
+                                rb.linearVelocity = Vector2.zero;
+                            }
                         }
                         break;
                     }

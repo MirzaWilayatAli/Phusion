@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-        followTarget.origin = this.transform;
+        followTarget.origin = transform;
         if (camScript == null)
         {
             camScript = FindFirstObjectByType<DynamicCamera2D>();

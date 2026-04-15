@@ -329,7 +329,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FollowTarget
   target: {fileID: 0}
   origin: {fileID: 0}
-  smoothTime: 0.1
+  smoothTime: 0.025
   maxSpeed: 100
 --- !u!114 &5221319836175614720
 MonoBehaviour:
@@ -515,6 +515,6 @@ LineRenderer:
     textureScale: {x: 1, y: 1}
     shadowBias: 0.5
     generateLightingData: 0
-  m_UseWorldSpace: 0
+  m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
