@@ -11,15 +11,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: ed7ff04fd0054a246b72826894a65f94
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PrototypeGameLevel.unity
     guid: 5ff35793752c79c4ca24db31e2c56361
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LocalMultiplayerSetup.unity
     guid: 14ac0ab873feb9d498f7755394015816
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LocalMultiplayerSetup Phoebe.unity
     guid: 09727e70145f1480bb6aee5313ffd972
+  - enabled: 1
+    path: Assets/Scenes/PrototypeGameLevel Altered.unity
+    guid: a75a3b91f72c6410d8745e558607e50d
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

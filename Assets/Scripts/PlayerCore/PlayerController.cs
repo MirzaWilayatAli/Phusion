@@ -25,6 +25,7 @@ public class PlayerController : MonoBehaviour
     private MechanicTag _controlledObject;
     [SerializeField] private FollowTarget followTarget;
     [SerializeField] private GameObject line;
+    
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
@@ -110,12 +111,16 @@ public class PlayerController : MonoBehaviour
     private void ClampToCamera()
     {
         Vector2 bounds = camScript.GetCameraBounds();
-
         Vector3 camPos = camScript.transform.position;
         Vector3 pos = transform.position;
 
-        pos.x = Mathf.Clamp(pos.x, camPos.x - bounds.x + padding, camPos.x + bounds.x - padding);
-        pos.y = Mathf.Clamp(pos.y, camPos.y - bounds.y + padding, camPos.y + bounds.y - padding);
+        float minX = camPos.x - bounds.x + padding;
+        float maxX = camPos.x + bounds.x - padding;
+        float minY = camPos.y - bounds.y + padding;
+        float maxY = camPos.y + bounds.y - padding;
+
+        pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         transform.position = pos;
     }
