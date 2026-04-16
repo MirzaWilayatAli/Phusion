@@ -62,5 +62,16 @@ public class SceneLoader : MonoBehaviour
             yield return null;
         }
     }
+    
+    public void QuitGame()
+    {
+        Application.Quit();
+
+        // This line is only for testing inside Unity Editor
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#endif
+    }
+    
 }
 

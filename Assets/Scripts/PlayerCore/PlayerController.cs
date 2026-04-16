@@ -23,11 +23,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private LayerMask mask;
     private bool _isGrounded;
     private MechanicTag _controlledObject;
-
+    [SerializeField] private FollowTarget followTarget;
+    [SerializeField] private GameObject line;
+    
     void Awake()
     {
         _rb = GetComponent<Rigidbody2D>();
-
+        followTarget.origin = transform;
         if (camScript == null)
         {
             camScript = FindFirstObjectByType<DynamicCamera2D>();
@@ -57,7 +59,10 @@ public class PlayerController : MonoBehaviour
         if (context.canceled)
         {
             _ability = false;
+            if(_controlledObject) _controlledObject.rb.linearVelocity = Vector2.zero;
             _controlledObject = null;
+            followTarget.target = null;
+            line.SetActive(false);
         }
     }
 
@@ -71,15 +76,17 @@ public class PlayerController : MonoBehaviour
 
         if (_ability)
         {
-            Debug.Log("Triggered Ability");
             Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
-            Collider2D x = Physics2D.OverlapCircle(temporary, 2, mask);
+            Collider2D x = Physics2D.OverlapCircle(temporary, 4, mask);
             if (x && !_controlledObject)
             {
-                Debug.Log("Object found");
                 if (x.TryGetComponent(out MechanicTag t))
                 {
                     _controlledObject = t;
+                    followTarget.target = _controlledObject.transform;
+                    _controlledObject.Prep();
+                    line.SetActive(true);
+                    
                 }
             }
             if (_controlledObject)
@@ -104,12 +111,16 @@ public class PlayerController : MonoBehaviour
     private void ClampToCamera()
     {
         Vector2 bounds = camScript.GetCameraBounds();
-
         Vector3 camPos = camScript.transform.position;
         Vector3 pos = transform.position;
 
-        pos.x = Mathf.Clamp(pos.x, camPos.x - bounds.x + padding, camPos.x + bounds.x - padding);
-        pos.y = Mathf.Clamp(pos.y, camPos.y - bounds.y + padding, camPos.y + bounds.y - padding);
+        float minX = camPos.x - bounds.x + padding;
+        float maxX = camPos.x + bounds.x - padding;
+        float minY = camPos.y - bounds.y + padding;
+        float maxY = camPos.y + bounds.y - padding;
+
+        pos.x = Mathf.Clamp(pos.x, minX, maxX);
+        pos.y = Mathf.Clamp(pos.y, minY, maxY);
 
         transform.position = pos;
     }
@@ -121,7 +132,7 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         Gizmos.color = Color.red;
         Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
-        Gizmos.DrawWireSphere(temporary, 2);
+        Gizmos.DrawWireSphere(temporary, 4);
     }
     
     
