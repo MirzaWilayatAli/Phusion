@@ -493,8 +493,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5633444383677741294, guid: 6f4abc6546a583a438fa1f1b2bd4ea8f, type: 3}
       propertyPath: charge
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6209517319236007002, guid: 6f4abc6546a583a438fa1f1b2bd4ea8f, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: d7327c4a7dfed2e47abcf0bf69b99d8c, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -997,8 +1001,6 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
-<<<<<<< Updated upstream
-=======
 --- !u!1 &226976541
 GameObject:
   m_ObjectHideFlags: 0
@@ -1037,10 +1039,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This is Posi. Posi has a Positive charge.
+  m_text: 'This is Posi. Posi is a Positively charged particle.
 
-    Posi can push (repel) positively
-    charged objects, and pull (attract) negatively charged objects.'
+    Posi can push
+    similarly charged objects, and pull oppositely charged objects.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1173,17 +1175,16 @@ RectTransform:
   m_GameObject: {fileID: 226976541}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.21933524, y: 0.21933524, z: 0.21933524}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2031394746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.38, y: -1.0599997}
+  m_AnchoredPosition: {x: 2.18, y: -0.93}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> Stashed changes
 --- !u!1 &284944963
 GameObject:
   m_ObjectHideFlags: 0
@@ -1295,7 +1296,7 @@ MonoBehaviour:
   player2: {fileID: 1573190437}
   followSpeed: 5
   offset: {x: 0, y: 0, z: -10}
-  minZoom: 3
+  minZoom: 5
   maxZoom: 12
   maxDistance: 15
   minDistanceBuffer: 2
@@ -2347,8 +2348,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c69e66bf0853a894b9a04a79fa54cd53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
-<<<<<<< Updated upstream
-=======
 --- !u!1 &711556736
 GameObject:
   m_ObjectHideFlags: 0
@@ -2387,10 +2386,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'This is Eli. Eli has a Negative charge.
+  m_text: 'This is Eli. Eli is a Negatively charged particle.
 
-    Eli can push (repel) negatively
-    charged objects, and pull (attract) positively charged objects.'
+    Eli can push similarly
+    charged objects, and pull oppositely charged objects.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2523,17 +2522,16 @@ RectTransform:
   m_GameObject: {fileID: 711556736}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 0.21933524, y: 0.21933524, z: 0.21933524}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2031394746}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 7.86, y: -1.01}
+  m_AnchoredPosition: {x: 10.44, y: -0.88}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
->>>>>>> Stashed changes
 --- !u!1 &725177369
 GameObject:
   m_ObjectHideFlags: 0
@@ -2936,9 +2934,7 @@ GameObject:
   - component: {fileID: 918826833}
   - component: {fileID: 918826835}
   - component: {fileID: 918826834}
-  - component: {fileID: 918826838}
-  - component: {fileID: 918826837}
-  - component: {fileID: 918826839}
+  - component: {fileID: 918826836}
   m_Layer: 31
   m_Name: Tilemap
   m_TagString: Untagged
@@ -5979,297 +5975,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!66 &918826837
-CompositeCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918826832}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 6200000, guid: 12666a06395a22945a6114aa8f0026ca, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_GeometryType: 0
-  m_GenerationType: 0
-  m_EdgeRadius: 0
-  m_ColliderPaths:
-  - m_Collider: {fileID: 918826839}
-    m_ColliderPaths:
-    - - X: 250000000
-        Y: 290000000
-      - X: -210000000
-        Y: 290000000
-      - X: -210000000
-        Y: -50000000
-      - X: 250000000
-        Y: -50000000
-    - - X: -200000000
-        Y: -40000000
-      - X: -200000000
-        Y: 80000000
-      - X: -130000000
-        Y: 80000000
-      - X: -130000000
-        Y: 90000000
-      - X: -200000000
-        Y: 90000000
-      - X: -200000000
-        Y: 220000000
-      - X: -160000000
-        Y: 220000000
-      - X: -160000000
-        Y: 210000000
-      - X: -120000000
-        Y: 210000000
-      - X: -120000000
-        Y: 220000000
-      - X: -150000000
-        Y: 220000000
-      - X: -150000000
-        Y: 230000000
-      - X: -200000000
-        Y: 230000000
-      - X: -200000000
-        Y: 280000000
-      - X: 240000000
-        Y: 280000000
-      - X: 240000000
-        Y: 180000000
-      - X: 120000000
-        Y: 180000000
-      - X: 120000000
-        Y: 170000000
-      - X: 100000000
-        Y: 170000000
-      - X: 100000000
-        Y: 160000000
-      - X: 130000000
-        Y: 160000000
-      - X: 130000000
-        Y: 170000000
-      - X: 240000000
-        Y: 170000000
-      - X: 240000000
-        Y: 0
-      - X: -40000000
-        Y: 0
-      - X: -40000000
-        Y: -10000000
-      - X: 240000000
-        Y: -10000000
-      - X: 240000000
-        Y: -40000000
-    - - X: 140000000
-        Y: 210000000
-      - X: 130000000
-        Y: 210000000
-      - X: 130000000
-        Y: 220000000
-      - X: 90000000
-        Y: 220000000
-      - X: 90000000
-        Y: 210000000
-      - X: 120000000
-        Y: 210000000
-      - X: 120000000
-        Y: 200000000
-      - X: 140000000
-        Y: 200000000
-    - - X: -60000000
-        Y: 220000000
-      - X: -90000000
-        Y: 220000000
-      - X: -90000000
-        Y: 210000000
-      - X: -60000000
-        Y: 210000000
-    - - X: 0
-        Y: 220000000
-      - X: -30000000
-        Y: 220000000
-      - X: -30000000
-        Y: 210000000
-      - X: 0
-        Y: 210000000
-    - - X: 90000000
-        Y: 160000000
-      - X: 60000000
-        Y: 160000000
-      - X: 60000000
-        Y: 150000000
-      - X: 90000000
-        Y: 150000000
-    - - X: 120000000
-        Y: 130000000
-      - X: -130000000
-        Y: 130000000
-      - X: -130000000
-        Y: 120000000
-      - X: 120000000
-        Y: 120000000
-    - - X: -140000000
-        Y: 120000000
-      - X: -160000000
-        Y: 120000000
-      - X: -160000000
-        Y: 110000000
-      - X: -140000000
-        Y: 110000000
-    - - X: -60000000
-        Y: 60000000
-      - X: -20000000
-        Y: 60000000
-      - X: -20000000
-        Y: 40000000
-      - X: 140000000
-        Y: 40000000
-      - X: 140000000
-        Y: 50000000
-      - X: -10000000
-        Y: 50000000
-      - X: -10000000
-        Y: 70000000
-      - X: -70000000
-        Y: 70000000
-      - X: -70000000
-        Y: 50000000
-      - X: -150000000
-        Y: 50000000
-      - X: -150000000
-        Y: 40000000
-      - X: -60000000
-        Y: 40000000
-  m_CompositePaths:
-    m_Paths:
-    - - {x: 24.999971, y: -5}
-      - {x: 24.999971, y: 29}
-      - {x: -21, y: 28.999971}
-      - {x: -20.999971, y: -5}
-    - - {x: 24, y: -3.9999704}
-      - {x: -20, y: -3.9999704}
-      - {x: -19.999971, y: 8}
-      - {x: -13, y: 8.00003}
-      - {x: -13.00003, y: 9}
-      - {x: -20, y: 9.00003}
-      - {x: -19.999971, y: 22}
-      - {x: -16, y: 21.999971}
-      - {x: -15.999971, y: 21}
-      - {x: -12, y: 21.000029}
-      - {x: -12.00003, y: 22}
-      - {x: -15, y: 22.000029}
-      - {x: -15.000029, y: 23}
-      - {x: -20, y: 23.000029}
-      - {x: -19.999971, y: 28}
-      - {x: 24, y: 27.999971}
-      - {x: 23.999971, y: 18}
-      - {x: 12, y: 17.999971}
-      - {x: 11.99997, y: 17}
-      - {x: 10, y: 16.999971}
-      - {x: 10.00003, y: 16}
-      - {x: 13, y: 16.000029}
-      - {x: 13.00003, y: 17}
-      - {x: 24, y: 16.999971}
-      - {x: 23.999971, y: 0}
-      - {x: -4, y: -0.000029300001}
-      - {x: -3.999971, y: -1}
-      - {x: 24, y: -1.0000294}
-    - - {x: 13.999971, y: 20}
-      - {x: 13.999971, y: 21}
-      - {x: 13, y: 21.000029}
-      - {x: 12.99997, y: 22}
-      - {x: 9, y: 21.999971}
-      - {x: 9.00003, y: 21}
-      - {x: 12, y: 20.999971}
-      - {x: 12.00003, y: 20}
-    - - {x: -0.000029300001, y: 21}
-      - {x: -0.000029300001, y: 22}
-      - {x: -3, y: 21.999971}
-      - {x: -2.999971, y: 21}
-    - - {x: -6.000029, y: 21}
-      - {x: -6.000029, y: 22}
-      - {x: -9, y: 21.999971}
-      - {x: -8.99997, y: 21}
-    - - {x: 8.99997, y: 15}
-      - {x: 8.99997, y: 16}
-      - {x: 6, y: 15.999971}
-      - {x: 6.000029, y: 15}
-    - - {x: 11.99997, y: 12}
-      - {x: 11.99997, y: 13}
-      - {x: -13, y: 12.99997}
-      - {x: -12.99997, y: 12}
-    - - {x: -14.000029, y: 11}
-      - {x: -14.000029, y: 12}
-      - {x: -16, y: 11.99997}
-      - {x: -15.999971, y: 11}
-    - - {x: -6.000029, y: 4}
-      - {x: -5.9999704, y: 6}
-      - {x: -2, y: 5.9999704}
-      - {x: -1.9999708, y: 4}
-      - {x: 14, y: 4.000029}
-      - {x: 13.999971, y: 5}
-      - {x: -1, y: 5.0000296}
-      - {x: -1.0000293, y: 7}
-      - {x: -7, y: 6.9999704}
-      - {x: -7.0000296, y: 5}
-      - {x: -15, y: 4.999971}
-      - {x: -14.999971, y: 4}
-  m_VertexDistance: 0.0005
-  m_OffsetDistance: 0.00005
-  m_UseDelaunayMesh: 0
-  m_CompositeGameObject: {fileID: 918826832}
---- !u!50 &918826838
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918826832}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 6200000, guid: 12666a06395a22945a6114aa8f0026ca, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
---- !u!19719996 &918826839
+--- !u!19719996 &918826836
 TilemapCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6301,7 +6007,7 @@ TilemapCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 1
+  m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_MaximumTileChangeCount: 1000
@@ -6380,17 +6086,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 284944967}
     - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
-<<<<<<< Updated upstream
-=======
       propertyPath: jumpForce
       value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
-      propertyPath: mask.m_Bits
-      value: 1073741824
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
->>>>>>> Stashed changes
       propertyPath: winUICanvas
       value: 
       objectReference: {fileID: 1558716201}
@@ -7497,6 +7196,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 284944967}
     - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: jumpForce
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: winUICanvas
       value: 
       objectReference: {fileID: 1558716201}
@@ -8206,8 +7909,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f4abc6546a583a438fa1f1b2bd4ea8f, type: 3}
-<<<<<<< Updated upstream
-=======
 --- !u!1 &2031394743
 GameObject:
   m_ObjectHideFlags: 0
@@ -8220,7 +7921,7 @@ GameObject:
   - component: {fileID: 2031394745}
   - component: {fileID: 2031394744}
   m_Layer: 0
-  m_Name: TutorialText
+  m_Name: Tutorial
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8239,7 +7940,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FadeOutText
   text: {fileID: 226976542}
-  delay: 0.4
+  delay: 0.1
 --- !u!114 &2031394745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8253,7 +7954,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   text: {fileID: 711556737}
-  delay: 0.4
+  delay: 0.1
 --- !u!4 &2031394746
 Transform:
   m_ObjectHideFlags: 0
@@ -8263,7 +7964,7 @@ Transform:
   m_GameObject: {fileID: 2031394743}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -18.5, y: -4.9, z: 0}
+  m_LocalPosition: {x: -17.51, y: -1.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -8271,7 +7972,6 @@ Transform:
   - {fileID: 226976544}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
->>>>>>> Stashed changes
 --- !u!1 &2073189220
 GameObject:
   m_ObjectHideFlags: 0
@@ -8657,11 +8357,11 @@ SceneRoots:
   - {fileID: 1940151833}
   - {fileID: 618956279}
   - {fileID: 1558716205}
-  - {fileID: 2031394746}
   - {fileID: 725177370}
   - {fileID: 957615425}
   - {fileID: 1573190436}
   - {fileID: 1784416080}
+  - {fileID: 2031394746}
   - {fileID: 745341512}
   - {fileID: 770461947}
   - {fileID: 631284056}

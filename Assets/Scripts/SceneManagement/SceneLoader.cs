@@ -9,13 +9,18 @@ public class SceneLoader : MonoBehaviour
     [SerializeField] private Image fadeImage;
     [SerializeField] private float fadeDuration = 1f;
     
-
     private void Start()
     {
         // Fade in when game starts
         StartCoroutine(FadeIn());
     }
 
+    public void ReloadScene()
+    {
+        // Should just reload the scene, just don't wanna figure out bindings right now. Should be easy to hook up later though.
+        StartCoroutine(LoadSceneRoutine(SceneManager.GetActiveScene().name));
+    }
+    
     public void LoadScene(string sceneName)
     {
         StartCoroutine(LoadSceneRoutine(sceneName));
@@ -27,7 +32,7 @@ public class SceneLoader : MonoBehaviour
 
         AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
 
-        while (!operation.isDone)
+        while (operation is { isDone: false }) // change to prevent nullreferenceexception, god bless ReSharp i love you jetbrains
         {
             yield return null;
         }
