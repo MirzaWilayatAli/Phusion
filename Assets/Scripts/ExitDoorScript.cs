@@ -19,13 +19,13 @@ public class ExitDoorScript : MonoBehaviour
         {
             Debug.Log(other.gameObject.name + " entered");
             
-            annihilationChecker.gameObject.SetActive(false);
+            if(annihilationChecker) annihilationChecker.gameObject.SetActive(false);
             
             currentPlayerCount++;
 
             if (currentPlayerCount == 2)
             {
-                winUICanvas.SetActive(true);
+                if(winUICanvas) winUICanvas.SetActive(true);
             }
         }
     }
@@ -34,13 +34,13 @@ public class ExitDoorScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            annihilationChecker.gameObject.SetActive(true);
+            if(annihilationChecker) annihilationChecker.gameObject.SetActive(true);
             
             currentPlayerCount--;
 
             if (currentPlayerCount < 2)
             {
-                winUICanvas.SetActive(false);
+                if (winUICanvas) winUICanvas.SetActive(false);
             }
         }
     }
