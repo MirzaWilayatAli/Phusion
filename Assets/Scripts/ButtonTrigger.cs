@@ -7,6 +7,15 @@ public class ButtonTrigger : TriggerBase
     public string triggerTag = "";
     public LayerMask mask;
     public bool triggered = false;
+    
+    // for visuals so players know they have successfully activated a button
+    public SpriteRenderer sprite;
+
+    private void Start()
+    {
+        sprite = GetComponent<SpriteRenderer>();
+    }
+
     private void FixedUpdate()
     {
         Vector2 x = new Vector2(transform.position.x, transform.position.y);
@@ -28,6 +37,7 @@ public class ButtonTrigger : TriggerBase
                             {
                                 rb.linearVelocity = Vector2.zero;
                             }
+                            sprite.color = Color.green;
                         }
                         break;
                     }
@@ -41,6 +51,7 @@ public class ButtonTrigger : TriggerBase
                 Debug.Log("left");
                 triggered = false;
                 onTriggerOff.Invoke();
+                sprite.color = Color.softRed;
             }
         }
     }
