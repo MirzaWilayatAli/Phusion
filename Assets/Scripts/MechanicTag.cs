@@ -5,16 +5,38 @@ public class MechanicTag : MonoBehaviour
 {
     public bool charge; // True is positive, etc
     [SerializeField] public Rigidbody2D rb;
+    public bool pos = false;
+    public bool neg = false;
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void Prep()
+    public void Release(bool charge)
     {
-        if (rb.linearVelocity.magnitude > 0.1f)
+        if (charge)
+        {
+            pos = false;
+        }
+        if (charge == false)
+        {
+            neg = false;
+        }
+    }
+    public void Prep(bool charge)
+    {
+        bool current = pos || neg;
+        if (rb.linearVelocity.magnitude > 0.1f && !current)
         {
             rb.linearVelocity = Vector2.zero;
+        }
+        if (charge)
+        {
+            pos = true;
+        }
+        if (charge == false)
+        {
+            neg = true;
         }
     }
     public void Push(Transform t)

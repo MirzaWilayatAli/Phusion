@@ -1,12 +1,12 @@
-using System;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class AnnihilationChecker : MonoBehaviour
 {
-    [Header("Player References")]
+    [Header("References")]
     public Transform playerOne;
     public Transform playerTwo;
+    public SceneLoader loader;
     
     [Header("Shake Settings")]
     [SerializeField] private float minShakeMagnitude = 0.01f;
@@ -17,22 +17,28 @@ public class AnnihilationChecker : MonoBehaviour
     public Image image;
 
     public CameraShake cameraShakeComponent;
-    
+    private float timer;
     private void Start()
     {
-        cameraShakeComponent = Camera.main.GetComponent<CameraShake>();
+        if (Camera.main != null) cameraShakeComponent = Camera.main.GetComponent<CameraShake>();
     }
 
     private void FixedUpdate()
     {
         float distance = Vector3.Distance(playerOne.position, playerTwo.position);
-        
+
         if (distance <= 1f)
         {
-            Debug.Log("Annihilated!");
+            if(timer >= 1)
+                loader.ReloadScene();
+            else
+            {
+                timer += Time.deltaTime;
+            }
         }
         else
         {
+            timer = 0;
             float alpha = 0;
             
             if (distance <= shakeStartDistance)

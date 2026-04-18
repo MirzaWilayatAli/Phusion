@@ -11,10 +11,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Transform groundCheck;
     [SerializeField] private float groundRadius = 0.2f;
     [SerializeField] private LayerMask groundLayer;
-
+    public float abilityRadius = 4f;
+    
     public DynamicCamera2D camScript;
     public float padding = 0.5f; // prevents clipping
 
+    [SerializeField] private Transform abilityCenter;    
     private Rigidbody2D _rb;
     private Vector2 _moveInput;
     [Tooltip("true = positive")] public bool activatedAbility;
@@ -28,6 +30,10 @@ public class PlayerController : MonoBehaviour
     
     void Awake()
     {
+        if (!abilityCenter)
+        {
+            abilityCenter = transform;
+        }
         _rb = GetComponent<Rigidbody2D>();
         followTarget.origin = transform;
         if (camScript == null)
@@ -59,8 +65,16 @@ public class PlayerController : MonoBehaviour
         if (context.canceled)
         {
             _ability = false;
-            if(_controlledObject) _controlledObject.rb.linearVelocity = Vector2.zero;
-            _controlledObject = null;
+            if (_controlledObject)
+            {
+                bool current = _controlledObject.neg || _controlledObject.pos;
+                if(current)
+                    _controlledObject.rb.linearVelocity = Vector2.zero;
+                
+                _controlledObject.Release(activatedAbility);
+                _controlledObject = null;
+            }
+
             followTarget.target = null;
             line.SetActive(false);
         }
@@ -76,17 +90,16 @@ public class PlayerController : MonoBehaviour
 
         if (_ability)
         {
-            Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
-            Collider2D x = Physics2D.OverlapCircle(temporary, 4, mask);
+            Vector2 temporary = new Vector2(abilityCenter.position.x + last.x, abilityCenter.position.y + last.y);
+            Collider2D x = Physics2D.OverlapCircle(temporary, abilityRadius, mask);
             if (x && !_controlledObject)
             {
                 if (x.TryGetComponent(out MechanicTag t))
                 {
                     _controlledObject = t;
                     followTarget.target = _controlledObject.transform;
-                    _controlledObject.Prep();
+                    _controlledObject.Prep(activatedAbility);
                     line.SetActive(true);
-                    
                 }
             }
             if (_controlledObject)
@@ -132,7 +145,12 @@ public class PlayerController : MonoBehaviour
         Gizmos.DrawWireSphere(groundCheck.position, groundRadius);
         Gizmos.color = Color.red;
         Vector2 temporary = new Vector2(transform.position.x + last.x, transform.position.y + last.y);
-        Gizmos.DrawWireSphere(temporary, 4);
+
+        if (abilityCenter)
+        {
+            temporary = new Vector2(abilityCenter.position.x + last.x, abilityCenter.position.y + last.y);
+        }
+        Gizmos.DrawWireSphere(temporary, abilityRadius);
     }
     
     

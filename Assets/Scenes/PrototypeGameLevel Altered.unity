@@ -486,7 +486,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 442148146941831071, guid: 6f4abc6546a583a438fa1f1b2bd4ea8f, type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1937362322991926007, guid: 6f4abc6546a583a438fa1f1b2bd4ea8f, type: 3}
       propertyPath: m_Name
@@ -3519,7 +3519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 442148146941831071, guid: 6f4abc6546a583a438fa1f1b2bd4ea8f, type: 3}
       propertyPath: m_CollisionDetection
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1937362322991926007, guid: 6f4abc6546a583a438fa1f1b2bd4ea8f, type: 3}
       propertyPath: m_Name
@@ -7139,6 +7139,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1558716201}
     - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
+      propertyPath: abilityRadius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 3221225472
       objectReference: {fileID: 0}
@@ -8315,6 +8319,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnnihilationChecker
   playerOne: {fileID: 1573190437}
   playerTwo: {fileID: 957615426}
+  loader: {fileID: 687044963}
   minShakeMagnitude: 0.005
   maxShakeMagnitude: 0.015
   shakeStartDistance: 2
@@ -8518,6 +8523,10 @@ PrefabInstance:
       propertyPath: winUICanvas
       value: 
       objectReference: {fileID: 1558716201}
+    - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: abilityRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 3221225472
