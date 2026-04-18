@@ -9,6 +9,6 @@ PhysicsMaterial2D:
   m_Name: SuperSlippery
   serializedVersion: 2
   friction: 0
-  bounciness: 0
+  bounciness: 0.01
   m_FrictionCombine: 3
   m_BounceCombine: 3

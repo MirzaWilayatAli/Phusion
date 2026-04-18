@@ -177,6 +177,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 6035652645788598157}
   - {fileID: 6950689638001028144}
   - {fileID: 7455478384099395511}
   - {fileID: 2061685080687195924}
@@ -338,8 +339,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 2147483648
+  abilityRadius: 4
   camScript: {fileID: 0}
   padding: 0.5
+  abilityCenter: {fileID: 6035652645788598157}
   activatedAbility: 0
   last: {x: 0, y: 0}
   mask:
@@ -518,3 +521,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UpdateLine
   lineRenderer: {fileID: 6313263584899059273}
   index: 1
+--- !u!1 &7121124502804143392
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6035652645788598157}
+  m_Layer: 0
+  m_Name: AbilityCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6035652645788598157
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7121124502804143392}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5242131030786102361}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

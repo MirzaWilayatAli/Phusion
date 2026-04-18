@@ -38,6 +38,7 @@ Transform:
   - {fileID: 2061685080687195924}
   - {fileID: 1201027283330497199}
   - {fileID: 6939876912485749046}
+  - {fileID: 7511608882863583450}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4107531267170172391
@@ -196,8 +197,10 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 2147483648
+  abilityRadius: 4
   camScript: {fileID: 0}
   padding: 0.5
+  abilityCenter: {fileID: 7511608882863583450}
   activatedAbility: 1
   last: {x: 0, y: 0}
   mask:
@@ -518,3 +521,34 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!1 &6568073346582550682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7511608882863583450}
+  m_Layer: 0
+  m_Name: AbilityCenter
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7511608882863583450
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6568073346582550682}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.25, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5242131030786102361}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
