@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
@@ -28,6 +29,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FollowTarget followTarget;
     [SerializeField] private GameObject line;
     
+    [SerializeField] private int playerID; // assign 0 to Posi and 1 to Eli
+    [SerializeField] private PsionFormManager psionManager;
+
+    public bool inPsionForm;
+    
     void Awake()
     {
         if (!abilityCenter)
@@ -44,12 +50,15 @@ public class PlayerController : MonoBehaviour
 
     public void Move(InputAction.CallbackContext context)
     {
-        _moveInput = context.ReadValue<Vector2>();
+        if (context.performed || context.canceled)
+        {
+            _moveInput = context.ReadValue<Vector2>();
+        }
     }
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && _isGrounded)
+        if (context.performed && _isGrounded && !inPsionForm)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
         }
@@ -84,10 +93,19 @@ public class PlayerController : MonoBehaviour
     {
         // Ground check
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
+        
         // Horizontal movement
         if(_moveInput.sqrMagnitude > 0) last = _moveInput.normalized;
-        _rb.linearVelocity = new Vector2(_moveInput.x * moveSpeed, _rb.linearVelocity.y);
-
+        
+        if (!inPsionForm)
+        {
+            HandleNormalMovement();
+        }
+        else
+        {
+            HandlePsionInput();
+        }
+        
         if (_ability)
         {
             Vector2 temporary = new Vector2(abilityCenter.position.x + last.x, abilityCenter.position.y + last.y);
@@ -138,6 +156,27 @@ public class PlayerController : MonoBehaviour
         transform.position = pos;
     }
 
+    private void HandleNormalMovement()
+    {
+        _rb.linearVelocity = new Vector2(_moveInput.x * moveSpeed, _rb.linearVelocity.y);
+    }
+
+    private void HandlePsionInput()
+    {
+        if (_moveInput.x > 0.1f)
+        {
+            psionManager.SetPlayerDirection(playerID, 1);
+        }
+        else if (_moveInput.x < -0.1f)
+        {
+            psionManager.SetPlayerDirection(playerID, -1);
+        }
+        else
+        {
+            psionManager.SetPlayerDirection(playerID, 0);
+        }
+    }
+    
 
     private void OnDrawGizmos()
     {
