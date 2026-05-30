@@ -4999,7 +4999,7 @@ PrefabInstance:
     - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
       propertyPath: psionManager
       value: 
-      objectReference: {fileID: 1010857726}
+      objectReference: {fileID: 1116899333}
     - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 3221225472
@@ -5065,57 +5065,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c13a9890a60ea04ea847c61c682ff92, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
---- !u!1 &1010857725
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1010857727}
-  - component: {fileID: 1010857726}
-  m_Layer: 0
-  m_Name: PsionFormManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1010857726
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010857725}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bdf0461fe22962e4bba0e34802a23b3e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PsionFormManager
-  nucleus: {fileID: 1116899331}
-  player1: {fileID: 957615430}
-  player2: {fileID: 1573190441}
-  angularSpeed: 120
-  enterDuration: 0.5
-  player1Controller: {fileID: 957615431}
-  player2Controller: {fileID: 1573190442}
---- !u!4 &1010857727
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1010857725}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.45065, y: 11.46485, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1116899329
 GameObject:
   m_ObjectHideFlags: 0
@@ -5126,8 +5075,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1116899331}
   - component: {fileID: 1116899330}
+  - component: {fileID: 1116899333}
+  - component: {fileID: 1116899332}
+  - component: {fileID: 1116899334}
+  - component: {fileID: 1116899335}
   m_Layer: 0
-  m_Name: Nucleus
+  m_Name: PsionForm
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5207,6 +5160,107 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1116899332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116899329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ae60633650cd9147a0067c62303785b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PsionFormMovement
+  nucleus: {fileID: 1116899331}
+  eli: {fileID: 1573190437}
+  posi: {fileID: 957615426}
+  thrustForce: 1
+  acceleration: 1
+  drag: 1
+--- !u!114 &1116899333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116899329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bdf0461fe22962e4bba0e34802a23b3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PsionFormManager
+  nucleus: {fileID: 1116899331}
+  player1: {fileID: 957615430}
+  player2: {fileID: 1573190441}
+  angularSpeed: 120
+  enterDuration: 0.5
+  player1Controller: {fileID: 957615431}
+  player2Controller: {fileID: 1573190442}
+  psionFormMovementComponent: {fileID: 0}
+--- !u!58 &1116899334
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116899329}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 536870912
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2
+--- !u!50 &1116899335
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1116899329}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0
+  m_GravityScale: 0
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
 --- !u!1 &1381599442
 GameObject:
   m_ObjectHideFlags: 0
@@ -5819,7 +5873,7 @@ PrefabInstance:
     - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: psionManager
       value: 
-      objectReference: {fileID: 1010857726}
+      objectReference: {fileID: 1116899333}
     - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: groundLayer.m_Bits
       value: 3221225472
@@ -6498,5 +6552,4 @@ SceneRoots:
   - {fileID: 745429233}
   - {fileID: 8046526917883331611}
   - {fileID: 2117983901}
-  - {fileID: 1010857727}
   - {fileID: 1116899331}

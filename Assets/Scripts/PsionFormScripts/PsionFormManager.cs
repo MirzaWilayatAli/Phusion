@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using System.Collections;
 
@@ -20,7 +21,15 @@ public class PsionFormManager : MonoBehaviour
     
     [SerializeField] private PlayerController player1Controller;
     [SerializeField] private PlayerController player2Controller;
-    
+
+    [SerializeField] private PsionFormMovement psionFormMovementComponent;
+
+    private void Awake()
+    {
+        psionFormMovementComponent = GetComponent<PsionFormMovement>();
+        psionFormMovementComponent.enabled = false;
+    }
+
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))
@@ -28,10 +37,12 @@ public class PsionFormManager : MonoBehaviour
             if (!psionFormActivated)
             {
                 EnterPsionForm();
+                psionFormMovementComponent.enabled = true;
             }
             else
             {
                 ExitPsionForm();
+                psionFormMovementComponent.enabled = false;
             }
         }
         
