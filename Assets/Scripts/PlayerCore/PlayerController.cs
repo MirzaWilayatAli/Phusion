@@ -1,6 +1,8 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
 
 public class PlayerController : MonoBehaviour
@@ -32,6 +34,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int playerID; // assign 0 to Posi and 1 to Eli
     [SerializeField] private PsionFormManager psionManager;
 
+    public UnityEvent jumpTrigger;
+    
     public bool inPsionForm;
     
     void Awake()
@@ -61,6 +65,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed && _isGrounded && !inPsionForm)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
+            jumpTrigger?.Invoke();
         }
     }
 
