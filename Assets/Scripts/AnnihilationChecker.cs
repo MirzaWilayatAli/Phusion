@@ -70,4 +70,23 @@ public class AnnihilationChecker : MonoBehaviour
         Time.timeScale = Mathf.Lerp(1, 0.1f, prox);
         Time.fixedDeltaTime = 0.02f * Time.timeScale;
     }
+    
+    private void OnDisable()
+    {
+        if (cameraShakeComponent != null)
+        {
+            cameraShakeComponent.enabled = false;
+            cameraShakeComponent.SetMagnitude(0f);
+        }
+
+        if (image != null)
+        {
+            Color c = image.color;
+            c.a = 0f;
+            image.color = c;
+        }
+
+        Time.timeScale = 1f;
+        Time.fixedDeltaTime = 0.02f;
+    }
 }

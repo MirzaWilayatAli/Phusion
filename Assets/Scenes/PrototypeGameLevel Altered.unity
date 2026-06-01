@@ -2247,7 +2247,7 @@ CircleCollider2D:
     m_Bits: 4294967295
   m_ForceReceiveLayers:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 3221225527
   m_ContactCaptureLayers:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -2276,14 +2276,14 @@ Rigidbody2D:
   m_LinearDamping: 0
   m_AngularDamping: 0
   m_GravityScale: 0
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 12666a06395a22945a6114aa8f0026ca, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_Interpolate: 0
+  m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
@@ -2374,6 +2374,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae60633650cd9147a0067c62303785b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PsionFormMovement
+  rb: {fileID: 559788790}
   nucleus: {fileID: 559788792}
   eli: {fileID: 1573190437}
   posi: {fileID: 957615426}
@@ -2400,6 +2401,7 @@ MonoBehaviour:
   player1Controller: {fileID: 742693992}
   player2Controller: {fileID: 1179921999}
   psionFormMovementComponent: {fileID: 0}
+  AnnihilationChecker: {fileID: 1541829320}
 --- !u!1 &580593006
 GameObject:
   m_ObjectHideFlags: 0

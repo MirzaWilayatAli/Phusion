@@ -2,50 +2,32 @@ using UnityEngine;
 
 public class PsionFormMovement : MonoBehaviour
 {
-    [Header("Core")]
+    [Header("References")]
     public Transform nucleus;
-
-    [Header("Orbiters")]
     public Transform eli;
     public Transform posi;
 
-    [Header("Movement")]
-    public float thrustForce = 5f;
-    public float acceleration = 5f;
+    private Vector2 velocity;
+
+    public float thrustForce = 1f;
+    public float acceleration = 1f;
     public float drag = 1f;
 
-    private Vector3 velocity;
-
-    void Update()
+    private void FixedUpdate()
     {
-        CalculateMovement();
-    }
+        Vector2 netForce = Vector2.zero;
 
-    void CalculateMovement()
-    {
-        Vector3 netForce = Vector3.zero;
-
-        // Eli 
-
-        Vector3 eliDirection = (eli.position - nucleus.position).normalized;
-
+        // Eli
+        Vector2 eliDirection = ((Vector2)eli.position - (Vector2)nucleus.position).normalized;
         netForce += eliDirection * thrustForce;
 
-        
-        // Posi Input
-
-        Vector3 posiDirection =
-            (posi.position - nucleus.position).normalized;
-
+        // Posi
+        Vector2 posiDirection = ((Vector2)posi.position - (Vector2)nucleus.position).normalized;
         netForce += posiDirection * thrustForce;
 
-        
-        // Move Core
-       
-        velocity += netForce * acceleration * Time.deltaTime;
-
-        velocity *= 1f / (1f + drag * Time.deltaTime);
-
-        nucleus.position += velocity * Time.deltaTime;
+        // Movement
+        velocity += netForce * acceleration * Time.fixedDeltaTime;
+        velocity *= 1f / (1f + drag * Time.fixedDeltaTime);
+        nucleus.position += (Vector3)(velocity * Time.fixedDeltaTime);
     }
 }

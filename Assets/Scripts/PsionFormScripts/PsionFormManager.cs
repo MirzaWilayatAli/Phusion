@@ -24,6 +24,8 @@ public class PsionFormManager : MonoBehaviour
 
     [SerializeField] private PsionFormMovement psionFormMovementComponent;
 
+    [SerializeField] private GameObject AnnihilationChecker;
+
     private void Awake()
     {
         psionFormMovementComponent = GetComponent<PsionFormMovement>();
@@ -38,11 +40,13 @@ public class PsionFormManager : MonoBehaviour
             {
                 EnterPsionForm();
                 psionFormMovementComponent.enabled = true;
+                AnnihilationChecker.SetActive(false);
             }
             else
             {
                 ExitPsionForm();
                 psionFormMovementComponent.enabled = false;
+                AnnihilationChecker.SetActive(true);
             }
         }
         
