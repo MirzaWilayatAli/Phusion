@@ -2374,7 +2374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ae60633650cd9147a0067c62303785b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PsionFormMovement
-  rb: {fileID: 559788790}
   nucleus: {fileID: 559788792}
   eli: {fileID: 1573190437}
   posi: {fileID: 957615426}
@@ -9844,13 +9843,37 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 29
       objectReference: {fileID: 0}
+    - target: {fileID: 4107531267170172391, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: m_Size.x
+      value: 1.1733333
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107531267170172391, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: m_Size.y
+      value: 2.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107531267170172391, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 7399648493245821728, guid: a7473b716081c8f4a8d889664f0f5e1d, type: 3}
+    - target: {fileID: 4107531267170172391, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107531267170172391, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4107531267170172391, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5242131030786102361, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.88
       objectReference: {fileID: 0}
     - target: {fileID: 5242131030786102361, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.3
+      value: -2.853
       objectReference: {fileID: 0}
     - target: {fileID: 5242131030786102361, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9884,6 +9907,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5919190540029514232, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: m_Size.x
+      value: 0.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5919190540029514232, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: m_Size.y
+      value: 1.73
+      objectReference: {fileID: 0}
     - target: {fileID: 6479230431628320105, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: m_Mass
       value: 0.1
@@ -9916,7 +9947,8 @@ PrefabInstance:
       propertyPath: groundLayer.m_Bits
       value: 3221225472
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: -3539671672953116669, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
