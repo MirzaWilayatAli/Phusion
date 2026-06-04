@@ -26,6 +26,11 @@ public class PsionFormManager : MonoBehaviour
 
     [SerializeField] private GameObject AnnihilationChecker;
 
+    private bool player1Ready;
+    private bool player2Ready;
+
+    public bool PsionFormActivated { get => psionFormActivated; }
+
     private void Awake()
     {
         psionFormMovementComponent = GetComponent<PsionFormMovement>();
@@ -34,26 +39,43 @@ public class PsionFormManager : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.P))
-        {
-            if (!psionFormActivated)
-            {
-                EnterPsionForm();
-                psionFormMovementComponent.enabled = true;
-                AnnihilationChecker.SetActive(false);
-            }
-            else
-            {
-                ExitPsionForm();
-                psionFormMovementComponent.enabled = false;
-                AnnihilationChecker.SetActive(true);
-            }
-        }
-        
         if (!psionFormActivated) return;
 
         UpdateOrbit(player1);
         UpdateOrbit(player2);
+    }
+
+
+    public void RequestEnterPsionForm(int playerID)
+    {
+        if (playerID == 0)
+            player1Ready = true;
+
+        if (playerID == 1)
+            player2Ready = true;
+
+        if (player1Ready && player2Ready)
+        {
+            EnterPsionForm();
+            psionFormMovementComponent.enabled = true;
+            AnnihilationChecker.SetActive(false);
+        }
+    }
+
+    public void RequestExitPsionForm(int playerID)
+    {
+        if (playerID == 0)
+            player1Ready = false;
+
+        if (playerID == 1)
+            player2Ready = false;
+
+        if (!player1Ready && !player2Ready)
+        {
+            ExitPsionForm();
+            psionFormMovementComponent.enabled = false;
+            AnnihilationChecker.SetActive(true);
+        }
     }
 
     void UpdateOrbit(PsionOrbiter psionOrbiter)
@@ -80,8 +102,6 @@ public class PsionFormManager : MonoBehaviour
 
     IEnumerator EnterRoutine()
     {
-        player1Controller.inPsionForm = true;
-        player2Controller.inPsionForm = true;
         player1.direction = 0;
         player2.direction = 0;
         psionFormActivated = false;
@@ -131,8 +151,6 @@ public class PsionFormManager : MonoBehaviour
     {
         player1.direction = 0;
         player2.direction = 0;
-        player1Controller.inPsionForm = false;
-        player2Controller.inPsionForm = false;
         psionFormActivated = false;
 
         RestorePlayer(player1);
