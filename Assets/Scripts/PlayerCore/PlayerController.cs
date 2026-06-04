@@ -29,10 +29,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FollowTarget followTarget;
     [SerializeField] private GameObject line;
     
+    public AnnihilationProgressBar  AnnihilationProgressBar;
+    
     [SerializeField] private int playerID; // assign 0 to Posi and 1 to Eli
     [SerializeField] private PsionFormManager psionManager;
-
-    public bool inPsionForm;
     
     void Awake()
     {
@@ -58,7 +58,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && _isGrounded && !inPsionForm)
+        if (context.performed && _isGrounded && !psionManager.PsionFormActivated)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
         }
@@ -89,6 +89,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    public void PsionForm(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            if (!psionManager.PsionFormActivated)
+            {
+                AnnihilationProgressBar.ActivatePsionForm();
+                psionManager.RequestEnterPsionForm(playerID);
+            }
+            else
+            {
+                psionManager.RequestExitPsionForm(playerID);
+            }
+        }
+    }
+
     void FixedUpdate()
     {
         // Ground check
@@ -97,7 +113,7 @@ public class PlayerController : MonoBehaviour
         // Horizontal movement
         if(_moveInput.sqrMagnitude > 0) last = _moveInput.normalized;
         
-        if (!inPsionForm)
+        if (!psionManager.PsionFormActivated)
         {
             HandleNormalMovement();
         }

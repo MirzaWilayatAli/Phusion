@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3539671672953116669}
   - component: {fileID: 6479230431628320105}
   - component: {fileID: 3950316171074518391}
+  - component: {fileID: -2145862104403009986}
   m_Layer: 0
   m_Name: Posi
   m_TagString: Untagged
@@ -173,6 +174,10 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 305c9d58-6bf2-468a-896f-541d275a1b12
     m_ActionName: 'Gameplay/Ability[/Keyboard/leftShift,/Keyboard/rightShift]'
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: a944a210-a7ff-4fb7-8be2-417ec765c15c
+    m_ActionName: 'Gameplay/PsionForm[/Keyboard/e,/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay
@@ -208,6 +213,10 @@ MonoBehaviour:
     m_Bits: 1073741824
   followTarget: {fileID: 7370637957698827077}
   line: {fileID: 3338173324229357265}
+  AnnihilationProgressBar: {fileID: 0}
+  playerID: 0
+  psionManager: {fileID: 0}
+  inPsionForm: 0
 --- !u!58 &-3539671672953116669
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -285,6 +294,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::UpdateLine
   lineRenderer: {fileID: 6773899653695083119}
   index: 0
+--- !u!114 &-2145862104403009986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938462526179327270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190544db560673f4bb94ede8491540a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PsionOrbiter
+  rb: {fileID: 6479230431628320105}
+  currentAngle: 0
+  orbitRadius: 1
+  direction: 1
 --- !u!1 &1470818493247931986
 GameObject:
   m_ObjectHideFlags: 0
