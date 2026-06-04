@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -119,6 +120,11 @@ public class AnnihilationChecker : MonoBehaviour
         Color color = warningImage.color;
         color.a = 0f;
         warningImage.color = color;
+    }
+
+    private void OnEnable()
+    {
+        annihilationTimer = 0;
     }
 
     private void OnDisable()
