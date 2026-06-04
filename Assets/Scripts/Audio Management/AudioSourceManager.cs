@@ -9,6 +9,7 @@ public class AudioSourceManager : MonoBehaviour
     public AudioSource audioSource;
     public AudioSourceType audioSourceType;
     public bool playOnInitialise;
+    
     IEnumerator WaitForGam()
     {
         while (!GlobalAudioManager.Instance)
@@ -19,7 +20,7 @@ public class AudioSourceManager : MonoBehaviour
         globalAudioManager.VolumeChanged += VolumeChanged;
         VolumeChanged(globalAudioManager.Volume);
         if(playOnInitialise) audioSource.Play();
-        if(DebugHandler.IsDebugEnabled) Debug.LogWarning("GlobalAudioManager has been found, Actions hooked up.");
+        if(DebugHandler.IsDebugEnabled) Debug.Log("GlobalAudioManager has been found, events hooked.");
     }
 
     private void VolumeChanged(Vector3 vol)
@@ -45,8 +46,8 @@ public class AudioSourceManager : MonoBehaviour
 
     private void Awake()
     {
-        StartCoroutine(WaitForGam());
         TryGetComponent<AudioSource>(out audioSource);
+        StartCoroutine(WaitForGam());
     }
 
     private void OnDisable()
