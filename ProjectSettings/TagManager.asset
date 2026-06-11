@@ -39,6 +39,12 @@ TagManager:
   - Interactive
   - Ground
   m_SortingLayers:
+  - name: BG
+    uniqueID: 3851301127
+    locked: 0
+  - name: FG
+    uniqueID: 3776566227
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
