@@ -234,7 +234,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 21300000, guid: d7c526cd3873e7d40a3835a2a7a4cd86, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b375c0412193ef340bcbd762424bc089, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -359,6 +359,7 @@ MonoBehaviour:
   AnnihilationProgressBar: {fileID: 0}
   playerID: 0
   psionManager: {fileID: 0}
+  animator: {fileID: 0}
   jumpTrigger:
     m_PersistentCalls:
       m_Calls: []
