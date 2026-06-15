@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private int playerID; // assign 0 to Posi and 1 to Eli
     [SerializeField] private PsionFormManager psionManager;
 
+    public Animator animator;
     public UnityEvent jumpTrigger;
     
     void Awake()
@@ -65,6 +66,12 @@ public class PlayerController : MonoBehaviour
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
             jumpTrigger.Invoke();
+            if(animator) animator.SetTrigger("Jump");
+        }
+
+        if (context.canceled)
+        {
+            if(animator) animator.ResetTrigger("Jump");
         }
     }
 
@@ -73,10 +80,12 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             _ability = true;
+            if(animator) animator.SetBool("Ability", true);
         }
 
         if (context.canceled)
         {
+            if(animator) animator.SetBool("Ability", false);
             _ability = false;
             if (_controlledObject)
             {
@@ -116,13 +125,16 @@ public class PlayerController : MonoBehaviour
         
         // Horizontal movement
         if(_moveInput.sqrMagnitude > 0) last = _moveInput.normalized;
-        
+
         if (!psionManager.PsionFormActivated)
         {
+            if(animator) animator.SetBool("Psion", false);
             HandleNormalMovement();
+            if(animator) animator.SetFloat("Movement", _moveInput.x);
         }
         else
         {
+            if(animator) animator.SetBool("Psion", true);
             HandlePsionInput();
         }
         
