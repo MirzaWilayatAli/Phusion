@@ -35,4 +35,9 @@ public class ButtonHoverMoveText : MonoBehaviour, IPointerEnterHandler, IPointer
     {
         targetPosition = originalPosition;
     }
+    private void OnDisable()
+    {
+        targetPosition = originalPosition;
+        buttonText.anchoredPosition = originalPosition;
+    }
 }
