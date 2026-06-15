@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a7473b716081c8f4a8d889664f0f5e1d
+guid: 4fdd1b05bd8f1ba44ab678786c82bd05
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7399648493245821728
-    second: Eli_0
+      213: -9202663980676541988
+    second: PhusionExitDoorUnlocked_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -46,12 +46,12 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 400
+  spritePixelsToUnits: 128
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 512
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Eli_0
+      name: PhusionExitDoorUnlocked_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 352
-        height: 684
+        width: 341
+        height: 495
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 023fbae7915d0b660800000000000000
-      internalID: 7399648493245821728
+      spriteID: cd11e7c0ed1994080800000000000000
+      internalID: -9202663980676541988
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Eli_0: 7399648493245821728
+      PhusionExitDoorUnlocked_0: -9202663980676541988
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

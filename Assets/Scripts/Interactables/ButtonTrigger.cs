@@ -10,6 +10,8 @@ public class ButtonTrigger : TriggerBase
     
     // for visuals so players know they have successfully activated a button
     public SpriteRenderer sprite;
+    [SerializeField] private Sprite untriggeredButtonSprite;
+    [SerializeField] private Sprite triggeredButtonSprite;
 
     private void Start()
     {
@@ -26,7 +28,7 @@ public class ButtonTrigger : TriggerBase
             {
                 foreach (Collider2D col in _)
                 {
-                    Debug.Log("entered");
+                    Debug.Log("button triggered");
                     if (col.TryGetComponent(out TriggerTag ttag))
                     {
                         if (ttag.newTag == triggerTag)
@@ -37,7 +39,7 @@ public class ButtonTrigger : TriggerBase
                             {
                                 rb.linearVelocity = Vector2.zero;
                             }
-                            sprite.color = Color.green;
+                            sprite.sprite = triggeredButtonSprite;
                         }
                         break;
                     }
@@ -48,10 +50,10 @@ public class ButtonTrigger : TriggerBase
         {
             if (triggered)
             {
-                Debug.Log("left");
+                Debug.Log("button untriggered");
                 triggered = false;
                 onTriggerOff.Invoke();
-                sprite.color = Color.softRed;
+                sprite.sprite = untriggeredButtonSprite;
             }
         }
     }

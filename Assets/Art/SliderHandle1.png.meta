@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 8e776c3bb347b564a8d135dd0991411d
+guid: 7888d9c8f9c4ea544a07829bfa62a5f4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7178040128857175216
-    second: unwalkable_wall_tile_0
+      213: -1555321688439169401
+    second: SliderHandle1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: unwalkable_wall_tile_0
+      name: SliderHandle1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 171
-        height: 128
+        width: 122
+        height: 122
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0b4f70067758d9360800000000000000
-      internalID: 7178040128857175216
+      spriteID: 78e5f113a236a6ae0800000000000000
+      internalID: -1555321688439169401
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      unwalkable_wall_tile_0: 7178040128857175216
+      SliderHandle1_0: -1555321688439169401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

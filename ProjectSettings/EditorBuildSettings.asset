@@ -23,6 +23,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PrototypeGameLevel Altered.unity
     guid: a75a3b91f72c6410d8745e558607e50d
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/Level 1.unity
+    guid: adb26169c8661354f9c2e89f91921857
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/Tutorial Level.unity
+    guid: dc49d0dd17ecd9446b3754530193c130
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
