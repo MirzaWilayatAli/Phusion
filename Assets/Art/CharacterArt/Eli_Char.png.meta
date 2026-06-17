@@ -3,8 +3,8 @@ guid: b375c0412193ef340bcbd762424bc089
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3983871908855768652
-    second: Eli_Char 1_0
+      213: -2507190448029176668
+    second: Eli_Char_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 1024
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Eli_Char 1_0
+      name: Eli_Char_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 478
-        height: 466
+        width: 443
+        height: 432
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4b99ef93b9176b8c0800000000000000
-      internalID: -3983871908855768652
+      spriteID: 4ace7f8329ba43dd0800000000000000
+      internalID: -2507190448029176668
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Eli_Char 1_0: -3983871908855768652
+      Eli_Char_0: -2507190448029176668
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
