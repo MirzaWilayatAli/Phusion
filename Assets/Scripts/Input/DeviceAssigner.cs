@@ -1,73 +1,115 @@
-using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 
 public class DeviceAssigner : MonoBehaviour
 {
-    [Header("Player Prefabs/Components")]
+    [Header("Player References")]
     public PlayerInput player1;
     public PlayerInput player2;
 
-    private void Awake()
+    private void OnEnable()
     {
-        if (player1 == null || player2 == null)
+        InputSystem.onDeviceChange += OnDeviceChange;
+        AutoAssignDevices();
+    }
+
+    private void OnDisable()
+    {
+        InputSystem.onDeviceChange -= OnDeviceChange;
+    }
+
+    private void OnDeviceChange(InputDevice device, InputDeviceChange change)
+    {
+        switch (change)
         {
-            Debug.LogWarning("You forgot to assign Player Prefabs to Device Assigner dumbo !");
+            case InputDeviceChange.Added:
+            case InputDeviceChange.Removed:
+            case InputDeviceChange.Disconnected:
+            case InputDeviceChange.Reconnected:
+                AutoAssignDevices();
+                break;
         }
     }
-    // One uses WASD and one uses Arrow keys
-    
-    public void AssignSharedKeyboard()
+
+    private void AutoAssignDevices()
     {
-        var keyboard = Keyboard.current;
-        if (keyboard == null) return;
-        
-        // keyboard related fix
-        InputUser.PerformPairingWithDevice(keyboard, player1.user);
-        InputUser.PerformPairingWithDevice(keyboard, player2.user);
-        
-        // Player 1: Keyboard using WASD scheme
-        player1.SwitchCurrentControlScheme("WASD", keyboard);
+        int gamepadCount = Gamepad.all.Count;
+        bool keyboardExists = Keyboard.current != null;
 
-        // Player 2: Keyboard using Arrows scheme
-        player2.SwitchCurrentControlScheme("Arrows", keyboard);
-        
-        Debug.Log("Shared Keyboard Assigned.");
-    }
+        Debug.Log($"Keyboard: {keyboardExists}, Gamepads: {gamepadCount}");
 
-    // One uses Keyboard and one uses a Gamepad
-
-    public void AssignKeyboardAndGamepad()
-    {
-        var keyboard = Keyboard.current;
-        var gamepads = Gamepad.all;
-
-        if (keyboard != null)
-            player1.SwitchCurrentControlScheme("WASD", keyboard);
-
-        if (gamepads.Count > 0)
-            player2.SwitchCurrentControlScheme("Gamepad", gamepads[0]);
-
-        Debug.Log("Keyboard and Gamepad Assigned.");
-    }
-    
-    
-    // Both use Gamepads
-    
-    public void AssignTwoGamepads()
-    {
-        var gamepads = Gamepad.all;
-
-        if (gamepads.Count >= 2)
+        if (keyboardExists && gamepadCount == 0)
         {
-            player1.SwitchCurrentControlScheme("Gamepad", gamepads[0]);
-            player2.SwitchCurrentControlScheme("Gamepad", gamepads[1]);
-            Debug.Log("Two Gamepads Assigned.");
+            AssignSharedKeyboard();
+        }
+        else if (keyboardExists && gamepadCount == 1)
+        {
+            AssignKeyboardAndGamepad();
+        }
+        else if (gamepadCount >= 2)
+        {
+            AssignTwoGamepads();
         }
         else
         {
-            Debug.LogWarning("Not enough gamepads connected!");
+            Debug.LogWarning("No valid control setup found.");
         }
+    }
+
+    // ----------------------------
+    // Shared Keyboard
+    // ----------------------------
+    private void AssignSharedKeyboard()
+    {
+        var keyboard = Keyboard.current;
+        if (keyboard == null) return;
+
+        player1.user.UnpairDevices();
+        player2.user.UnpairDevices();
+
+        InputUser.PerformPairingWithDevice(keyboard, player1.user);
+        InputUser.PerformPairingWithDevice(keyboard, player2.user);
+
+        player1.SwitchCurrentControlScheme("WASD", keyboard);
+        player2.SwitchCurrentControlScheme("Arrows", keyboard);
+
+        Debug.Log("Shared Keyboard Assigned");
+    }
+
+    // ----------------------------
+    // Keyboard + Gamepad
+    // ----------------------------
+    private void AssignKeyboardAndGamepad()
+    {
+        var keyboard = Keyboard.current;
+        var gamepad = Gamepad.all[0];
+
+        player1.user.UnpairDevices();
+        player2.user.UnpairDevices();
+
+        player1.SwitchCurrentControlScheme("WASD", keyboard);
+        player2.SwitchCurrentControlScheme("Gamepad", gamepad);
+
+        Debug.Log("Keyboard + Gamepad Assigned");
+    }
+
+    // ----------------------------
+    // Two Gamepads
+    // ----------------------------
+    private void AssignTwoGamepads()
+    {
+        var gamepads = Gamepad.all;
+
+        if (gamepads.Count < 2)
+            return;
+
+        player1.user.UnpairDevices();
+        player2.user.UnpairDevices();
+
+        player1.SwitchCurrentControlScheme("Gamepad", gamepads[0]);
+        player2.SwitchCurrentControlScheme("Gamepad", gamepads[1]);
+
+        Debug.Log("Two Gamepads Assigned");
     }
 }

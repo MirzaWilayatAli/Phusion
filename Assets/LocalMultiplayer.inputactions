@@ -201,7 +201,7 @@
                 {
                     "name": "",
                     "id": "70c7c019-0701-45ce-970b-c9b655cd3b37",
-                    "path": "<Keyboard>/e",
+                    "path": "<Keyboard>/leftCtrl",
                     "interactions": "",
                     "processors": "",
                     "groups": ";WASD",
@@ -212,7 +212,7 @@
                 {
                     "name": "",
                     "id": "a3a4f92e-bf75-41d1-a76e-c1e47dbfa9f6",
-                    "path": "<Keyboard>/enter",
+                    "path": "<Keyboard>/rightCtrl",
                     "interactions": "",
                     "processors": "",
                     "groups": ";Arrows",

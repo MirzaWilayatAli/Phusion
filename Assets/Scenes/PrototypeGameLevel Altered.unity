@@ -3552,6 +3552,8 @@ MonoBehaviour:
     m_Bits: 1073741824
   triggered: 0
   sprite: {fileID: 0}
+  untriggeredButtonSprite: {fileID: 0}
+  triggeredButtonSprite: {fileID: 0}
 --- !u!212 &679986708
 SpriteRenderer:
   serializedVersion: 2
@@ -8999,6 +9001,8 @@ MonoBehaviour:
     m_Bits: 1073741824
   triggered: 0
   sprite: {fileID: 0}
+  untriggeredButtonSprite: {fileID: 0}
+  triggeredButtonSprite: {fileID: 0}
 --- !u!212 &1152060696
 SpriteRenderer:
   serializedVersion: 2
@@ -13069,6 +13073,8 @@ MonoBehaviour:
     m_Bits: 1073741824
   triggered: 0
   sprite: {fileID: 0}
+  untriggeredButtonSprite: {fileID: 0}
+  triggeredButtonSprite: {fileID: 0}
 --- !u!212 &2144947151
 SpriteRenderer:
   serializedVersion: 2

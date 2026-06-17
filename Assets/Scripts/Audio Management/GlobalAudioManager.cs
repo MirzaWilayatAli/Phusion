@@ -48,7 +48,7 @@ public class GlobalAudioManager : MonoBehaviour
      *
      * y * x or z * x to handle vol
      */
-    [SerializeField] private Vector3 volume = new Vector3(.75f, 0.5f, 0.5f); 
+    [SerializeField] private Vector3 volume = new Vector3(1f, 1f, 1f); 
     private void Awake()
     {
         if(Instance == null) Instance = this;
