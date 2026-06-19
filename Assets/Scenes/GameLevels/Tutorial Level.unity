@@ -2497,7 +2497,7 @@ GameObject:
   - component: {fileID: 477201393}
   - component: {fileID: 477201397}
   - component: {fileID: 477201396}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Door2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2891,7 +2891,7 @@ GameObject:
   - component: {fileID: 491254407}
   - component: {fileID: 491254411}
   - component: {fileID: 491254410}
-  m_Layer: 0
+  m_Layer: 31
   m_Name: Door1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4308,6 +4308,7 @@ GameObject:
   m_Component:
   - component: {fileID: 999658663}
   - component: {fileID: 999658662}
+  - component: {fileID: 999658664}
   m_Layer: 0
   m_Name: TimedButton
   m_TagString: Untagged
@@ -4390,6 +4391,56 @@ Transform:
   - {fileID: 1133224033}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &999658664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 999658661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a57487356ccd4c619fd04f7972c71610, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TimedButtonTrigger
+  onTriggerOn:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 491254405}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onTriggerOff:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 491254405}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  triggerTag: Button1
+  mask:
+    serializedVersion: 2
+    m_Bits: 1073741824
+  delay: 2
+  sprite: {fileID: 0}
+  pressedScaleX: 0.5
+  releasedScaleX: 1
 --- !u!1001 &1029494914
 PrefabInstance:
   m_ObjectHideFlags: 0
