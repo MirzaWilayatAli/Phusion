@@ -8,7 +8,6 @@ public class AnnihilationChecker : MonoBehaviour
     [SerializeField] private Transform playerOne;
     [SerializeField] private Transform playerTwo;
     [SerializeField] private SceneLoader loader;
-    [SerializeField] private Image warningImage;
     [SerializeField] private GameObject annihilationCanvas;
 
     [Header("Distance Settings")]
@@ -74,7 +73,6 @@ public class AnnihilationChecker : MonoBehaviour
         annihilationCanvas.SetActive(true);
 
         UpdateCameraShake(distance);
-        UpdateWarningImage(distance);
     }
 
     private void UpdateCameraShake(float distance)
@@ -88,15 +86,6 @@ public class AnnihilationChecker : MonoBehaviour
         float magnitude = Mathf.Lerp(minShakeMagnitude, maxShakeMagnitude, t);
 
         cameraShake.SetMagnitude(magnitude);
-    }
-
-    private void UpdateWarningImage(float distance)
-    {
-        float alpha = 0.15f / distance;
-
-        Color color = warningImage.color;
-        color.a = alpha;
-        warningImage.color = color;
     }
 
     private void HandleTimeSlowdown(float distance)
@@ -116,10 +105,6 @@ public class AnnihilationChecker : MonoBehaviour
             cameraShake.enabled = false;
             cameraShake.SetMagnitude(0f);
         }
-
-        Color color = warningImage.color;
-        color.a = 0f;
-        warningImage.color = color;
     }
 
     private void OnEnable()

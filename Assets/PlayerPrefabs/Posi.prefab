@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 6479230431628320105}
   - component: {fileID: 3950316171074518391}
   - component: {fileID: -2145862104403009986}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Posi
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -177,7 +177,19 @@ MonoBehaviour:
     m_ActionId: 305c9d58-6bf2-468a-896f-541d275a1b12
     m_ActionName: 'Gameplay/Ability[/Keyboard/leftShift,/Keyboard/rightShift]'
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 6846171359095035236}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: PsionForm
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: a944a210-a7ff-4fb7-8be2-417ec765c15c
     m_ActionName: 'Gameplay/PsionForm[/Keyboard/e,/Keyboard/enter]'
   m_NeverAutoSwitchControlSchemes: 1
@@ -221,7 +233,49 @@ MonoBehaviour:
   animator: {fileID: 0}
   jumpTrigger:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4035866206800841006}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  startMagneticAbilitySFX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6599492446064479369}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+  stopMagneticAbilitySFX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6599492446064479369}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!58 &-3539671672953116669
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -326,7 +380,7 @@ GameObject:
   - component: {fileID: 6939876912485749046}
   - component: {fileID: 7370637957698827077}
   - component: {fileID: 5221319836175614720}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +441,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2061685080687195924}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: GroundCheck
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -419,7 +473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1201027283330497199}
   - component: {fileID: 6773899653695083119}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: Line
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -562,7 +616,7 @@ GameObject:
   - component: {fileID: 3153000069817301028}
   - component: {fileID: 5396300895052845714}
   - component: {fileID: 6017464510495304638}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: JumpSFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -706,7 +760,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7511608882863583450}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: AbilityCenter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -739,13 +793,13 @@ GameObject:
   - component: {fileID: 5521824099296056444}
   - component: {fileID: 4980303384664089572}
   - component: {fileID: 7159691896258180539}
-  m_Layer: 0
+  m_Layer: 29
   m_Name: MagneticAbilitySFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5521824099296056444
 Transform:
   m_ObjectHideFlags: 0
@@ -773,10 +827,10 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 66d2e720fe9a3f941bc0ad7ad342b956, type: 3}
-  m_PlayOnAwake: 0
+  m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -873,4 +927,4 @@ MonoBehaviour:
   globalAudioManager: {fileID: 0}
   audioSource: {fileID: 0}
   audioSourceType: 1
-  playOnInitialise: 0
+  playOnInitialise: 1
