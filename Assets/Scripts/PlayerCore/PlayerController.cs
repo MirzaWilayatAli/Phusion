@@ -36,7 +36,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PsionFormManager psionManager;
 
     public Animator animator;
+    // SFX Event Calls
     public UnityEvent jumpTrigger;
+    public UnityEvent startMagneticAbilitySFX;
+    public UnityEvent stopMagneticAbilitySFX;
     
     void Awake()
     {
@@ -80,13 +83,20 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             _ability = true;
+            
+            startMagneticAbilitySFX.Invoke();
+            
             if(animator) animator.SetBool("Ability", true);
         }
 
         if (context.canceled)
         {
             if(animator) animator.SetBool("Ability", false);
+            
             _ability = false;
+            
+            stopMagneticAbilitySFX.Invoke();
+            
             if (_controlledObject)
             {
                 bool current = _controlledObject.neg || _controlledObject.pos;
@@ -106,6 +116,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed)
         {
+            Debug.Log("Psion Form entry attempted");
             if (!psionManager.PsionFormActivated)
             {
                 AnnihilationProgressBar.ActivatePsionForm();

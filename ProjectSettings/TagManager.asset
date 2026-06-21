@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - ExitDoor
+  - PsionForm
   layers:
   - Default
   - TransparentFX

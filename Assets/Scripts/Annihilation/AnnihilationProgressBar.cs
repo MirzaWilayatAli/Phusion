@@ -27,9 +27,9 @@ public class AnnihilationProgressBar : MonoBehaviour
     private float activationZoneMin;
     private float activationZoneMax;
 
-    private float timer;
-    private bool isRunning;
-    private bool completed;
+    [SerializeField] private float timer;
+    [SerializeField] private bool isRunning;
+    [SerializeField] private bool completed;
 
     private void Start()
     {
