@@ -1,13 +1,14 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
-public class ExitDoorScript : MonoBehaviour
+public class ExitDoor : MonoBehaviour
 {
-    public GameObject winUICanvas;
     private int currentPlayerCount = 0;
 
     public AnnihilationChecker annihilationChecker;
-
+    public UnityEvent winEvent;
+    
     private void Start()
     {
         annihilationChecker = FindFirstObjectByType<AnnihilationChecker>();
@@ -18,14 +19,17 @@ public class ExitDoorScript : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             Debug.Log(other.gameObject.name + " entered");
-            
-            if(annihilationChecker) annihilationChecker.gameObject.SetActive(false);
+
+            if (annihilationChecker)
+            {
+                annihilationChecker.gameObject.SetActive(false);
+            }
             
             currentPlayerCount++;
 
             if (currentPlayerCount == 2)
             {
-                if(winUICanvas) winUICanvas.SetActive(true);
+                winEvent.Invoke();
             }
         }
     }
@@ -34,14 +38,12 @@ public class ExitDoorScript : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if(annihilationChecker) annihilationChecker.gameObject.SetActive(true);
+            if (annihilationChecker)
+            {
+                annihilationChecker.gameObject.SetActive(true);
+            }
             
             currentPlayerCount--;
-
-            if (currentPlayerCount < 2)
-            {
-                if (winUICanvas) winUICanvas.SetActive(false);
-            }
         }
     }
 }

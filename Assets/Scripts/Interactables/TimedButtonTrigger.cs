@@ -9,8 +9,6 @@ public class TimedButtonTrigger : TriggerBase
 
     [Header("Visuals")]
     public SpriteRenderer sprite;
-    [SerializeField] private float pressedScaleX = 0.5f;
-    [SerializeField] private float releasedScaleX = 1f;
 
     private bool triggered;
     private bool timerRanOver;
@@ -28,9 +26,6 @@ public class TimedButtonTrigger : TriggerBase
 
         timer += Time.deltaTime;
 
-        float progress = Mathf.Clamp01(timer / delay);
-        SetScaleX(Mathf.Lerp(pressedScaleX, releasedScaleX, progress));
-
         if (timer >= delay)
         {
             triggered = false;
@@ -39,7 +34,6 @@ public class TimedButtonTrigger : TriggerBase
             onTriggerOff.Invoke();
 
             sprite.color = Color.softRed;
-            SetScaleX(releasedScaleX);
         }
     }
 
@@ -67,7 +61,6 @@ public class TimedButtonTrigger : TriggerBase
                     triggered = true;
 
                     timer = 0f;
-                    SetScaleX(pressedScaleX);
 
                     onTriggerOn.Invoke();
 
@@ -98,15 +91,8 @@ public class TimedButtonTrigger : TriggerBase
                 onTriggerOff.Invoke();
 
                 sprite.color = Color.softRed;
-                SetScaleX(releasedScaleX);
             }
         }
     }
 
-    private void SetScaleX(float value)
-    {
-        Vector3 scale = transform.localScale;
-        scale.x = value;
-        transform.localScale = scale;
-    }
 }

@@ -241,9 +241,9 @@ MonoBehaviour:
   onActivationFailed:
     m_PersistentCalls:
       m_Calls: []
-  onAnnihilation:
-    m_PersistentCalls:
-      m_Calls: []
+  timer: 0
+  isTimerRunning: 0
+  isTimerCompleted: 0
 --- !u!1 &2331813792994526932
 GameObject:
   m_ObjectHideFlags: 0
@@ -560,7 +560,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.177508, g: 0.48230308, b: 0.8792453, a: 0.47058824}
+  m_Color: {r: 0.177508, g: 0.48230308, b: 0.8792453, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1104,7 +1104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.87169814, g: 0.47855458, b: 0.15624769, a: 0.47058824}
+  m_Color: {r: 0.87169814, g: 0.47855458, b: 0.15624769, a: 0.78431374}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1400,9 +1400,9 @@ MonoBehaviour:
   onActivationFailed:
     m_PersistentCalls:
       m_Calls: []
-  onAnnihilation:
-    m_PersistentCalls:
-      m_Calls: []
+  timer: 0
+  isTimerRunning: 0
+  isTimerCompleted: 0
 --- !u!1001 &4444184724737218596
 PrefabInstance:
   m_ObjectHideFlags: 0

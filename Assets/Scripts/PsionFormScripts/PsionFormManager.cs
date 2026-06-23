@@ -4,10 +4,11 @@ using System.Collections;
 
 public class PsionFormManager : MonoBehaviour
 {
+    public Vector3 activationLocation; 
     [Header("Core")]
     public Transform nucleus;
 
-    [Header("Players")]
+    [Header("Psion Orbiter References")]
     public PsionOrbiter player1;
     public PsionOrbiter player2;
 
@@ -16,66 +17,34 @@ public class PsionFormManager : MonoBehaviour
 
     [Header("Transition")]
     public float enterDuration = 0.5f;
-
-    private bool psionFormActivated;
     
-    [SerializeField] private PlayerController player1Controller;
-    [SerializeField] private PlayerController player2Controller;
-
-    [SerializeField] private PsionFormMovement psionFormMovementComponent;
-
-    [SerializeField] private GameObject AnnihilationChecker;
-
-    private bool player1Ready;
-    private bool player2Ready;
-
-    public bool PsionFormActivated { get => psionFormActivated; }
+    public GameObject AnnihilationChecker;
+    public bool psionFormInitiated = false;
+    
 
     private void Awake()
     {
-        psionFormMovementComponent = GetComponent<PsionFormMovement>();
-        psionFormMovementComponent.enabled = false;
+        AnnihilationChecker =  GameObject.Find("AnnihilationChecker");
+    }
+
+    private void OnEnable()
+    {
+        transform.position = activationLocation;
+    }
+
+    private void OnDisable()
+    {
+        ExitPsionForm();
     }
 
     private void Update()
     {
-        if (!psionFormActivated) return;
-
+        if (!psionFormInitiated)
+        {
+            return;
+        }
         UpdateOrbit(player1);
         UpdateOrbit(player2);
-    }
-
-
-    public void RequestEnterPsionForm(int playerID)
-    {
-        if (playerID == 0)
-            player1Ready = true;
-
-        if (playerID == 1)
-            player2Ready = true;
-
-        if (player1Ready && player2Ready)
-        {
-            EnterPsionForm();
-            psionFormMovementComponent.enabled = true;
-            AnnihilationChecker.SetActive(false);
-        }
-    }
-
-    public void RequestExitPsionForm(int playerID)
-    {
-        if (playerID == 0)
-            player1Ready = false;
-
-        if (playerID == 1)
-            player2Ready = false;
-
-        if (!player1Ready && !player2Ready)
-        {
-            ExitPsionForm();
-            psionFormMovementComponent.enabled = false;
-            AnnihilationChecker.SetActive(true);
-        }
     }
 
     void UpdateOrbit(PsionOrbiter psionOrbiter)
@@ -95,8 +64,9 @@ public class PsionFormManager : MonoBehaviour
 
     public void EnterPsionForm()
     {
-        if (psionFormActivated) return;
-
+        psionFormInitiated = true;
+        AnnihilationChecker.SetActive(false);
+        
         StartCoroutine(EnterRoutine());
     }
 
@@ -104,7 +74,6 @@ public class PsionFormManager : MonoBehaviour
     {
         player1.direction = 0;
         player2.direction = 0;
-        psionFormActivated = false;
 
         PreparePlayer(player1);
         PreparePlayer(player2);
@@ -133,8 +102,6 @@ public class PsionFormManager : MonoBehaviour
 
         player1.currentAngle = 180f;
         player2.currentAngle = 0f;
-
-        psionFormActivated = true;
     }
 
     void PreparePlayer(PsionOrbiter member)
@@ -151,8 +118,9 @@ public class PsionFormManager : MonoBehaviour
     {
         player1.direction = 0;
         player2.direction = 0;
-        psionFormActivated = false;
-
+        psionFormInitiated = false;
+        AnnihilationChecker.SetActive(true);
+        
         RestorePlayer(player1);
         RestorePlayer(player2);
     }
