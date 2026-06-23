@@ -9,8 +9,19 @@ public class TutorialPopup_MassFade : MonoBehaviour
     public List<SpriteRenderer> sprites = new List<SpriteRenderer>();
     public List<TMP_Text> texts = new List<TMP_Text>();
     public float delay = .2f;
+
+    public bool fadeOnAwake = false;
+    private bool fading = false;
     private void OnEnable()
     {
+        if(fadeOnAwake) StartFade();
+    }
+
+    public void StartFade()
+    {
+        if (isActiveAndEnabled == false) return;
+        if(fading) return;
+        fading = true;
         foreach (var c in sprites)
         {
             StartCoroutine(Fade(c));
@@ -19,9 +30,9 @@ public class TutorialPopup_MassFade : MonoBehaviour
         foreach (var t in texts)
         {
             StartCoroutine(Fade(t));
-        }
+        } 
     }
-
+    
     IEnumerator Fade(TMP_Text toFade)
     {
         while (toFade.color.a > 0)

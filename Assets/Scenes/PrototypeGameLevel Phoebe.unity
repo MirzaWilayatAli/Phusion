@@ -1765,6 +1765,7 @@ MonoBehaviour:
   - {fileID: 706642695}
   - {fileID: 304530140}
   delay: 0.2
+  fadeOnAwake: 0
 --- !u!1 &226976541
 GameObject:
   m_ObjectHideFlags: 0
@@ -3266,6 +3267,7 @@ MonoBehaviour:
   - {fileID: 1950229473}
   - {fileID: 1075124586}
   delay: 0.2
+  fadeOnAwake: 0
 --- !u!1 &559788788
 GameObject:
   m_ObjectHideFlags: 0
@@ -14226,6 +14228,7 @@ MonoBehaviour:
   - {fileID: 1190412951}
   - {fileID: 214638850}
   delay: 0.2
+  fadeOnAwake: 0
 --- !u!1 &1784416079
 GameObject:
   m_ObjectHideFlags: 0

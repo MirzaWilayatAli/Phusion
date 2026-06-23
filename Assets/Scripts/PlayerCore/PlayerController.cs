@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
     public UnityEvent jumpTrigger;
     public UnityEvent startMagneticAbilitySFX;
     public UnityEvent stopMagneticAbilitySFX;
-    
+    public UnityEvent onMove;
     void Awake()
     {
         if (!abilityCenter)
@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed || context.canceled)
         {
+            onMove?.Invoke();
             _moveInput = context.ReadValue<Vector2>();
         }
     }
