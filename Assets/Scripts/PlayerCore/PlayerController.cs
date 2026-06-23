@@ -41,9 +41,10 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
     // SFX Event Calls
-    public UnityEvent jumpTrigger;
+    public UnityEvent jumpSFX;
     public UnityEvent startMagneticAbilitySFX;
     public UnityEvent stopMagneticAbilitySFX;
+    public UnityEvent deathSFX;
     
     void Awake()
     {
@@ -72,7 +73,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed && _isGrounded && !psionFormManager.gameObject.activeInHierarchy)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
-            jumpTrigger.Invoke();
+            jumpSFX.Invoke();
             if(animator) animator.SetTrigger("Jump");
         }
 
