@@ -30,10 +30,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private FollowTarget followTarget;
     [SerializeField] private GameObject line;
     
+    [Header("Annihilation")]
     public AnnihilationProgressBar  AnnihilationProgressBar;
+    public AnnihilationChecker  AnnihilationChecker;
     
+    [Header("Psion Form")]
     [SerializeField] private int playerID; // assign 0 to Posi and 1 to Eli
-    [SerializeField] private PsionFormManager psionManager;
+    [SerializeField] private PsionFormManager psionFormManager;
+    [SerializeField] private PsionFormInitiator psionFormInitiator;
 
     public Animator animator;
     // SFX Event Calls
@@ -65,7 +69,7 @@ public class PlayerController : MonoBehaviour
 
     public void Jump(InputAction.CallbackContext context)
     {
-        if (context.performed && _isGrounded && !psionManager.PsionFormActivated)
+        if (context.performed && _isGrounded && !psionFormManager.gameObject.activeInHierarchy)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
             jumpTrigger.Invoke();
@@ -114,19 +118,22 @@ public class PlayerController : MonoBehaviour
 
     public void PsionForm(InputAction.CallbackContext context)
     {
-        if (context.performed)
+        if (!context.performed)
+            return;
+
+        if (AnnihilationProgressBar != null && AnnihilationProgressBar.gameObject.activeInHierarchy)
         {
-            Debug.Log("Psion Form entry attempted");
-            if (!psionManager.PsionFormActivated)
-            {
-                AnnihilationProgressBar.ActivatePsionForm();
-                psionManager.RequestEnterPsionForm(playerID);
-            }
-            else
-            {
-                psionManager.RequestExitPsionForm(playerID);
-            }
+            AnnihilationProgressBar.ActivatePsionForm();
+            return;
         }
+
+        if (psionFormManager != null && psionFormManager.gameObject.activeInHierarchy)
+        {
+            psionFormInitiator.TerminateQuantumHandshake(playerID);
+            return;
+        }
+
+        Debug.Log("Please move closer to begin Annihilation");
     }
 
     void FixedUpdate()
@@ -137,7 +144,7 @@ public class PlayerController : MonoBehaviour
         // Horizontal movement
         if(_moveInput.sqrMagnitude > 0) last = _moveInput.normalized;
 
-        if (!psionManager.PsionFormActivated)
+        if (!psionFormManager.gameObject.activeInHierarchy)
         {
             if(animator) animator.SetBool("Psion", false);
             HandleNormalMovement();
@@ -208,15 +215,15 @@ public class PlayerController : MonoBehaviour
     {
         if (_moveInput.x > 0.1f)
         {
-            psionManager.SetPlayerDirection(playerID, 1);
+            psionFormManager.SetPlayerDirection(playerID, 1);
         }
         else if (_moveInput.x < -0.1f)
         {
-            psionManager.SetPlayerDirection(playerID, -1);
+            psionFormManager.SetPlayerDirection(playerID, -1);
         }
         else
         {
-            psionManager.SetPlayerDirection(playerID, 0);
+            psionFormManager.SetPlayerDirection(playerID, 0);
         }
     }
     

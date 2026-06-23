@@ -21,25 +21,19 @@ public class AnnihilationProgressBar : MonoBehaviour
     [Header("Events")]
     public UnityEvent onActivationSuccess;
     public UnityEvent onActivationFailed;
-    public UnityEvent onAnnihilation;
 
     private float activationZoneCenter;
     private float activationZoneMin;
     private float activationZoneMax;
 
     [SerializeField] private float timer;
-    [SerializeField] private bool isRunning;
-    [SerializeField] private bool completed;
-
-    private void Start()
-    {
-        onActivationSuccess.AddListener(OnActivationSuccess);
-        onActivationFailed.AddListener(OnActivationFailed);
-    }
+    [SerializeField] private bool isTimerRunning;
+    [SerializeField] private bool isTimerCompleted;
+    
 
     private void Update()
     {
-        if (!isRunning || completed)
+        if (!isTimerRunning || isTimerCompleted)
             return;
 
         timer += Time.deltaTime;
@@ -48,18 +42,29 @@ public class AnnihilationProgressBar : MonoBehaviour
 
         if (playerSlider.value >= playerSlider.maxValue)
         {
-            completed = true;
-            isRunning = false;
+            Debug.Log($"{gameObject.name} TIMER ENDED");
+            isTimerCompleted = true;
+            isTimerRunning = false;
 
-            onAnnihilation?.Invoke();
+            // onActivationFailed?.Invoke();
         }
     }
+    
+    private void OnEnable()
+    {
+        StartAnnihilationSequence();
+    }
 
+    private void OnDisable()
+    {
+        ResetAnnihilationSequence();
+    }
+    
     public void StartAnnihilationSequence()
     {
         timer = 0f;
-        completed = false;
-        isRunning = true;
+        isTimerCompleted = false;
+        isTimerRunning = true;
 
         playerSlider.value = 0f;
 
@@ -69,9 +74,9 @@ public class AnnihilationProgressBar : MonoBehaviour
 
     public void ResetAnnihilationSequence()
     {
-        isRunning = false;
+        isTimerRunning = false;
         timer = 0f;
-        completed = false;
+        isTimerCompleted = false;
         playerSlider.value = 0f;
     }
 
@@ -85,15 +90,16 @@ public class AnnihilationProgressBar : MonoBehaviour
     /// This method is called when player presses the Psion button.
     public void ActivatePsionForm()
     {
-        if (!isRunning || completed)
+        if (!isTimerRunning || isTimerCompleted)
             return;
 
         if (IsWithinActivationZone())
         {
-            completed = true;
-            isRunning = false;
+            isTimerCompleted = true;
+            isTimerRunning = false;
 
             onActivationSuccess?.Invoke();
+            Debug.Log($"SUCCESS - Running:{isTimerRunning} Completed:{isTimerCompleted}");
         }
         else
         {
@@ -118,25 +124,5 @@ public class AnnihilationProgressBar : MonoBehaviour
     {
         activationZoneVisual.anchorMin = new Vector2(activationZoneMin, activationZoneVisual.anchorMin.y);
         activationZoneVisual.anchorMax = new Vector2(activationZoneMax, activationZoneVisual.anchorMax.y);
-    }
-
-    void OnActivationSuccess()
-    {
-        Debug.Log("Psion Form successfully Activated");
-    }
-
-    void OnActivationFailed()
-    {
-        Debug.Log("Psion Form failed to Activate");
-    }
-
-    private void OnEnable()
-    {
-        StartAnnihilationSequence();
-    }
-
-    private void OnDisable()
-    {
-        ResetAnnihilationSequence();
     }
 }
