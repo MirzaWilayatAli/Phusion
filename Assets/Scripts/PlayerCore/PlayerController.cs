@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
     [Tooltip("true = positive")] public bool activatedAbility;
     private bool _ability;
+    public float maxMagLevDistance = 1f;
     [SerializeField] private Vector2 last;
     [SerializeField] private LayerMask mask;
     private bool _isGrounded;
@@ -166,8 +167,16 @@ public class PlayerController : MonoBehaviour
                 {
                     _controlledObject = t;
                     followTarget.target = _controlledObject.transform;
-                    _controlledObject.Prep(activatedAbility);
+                    _controlledObject.Prep(this, activatedAbility);
                     line.SetActive(true);
+                }
+                if (x.TryGetComponent(out MagLevPlate plate))
+                {
+                    if (plate.charge == activatedAbility)
+                    {
+                        if(Vector3.Distance(transform.position, plate.transform.position) <= maxMagLevDistance)
+                            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, plate.force);
+                    }
                 }
             }
             if (_controlledObject)

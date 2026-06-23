@@ -23,7 +23,7 @@ public class MechanicTag : MonoBehaviour
             neg = false;
         }
     }
-    public void Prep(bool charge)
+    public void Prep(PlayerController sender, bool charge)
     {
         bool current = pos || neg;
         if (rb.linearVelocity.magnitude > 0.1f && !current)
