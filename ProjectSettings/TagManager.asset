@@ -2,8 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - ExitDoor
+  - PsionForm
   layers:
   - Default
   - TransparentFX
@@ -31,13 +33,24 @@ TagManager:
   - 
   - 
   - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Player_Eli
+  - Player_Posi
+  - Unwalkable
+  - Player
+  - Interactive
+  - Ground
   m_SortingLayers:
+  - name: BG
+    uniqueID: 3851301127
+    locked: 0
+  - name: FG
+    uniqueID: 3776566227
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Players
+    uniqueID: 1002906513
+    locked: 0
+  m_RenderingLayers:
+  - Default
