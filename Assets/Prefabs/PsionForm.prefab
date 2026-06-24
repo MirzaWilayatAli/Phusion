@@ -54,8 +54,8 @@ MonoBehaviour:
   player2: {fileID: 0}
   angularSpeed: 120
   enterDuration: 0.5
-  player1Controller: {fileID: 0}
-  player2Controller: {fileID: 0}
+  AnnihilationChecker: {fileID: 0}
+  psionFormInitiated: 0
 --- !u!114 &6840943692863086565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,7 +90,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 536870912
+    m_Bits: 738197504
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
