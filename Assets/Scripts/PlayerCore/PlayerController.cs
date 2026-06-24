@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private Vector2 _moveInput;
     [Tooltip("true = positive")] public bool activatedAbility;
     private bool _ability;
+    public float maxMagLevDistance = 1f;
     [SerializeField] private Vector2 last;
     [SerializeField] private LayerMask mask;
     private bool _isGrounded;
@@ -41,11 +42,10 @@ public class PlayerController : MonoBehaviour
 
     public Animator animator;
     // SFX Event Calls
-    public UnityEvent jumpSFX;
+    public UnityEvent jumpTrigger;
     public UnityEvent startMagneticAbilitySFX;
     public UnityEvent stopMagneticAbilitySFX;
-    public UnityEvent deathSFX;
-    
+    public UnityEvent onMove;
     void Awake()
     {
         if (!abilityCenter)
@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviour
     {
         if (context.performed || context.canceled)
         {
+            onMove?.Invoke();
             _moveInput = context.ReadValue<Vector2>();
         }
     }
@@ -73,7 +74,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed && _isGrounded && !psionFormManager.gameObject.activeInHierarchy)
         {
             _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, jumpForce);
-            jumpSFX.Invoke();
+            jumpTrigger.Invoke();
             if(animator) animator.SetTrigger("Jump");
         }
 
@@ -167,8 +168,16 @@ public class PlayerController : MonoBehaviour
                 {
                     _controlledObject = t;
                     followTarget.target = _controlledObject.transform;
-                    _controlledObject.Prep(activatedAbility);
+                    _controlledObject.Prep(this, activatedAbility);
                     line.SetActive(true);
+                }
+                if (x.TryGetComponent(out MagLevPlate plate))
+                {
+                    if (plate.charge == activatedAbility)
+                    {
+                        if(Vector3.Distance(transform.position, plate.transform.position) <= maxMagLevDistance)
+                            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, plate.force);
+                    }
                 }
             }
             if (_controlledObject)

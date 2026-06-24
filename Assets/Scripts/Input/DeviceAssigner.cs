@@ -1,13 +1,27 @@
+using System;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
+
+public enum ControlType
+{
+    Unknown,
+    SharedKeyboard,
+    TwoGamepads,
+    OneGamepadOneKeyboard
+}
 
 public class DeviceAssigner : MonoBehaviour
 {
     [Header("Player References")]
     public PlayerInput player1;
     public PlayerInput player2;
-
+    
+    [Header("Misc")]
+    public ControlType controlType = ControlType.Unknown;
+    public Action onTypeChange;
+    
     private void OnEnable()
     {
         InputSystem.onDeviceChange += OnDeviceChange;
@@ -41,20 +55,25 @@ public class DeviceAssigner : MonoBehaviour
 
         if (keyboardExists && gamepadCount == 0)
         {
+            controlType = ControlType.SharedKeyboard;
             AssignSharedKeyboard();
         }
         else if (keyboardExists && gamepadCount == 1)
         {
+            controlType = ControlType.OneGamepadOneKeyboard;
             AssignKeyboardAndGamepad();
         }
         else if (gamepadCount >= 2)
         {
+            controlType = ControlType.TwoGamepads;
             AssignTwoGamepads();
         }
         else
         {
             Debug.LogWarning("No valid control setup found.");
+            controlType = ControlType.Unknown;
         }
+        onTypeChange?.Invoke();
     }
 
     // ----------------------------
