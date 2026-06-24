@@ -16,7 +16,7 @@ public class UnwalkableArea : MonoBehaviour
         {
             if (other.gameObject.TryGetComponent<PlayerController>(out var playerController))
             {
-                playerController.deathSFX?.Invoke();
+                playerController.playDeathSFX?.Invoke();
             }
 
             other.gameObject.SetActive(false);
