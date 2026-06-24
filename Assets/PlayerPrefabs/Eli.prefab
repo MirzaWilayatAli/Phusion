@@ -370,24 +370,14 @@ MonoBehaviour:
   followTarget: {fileID: 3383643376058969906}
   line: {fileID: 636074397213394845}
   AnnihilationProgressBar: {fileID: 0}
+  AnnihilationChecker: {fileID: 0}
   playerID: 0
-  psionManager: {fileID: 0}
+  psionFormManager: {fileID: 0}
+  psionFormInitiator: {fileID: 0}
   animator: {fileID: 0}
-  jumpTrigger:
+  jumpSFX:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3514233276712870524}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   startMagneticAbilitySFX:
     m_PersistentCalls:
       m_Calls:
@@ -417,6 +407,21 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
+        m_CallState: 2
+  deathSFX:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!50 &6479230431628320105
 Rigidbody2D:
@@ -795,10 +800,10 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: b8c334286b300b640a1c0a0e9aedbdb9, type: 3}
+  m_Resource: {fileID: 8300000, guid: 98f07680f40f54143b372e5eefb77fd4, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.2
+  m_Pitch: 3
   Loop: 1
   Mute: 0
   Spatialize: 0

@@ -14,8 +14,17 @@ public class UnwalkableArea : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player") || other.gameObject.CompareTag("PsionForm"))
         {
+            if (other.gameObject.TryGetComponent<PlayerController>(out var playerController))
+            {
+                playerController.playDeathSFX?.Invoke();
+            }
+
             other.gameObject.SetActive(false);
-            if (sceneLoader != null) sceneLoader.ReloadScene();
+
+            if (sceneLoader != null)
+            {
+                sceneLoader.ReloadSceneWithDelay(2);
+            }
         }
         else
         {
