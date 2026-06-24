@@ -9041,6 +9041,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6355793283885459520, guid: 8327c823c56e65142b5765c6e52faa88, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 738197504
+      objectReference: {fileID: 0}
     - target: {fileID: 6840943692863086565, guid: 8327c823c56e65142b5765c6e52faa88, type: 3}
       propertyPath: eli
       value: 
