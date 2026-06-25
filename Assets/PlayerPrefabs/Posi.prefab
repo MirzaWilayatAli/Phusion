@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 4107531267170172391}
   - component: {fileID: 8441701818911182325}
   - component: {fileID: 6846171359095035236}
-  - component: {fileID: -3539671672953116669}
   - component: {fileID: 6479230431628320105}
   - component: {fileID: 3950316171074518391}
   - component: {fileID: -2145862104403009986}
+  - component: {fileID: 4160794915344371839}
   m_Layer: 29
   m_Name: Posi
   m_TagString: Player
@@ -221,12 +221,14 @@ MonoBehaviour:
   padding: 0.5
   abilityCenter: {fileID: 7511608882863583450}
   activatedAbility: 1
+  maxMagLevDistance: 1
   last: {x: 0, y: 0}
   mask:
     serializedVersion: 2
     m_Bits: 1073741824
   followTarget: {fileID: 7370637957698827077}
   line: {fileID: 3338173324229357265}
+  renderer: {fileID: 0}
   AnnihilationProgressBar: {fileID: 0}
   AnnihilationChecker: {fileID: 0}
   playerID: 0
@@ -278,7 +280,71 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!58 &-3539671672953116669
+  onMove:
+    m_PersistentCalls:
+      m_Calls: []
+  playDeathSFX:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!50 &6479230431628320105
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938462526179327270}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 2
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 2
+  m_Material: {fileID: 6200000, guid: 12666a06395a22945a6114aa8f0026ca, type: 2}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 4
+--- !u!114 &3950316171074518391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938462526179327270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d06c049da0c427abaef64f12ce4b001, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpdateLine
+  lineRenderer: {fileID: 6773899653695083119}
+  index: 0
+--- !u!114 &-2145862104403009986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 938462526179327270}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 190544db560673f4bb94ede8491540a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PsionOrbiter
+  rb: {fileID: 6479230431628320105}
+  currentAngle: 0
+  orbitRadius: 1
+  direction: 1
+  mainController: {fileID: 0}
+--- !u!58 &4160794915344371839
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -312,65 +378,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Radius: 2.2
---- !u!50 &6479230431628320105
-Rigidbody2D:
-  serializedVersion: 5
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938462526179327270}
-  m_BodyType: 0
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 2
-  m_LinearDamping: 0
-  m_AngularDamping: 0.05
-  m_GravityScale: 2
-  m_Material: {fileID: 6200000, guid: 12666a06395a22945a6114aa8f0026ca, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_Interpolate: 1
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 4
---- !u!114 &3950316171074518391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938462526179327270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d06c049da0c427abaef64f12ce4b001, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UpdateLine
-  lineRenderer: {fileID: 6773899653695083119}
-  index: 0
---- !u!114 &-2145862104403009986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 938462526179327270}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 190544db560673f4bb94ede8491540a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PsionOrbiter
-  rb: {fileID: 6479230431628320105}
-  currentAngle: 0
-  orbitRadius: 1
-  direction: 1
+  m_Offset: {x: -0.29879996, y: 0.10163998}
+  m_Radius: 2.4899998
 --- !u!1 &1470818493247931986
 GameObject:
   m_ObjectHideFlags: 0

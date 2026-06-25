@@ -51,7 +51,11 @@ public class GlobalAudioManager : MonoBehaviour
     [SerializeField] private Vector3 volume = new Vector3(1f, 1f, 1f); 
     private void Awake()
     {
-        if(Instance == null) Instance = this;
+        if (Instance == null)
+        {
+            DontDestroyOnLoad(this);
+            Instance = this;
+        }
         else
         {
             if(DebugHandler.IsDebugEnabled) Debug.LogWarning("There was more than one instance of GlobalAudioManager, destroying the most recent one.");

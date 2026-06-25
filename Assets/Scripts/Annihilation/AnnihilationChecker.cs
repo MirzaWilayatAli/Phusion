@@ -34,8 +34,16 @@ public class AnnihilationChecker : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (playerOne.gameObject.activeInHierarchy == false || playerTwo.gameObject.activeInHierarchy == false)
+        {
+            annihilationCanvas.SetActive(false);
+            enabled = false;
+            return;
+        }
+
         float distance = GetPlayerDistance();
 
+        
         HandleAnnihilation(distance);
         HandleVisualEffects(distance);
         HandleTimeSlowdown(distance);

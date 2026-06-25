@@ -157,7 +157,7 @@ GameObject:
   - component: {fileID: 6479230431628320105}
   - component: {fileID: 7512909490356757199}
   - component: {fileID: -5514924545420444183}
-  - component: {fileID: 7710672715298364075}
+  - component: {fileID: 5247104769094005767}
   m_Layer: 29
   m_Name: Eli
   m_TagString: Player
@@ -363,19 +363,21 @@ MonoBehaviour:
   padding: 0.5
   abilityCenter: {fileID: 6035652645788598157}
   activatedAbility: 0
+  maxMagLevDistance: 1
   last: {x: 0, y: 0}
   mask:
     serializedVersion: 2
     m_Bits: 1073741824
   followTarget: {fileID: 3383643376058969906}
   line: {fileID: 636074397213394845}
+  renderer: {fileID: 0}
   AnnihilationProgressBar: {fileID: 0}
   AnnihilationChecker: {fileID: 0}
   playerID: 0
   psionFormManager: {fileID: 0}
   psionFormInitiator: {fileID: 0}
   animator: {fileID: 0}
-  jumpSFX:
+  jumpTrigger:
     m_PersistentCalls:
       m_Calls: []
   startMagneticAbilitySFX:
@@ -408,21 +410,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  deathSFX:
+  onMove:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
+  playDeathSFX:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!50 &6479230431628320105
 Rigidbody2D:
   serializedVersion: 5
@@ -448,7 +441,7 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 4
 --- !u!114 &7512909490356757199
 MonoBehaviour:
@@ -480,7 +473,8 @@ MonoBehaviour:
   currentAngle: 0
   orbitRadius: 2
   direction: 1
---- !u!58 &7710672715298364075
+  mainController: {fileID: 0}
+--- !u!58 &5247104769094005767
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -515,7 +509,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 2.21
+  m_Radius: 2.2149997
 --- !u!1 &2338181546339612322
 GameObject:
   m_ObjectHideFlags: 0

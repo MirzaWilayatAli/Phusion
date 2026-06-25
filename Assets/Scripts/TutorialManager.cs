@@ -6,7 +6,7 @@ public class TutorialManager : MonoBehaviour
     public GameObject oneGamepad;
     public GameObject twoGamepads;
     public DeviceAssigner assigner;
-    public TutorialPopup_MassFade[] tutorialPopups;
+    public TutorialPopup_MassFadeOut[] tutorialPopups;
     
     private void OnEnable()
     {

@@ -4,12 +4,13 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class TutorialPopup_MassFade : MonoBehaviour
+public class TutorialPopup_MassFadeOut : MonoBehaviour
 {
     public List<SpriteRenderer> sprites = new List<SpriteRenderer>();
     public List<TMP_Text> texts = new List<TMP_Text>();
     public float delay = .2f;
 
+    public float fadingStartDelay = 0f;
     public bool fadeOnAwake = false;
     private bool fading = false;
     private void OnEnable()
@@ -17,11 +18,9 @@ public class TutorialPopup_MassFade : MonoBehaviour
         if(fadeOnAwake) StartFade();
     }
 
-    public void StartFade()
+    private IEnumerator StartFadeWithDelay()
     {
-        if (isActiveAndEnabled == false) return;
-        if(fading) return;
-        fading = true;
+        yield return new WaitForSeconds(fadingStartDelay);
         foreach (var c in sprites)
         {
             StartCoroutine(Fade(c));
@@ -31,6 +30,29 @@ public class TutorialPopup_MassFade : MonoBehaviour
         {
             StartCoroutine(Fade(t));
         } 
+    }
+    public void StartFade()
+    {
+        if (isActiveAndEnabled == false) return;
+        if(fading) return;
+        fading = true;
+
+        if (fadingStartDelay > 0f)
+        {
+            StartCoroutine(StartFadeWithDelay());
+        }
+        else
+        {
+            foreach (var c in sprites)
+            {
+                StartCoroutine(Fade(c));
+            }
+
+            foreach (var t in texts)
+            {
+                StartCoroutine(Fade(t));
+            } 
+        }
     }
     
     IEnumerator Fade(TMP_Text toFade)
