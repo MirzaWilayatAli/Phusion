@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 8
-  jumpForce: 10
+  jumpForce: 11
   groundCheck: {fileID: 2061685080687195924}
   groundRadius: 0.25
   groundLayer:
@@ -378,8 +378,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.29879996, y: 0.10163998}
-  m_Radius: 2.4899998
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2.215
 --- !u!1 &1470818493247931986
 GameObject:
   m_ObjectHideFlags: 0
