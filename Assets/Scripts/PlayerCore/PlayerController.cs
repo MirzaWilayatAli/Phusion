@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour
     private MechanicTag _controlledObject;
     [SerializeField] private FollowTarget followTarget;
     [SerializeField] private GameObject line;
-    
+    [SerializeField] private SpriteRenderer renderer;
     [Header("Annihilation")]
     public AnnihilationProgressBar  AnnihilationProgressBar;
     public AnnihilationChecker  AnnihilationChecker;
@@ -54,6 +54,7 @@ public class PlayerController : MonoBehaviour
             abilityCenter = transform;
         }
         _rb = GetComponent<Rigidbody2D>();
+        renderer = GetComponent<SpriteRenderer>();
         followTarget.origin = transform;
         if (camScript == null)
         {
@@ -146,7 +147,8 @@ public class PlayerController : MonoBehaviour
         
         // Horizontal movement
         if(_moveInput.sqrMagnitude > 0) last = _moveInput.normalized;
-
+        if (last.x == 1) renderer.flipX = false; else renderer.flipX = true;
+        
         if (!psionFormManager.gameObject.activeInHierarchy)
         {
             if(animator) animator.SetBool("Psion", false);
