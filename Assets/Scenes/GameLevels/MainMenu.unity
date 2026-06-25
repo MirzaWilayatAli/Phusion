@@ -15019,17 +15019,41 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3478741106399262245, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3478741106399262245, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 714887522}
+    - target: {fileID: 3478741106399262245, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GlobalAudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 5770540530955451333, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5770540530955451333, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 714887522}
+    - target: {fileID: 5770540530955451333, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GlobalAudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8836667667855727035, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8836667667855727035, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 714887522}
+    - target: {fileID: 8836667667855727035, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GlobalAudioManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
