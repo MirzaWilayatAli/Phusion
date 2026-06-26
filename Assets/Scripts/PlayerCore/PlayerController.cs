@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -164,25 +165,30 @@ public class PlayerController : MonoBehaviour
         if (_ability)
         {
             Vector2 temporary = new Vector2(abilityCenter.position.x + last.x, abilityCenter.position.y + last.y);
-            Collider2D x = Physics2D.OverlapCircle(temporary, abilityRadius, mask);
-            if (x && !_controlledObject)
+            Collider2D[] xs = Physics2D.OverlapCircleAll(temporary, abilityRadius, mask);
+            if (xs.Length > 0)
             {
-                if (x.TryGetComponent(out MechanicTag t))
+                Collider2D x = xs.OrderBy(z => (transform.position - z.transform.position).magnitude).First();
+                if (x && !_controlledObject)
                 {
-                    _controlledObject = t;
-                    followTarget.target = _controlledObject.transform;
-                    _controlledObject.Prep(this, activatedAbility);
-                    line.SetActive(true);
-                }
-                if (x.TryGetComponent(out MagLevPlate plate))
-                {
-                    if (plate.charge == activatedAbility)
+                    if (x.TryGetComponent(out MechanicTag t))
                     {
-                        if(Vector3.Distance(transform.position, plate.transform.position) <= maxMagLevDistance)
-                            _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, plate.force);
+                        _controlledObject = t;
+                        followTarget.target = _controlledObject.transform;
+                        _controlledObject.Prep(this, activatedAbility);
+                        line.SetActive(true);
+                    }
+                    if (x.TryGetComponent(out MagLevPlate plate))
+                    {
+                        if (plate.charge == activatedAbility)
+                        {
+                            if(Vector3.Distance(transform.position, plate.transform.position) <= maxMagLevDistance)
+                                _rb.linearVelocity = new Vector2(_rb.linearVelocity.x, plate.force);
+                        }
                     }
                 }
             }
+
             if (_controlledObject)
             {
                 if (_controlledObject.charge == activatedAbility)

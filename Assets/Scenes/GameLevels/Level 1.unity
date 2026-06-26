@@ -23392,10 +23392,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 559788794}
     - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
-      propertyPath: abilityRadius
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
       propertyPath: psionFormManager
       value: 
       objectReference: {fileID: 559788794}
@@ -23407,6 +23403,10 @@ PrefabInstance:
       propertyPath: psionFormInitiator
       value: 
       objectReference: {fileID: 770419803}
+    - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
+      propertyPath: AnnihilationChecker
+      value: 
+      objectReference: {fileID: 1541829321}
     - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
       propertyPath: AnnihilationProgressBar
       value: 
@@ -25080,6 +25080,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7235123853205025126, guid: 71094034562ff7c4d9b34bee15ca3f8a, type: 3}
   m_PrefabInstance: {fileID: 5042429494209028751}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1541829321 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8022577120232784239, guid: 71094034562ff7c4d9b34bee15ca3f8a, type: 3}
+  m_PrefabInstance: {fileID: 5042429494209028751}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541829320}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254ea87419794845a5444de0a54e0230, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnihilationChecker
 --- !u!1001 &1573190436
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25150,7 +25161,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5242131030786102361, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.853
+      value: -3.2
       objectReference: {fileID: 0}
     - target: {fileID: 5242131030786102361, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: m_LocalPosition.z
@@ -25217,10 +25228,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 559788794}
     - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
-      propertyPath: abilityRadius
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: psionFormManager
       value: 
       objectReference: {fileID: 559788794}
@@ -25232,6 +25239,10 @@ PrefabInstance:
       propertyPath: psionFormInitiator
       value: 
       objectReference: {fileID: 770419803}
+    - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
+      propertyPath: AnnihilationChecker
+      value: 
+      objectReference: {fileID: 1541829321}
     - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: AnnihilationProgressBar
       value: 
@@ -26064,7 +26075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1748241346442825654, guid: 6d7c9fe1db6ac55468b96c7aa3fae5bc, type: 3}
       propertyPath: winEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: Level2
+      value: MainMenu
       objectReference: {fileID: 0}
     - target: {fileID: 1748241346442825654, guid: 6d7c9fe1db6ac55468b96c7aa3fae5bc, type: 3}
       propertyPath: winEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
