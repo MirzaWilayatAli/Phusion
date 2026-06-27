@@ -45,4 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioManager
   valueUpdated: 0
-  volume: {x: 0.75, y: 0.25, z: 0.5}
+  volume: {x: 0.5, y: 0.25, z: 0.45}
