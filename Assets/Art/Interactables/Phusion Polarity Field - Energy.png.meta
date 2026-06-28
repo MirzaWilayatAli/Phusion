@@ -1,22 +1,10 @@
 fileFormatVersion: 2
-guid: dc7fbfdeab64d5a459f2ca21edacfdde
+guid: 754ed9404bf0a304d9cf7e85f89e4eb7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1156902454581751056
-    second: ARROWRS_0
-  - first:
-      213: -8810468299217693920
-    second: ARROWRS_1
-  - first:
-      213: 7108730736035486009
-    second: ARROWRS_2
-  - first:
-      213: 2062825561718201517
-    second: ARROWRS_3
-  - first:
-      213: 1048458702572175616
-    second: ARROWRS_4
+      213: -4781336604239542501
+    second: Phusion Polarity Field - Energy_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -85,8 +73,8 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 1
-    textureFormat: 4
+    resizeAlgorithm: 0
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -112,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ARROWRS_0
+      name: Phusion Polarity Field - Energy_0
       rect:
         serializedVersion: 2
-        x: 99
-        y: 220
-        width: 92
-        height: 99
+        x: 240
+        y: 0
+        width: 608
+        height: 1952
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -127,96 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0f290ead85bd1ffe0800000000000000
-      internalID: -1156902454581751056
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ARROWRS_1
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 119
-        width: 92
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0231a4003cdeab580800000000000000
-      internalID: -8810468299217693920
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ARROWRS_2
-      rect:
-        serializedVersion: 2
-        x: 99
-        y: 119
-        width: 92
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 939db45d0f847a260800000000000000
-      internalID: 7108730736035486009
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ARROWRS_3
-      rect:
-        serializedVersion: 2
-        x: 196
-        y: 119
-        width: 92
-        height: 99
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dac1fc74be0a0ac10800000000000000
-      internalID: 2062825561718201517
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ARROWRS_4
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 4
-        width: 156
-        height: 108
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0014b7092afdc8e00800000000000000
-      internalID: 1048458702572175616
+      spriteID: b17cab8e0b745adb0800000000000000
+      internalID: -4781336604239542501
       vertices: []
       indices: 
       edges: []
@@ -235,11 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ARROWRS_0: -1156902454581751056
-      ARROWRS_1: -8810468299217693920
-      ARROWRS_2: 7108730736035486009
-      ARROWRS_3: 2062825561718201517
-      ARROWRS_4: 1048458702572175616
+      Phusion Polarity Field - Energy_0: -4781336604239542501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

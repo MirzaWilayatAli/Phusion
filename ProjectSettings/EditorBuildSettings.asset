@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/LocalMultiplayerSetup Phoebe.unity
     guid: 09727e70145f1480bb6aee5313ffd972
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PrototypeGameLevel Altered.unity
     guid: a75a3b91f72c6410d8745e558607e50d
   - enabled: 1

@@ -106,7 +106,7 @@ public class AnnihilationChecker : MonoBehaviour
 
     private void DisableEffects()
     {
-        annihilationCanvas.SetActive(false);
+        if(annihilationCanvas) annihilationCanvas.SetActive(false);
 
         if (cameraShake != null)
         {
