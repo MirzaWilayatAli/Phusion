@@ -1,10 +1,14 @@
-using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class UnwalkableArea : MonoBehaviour
 {
     [SerializeField] private SceneLoader sceneLoader;
 
+    public UnityEvent playDeathSFX;
+    public UnityEvent playPsionFormDestructionSFX;
+    public UnityEvent playInteractiveObjectDestructionSFX;
+    
     private void Awake()
     {
         sceneLoader = FindFirstObjectByType<SceneLoader>();
@@ -16,16 +20,15 @@ public class UnwalkableArea : MonoBehaviour
         {
             if (other.gameObject.TryGetComponent(out PsionFormManager manager))
             {
-                manager.player1.mainController.playDeathSFX?.Invoke();
+                playPsionFormDestructionSFX?.Invoke();
                 manager.player1.gameObject.SetActive(false);
-                manager.player2.mainController.playDeathSFX?.Invoke();
                 manager.player2.gameObject.SetActive(false);
             }
             else
             {
                 if (other.gameObject.TryGetComponent<PlayerController>(out var playerController))
                 {
-                    playerController.playDeathSFX?.Invoke();
+                    playDeathSFX?.Invoke();
                 }
             }
 
@@ -38,6 +41,7 @@ public class UnwalkableArea : MonoBehaviour
         }
         else
         {
+            playInteractiveObjectDestructionSFX?.Invoke();
             Destroy(other.gameObject);
         }
     }

@@ -24863,6 +24863,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UnwalkableArea
   sceneLoader: {fileID: 687044963}
+  playDeathSFX:
+    m_PersistentCalls:
+      m_Calls: []
+  playPsionFormDestructionSFX:
+    m_PersistentCalls:
+      m_Calls: []
+  playInteractiveObjectDestructionSFX:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1437477058
 GameObject:
   m_ObjectHideFlags: 0
@@ -26075,7 +26084,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1748241346442825654, guid: 6d7c9fe1db6ac55468b96c7aa3fae5bc, type: 3}
       propertyPath: winEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
-      value: MainMenu
+      value: Level 2
       objectReference: {fileID: 0}
     - target: {fileID: 1748241346442825654, guid: 6d7c9fe1db6ac55468b96c7aa3fae5bc, type: 3}
       propertyPath: winEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
