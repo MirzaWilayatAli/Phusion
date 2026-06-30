@@ -66,7 +66,10 @@ public class AnnihilationChecker : MonoBehaviour
 
         if (annihilationTimer >= annihilationDelay)
         {
-            loader.ReloadScene();
+            //loader.ReloadScene();
+            
+            // This logic was transferred to Annihilation Progress Bars
+            // it is no longer needed here but leaving it here in case it might break if we temper
         }
     }
 

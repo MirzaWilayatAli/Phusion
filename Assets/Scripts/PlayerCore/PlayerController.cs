@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
@@ -47,7 +46,6 @@ public class PlayerController : MonoBehaviour
     public UnityEvent startMagneticAbilitySFX;
     public UnityEvent stopMagneticAbilitySFX;
     public UnityEvent onMove;
-    public UnityEvent playDeathSFX;
     void Awake()
     {
         if (!abilityCenter)

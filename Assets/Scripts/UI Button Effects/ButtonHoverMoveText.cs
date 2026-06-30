@@ -1,6 +1,5 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
-using TMPro;
 
 public class ButtonHoverMoveText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
