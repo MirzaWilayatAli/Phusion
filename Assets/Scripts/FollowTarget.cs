@@ -8,11 +8,20 @@ public class FollowTarget : MonoBehaviour
     private Vector3 _velocity;
     public float smoothTime = 0.25f;
     public float maxSpeed = 100;
+    public bool instant = false;
     private void Update()
     {
         if (target)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref _velocity, smoothTime, maxSpeed, Time.deltaTime);
+            
+            if (instant)
+            {
+                transform.position = target.position;
+            }
+            else
+            {
+                transform.position = Vector3.SmoothDamp(transform.position, target.transform.position, ref _velocity, smoothTime, maxSpeed, Time.deltaTime);
+            }
         }
         else
         {
