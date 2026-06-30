@@ -936,6 +936,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioSourceManager
   globalAudioManager: {fileID: 0}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 4980303384664089572}
   audioSourceType: 1
   playOnInitialise: 1

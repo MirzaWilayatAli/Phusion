@@ -905,9 +905,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioSourceManager
   globalAudioManager: {fileID: 0}
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 82078331458061622}
   audioSourceType: 1
-  playOnInitialise: 1
+  playOnInitialise: 0
 --- !u!1 &7121124502804143392
 GameObject:
   m_ObjectHideFlags: 0

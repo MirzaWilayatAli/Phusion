@@ -148,7 +148,7 @@ public class PlayerController : MonoBehaviour
         
         // Horizontal movement
         if(_moveInput.sqrMagnitude > 0) last = _moveInput.normalized;
-        if (last.x == 1) renderer.flipX = false; else renderer.flipX = true;
+        if (Mathf.Round(last.x) == 1) renderer.flipX = false; else renderer.flipX = true;
         
         if (!psionFormManager.gameObject.activeInHierarchy)
         {

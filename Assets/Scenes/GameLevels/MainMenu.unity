@@ -10138,10 +10138,10 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Special Thanks\r\n<b>HAYLEY</b>, <b>ANGELA</b>, and the rest of the <b>SAE
     STAFF</b>\r\n\r\nAssets Used\r\n<b>GABRIEL AGUIAR PRODUCTIONS \u2013 \"FREE QUICK
-    EFFECTS VOL. 1\" (UNITY ASSET STORE)</b>\r\n\r\nSound Design\r\n<b>LACHLAN DAFF</b>\r\n<b>WILL
-    ROBINSON</b>\r\n\r\nGame Design, Gameplay Programming\r\n<b>PHOEBE BUNTING</b>\r\n\r\nProject
-    Lead, Game Design, Gameplay Programming, 2D Art & Asset Production, VFX\r\n<b>MIRZA
-    WILAYAT ALI</b>"
+    EFFECTS VOL. 1\" (UNITY ASSET STORE)</b>\r\n<b>sfxr</b>\n\r\nSound Design\r\n<b>LACHLAN
+    DAFF</b>\r\n<b>WILL ROBINSON</b>\r\n\r\nGame Design, Asset Production, Gameplay
+    Programming\r\n<b>PHOEBE BUNTING</b>\r\n\r\nProject Lead, Game Design, Gameplay
+    Programming, 2D Art & Asset Production, VFX\r\n<b>MIRZA WILAYAT ALI</b>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
