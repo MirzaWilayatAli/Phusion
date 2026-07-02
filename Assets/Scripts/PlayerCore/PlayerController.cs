@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
         if (_isGrounded && _inAir && _rb.linearVelocity.y < 0.8)
         {
             _inAir = false;
-            if(_airTime >= 0.7f) hitGroundTrigger?.Invoke();
+            if(_airTime >= 0.65f) hitGroundTrigger?.Invoke();
             _airTime = 0f;
         }
             

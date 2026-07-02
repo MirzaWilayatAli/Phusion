@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3950316171074518391}
   - component: {fileID: -2145862104403009986}
   - component: {fileID: 4160794915344371839}
-  m_Layer: 29
+  m_Layer: 27
   m_Name: Posi
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -217,7 +217,7 @@ MonoBehaviour:
   groundRadius: 0.25
   groundLayer:
     serializedVersion: 2
-    m_Bits: 2147483648
+    m_Bits: 3288334336
   abilityRadius: 4
   camScript: {fileID: 0}
   padding: 0.5

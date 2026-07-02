@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 7512909490356757199}
   - component: {fileID: -5514924545420444183}
   - component: {fileID: 5247104769094005767}
-  m_Layer: 29
+  m_Layer: 26
   m_Name: Eli
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -374,7 +374,7 @@ MonoBehaviour:
   groundRadius: 0.25
   groundLayer:
     serializedVersion: 2
-    m_Bits: 2147483648
+    m_Bits: 3355443200
   abilityRadius: 4
   camScript: {fileID: 0}
   padding: 0.5
