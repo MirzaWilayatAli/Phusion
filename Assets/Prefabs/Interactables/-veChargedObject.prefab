@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 406fae2ec822345d3bfaa9df8a44b241, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MechanicTag
-  charge: 1
+  charge: 0
   rb: {fileID: 0}
   pos: 0
   neg: 0

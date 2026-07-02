@@ -39,18 +39,18 @@ public class MechanicTag : MonoBehaviour
             neg = true;
         }
     }
-    public void Push(Transform t)
-    {
-        Vector3 temp = t.position - transform.position;
-        Vector2 temp2 = new Vector2(temp.x, temp.y).normalized;
-        float dist = 3 * Vector3.Distance(t.position, transform.position);
-        rb.AddForce(temp2 * rb.mass * dist);
-    }
     public void Pull(Transform t)
     {
         Vector3 temp = t.position - transform.position;
         Vector2 temp2 = new Vector2(temp.x, temp.y).normalized;
-        float dist = 3 / Vector3.Distance(t.position, transform.position);
-        rb.AddForce(-temp2 * rb.mass * dist);
+        float dist = 3.75f * Vector3.Distance(t.position, transform.position);
+        rb.AddForce(temp2 * (rb.mass * dist), ForceMode2D.Force);
+    }
+    public void Push(Transform t)
+    {
+        Vector3 temp = t.position - transform.position;
+        Vector2 temp2 = new Vector2(temp.x, temp.y).normalized;
+        float dist = 3.75f / Vector3.Distance(t.position, transform.position);
+        rb.AddForce(-temp2 * (rb.mass * dist), ForceMode2D.Force);
     }
 }

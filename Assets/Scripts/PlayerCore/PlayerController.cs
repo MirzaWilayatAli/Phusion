@@ -207,12 +207,12 @@ public class PlayerController : MonoBehaviour
                 if (_controlledObject.charge == activatedAbility)
                 {
                     if(lineAnimation && lineAnimation.lineMaterial) lineAnimation.lineMaterial.SetFloat(Flip, 1.0f);
-                    _controlledObject.Pull(transform);
+                    _controlledObject.Push(transform);
                 }
                 else
                 {
                     if(lineAnimation && lineAnimation.lineMaterial) lineAnimation.lineMaterial.SetFloat(Flip, 0.0f);
-                    _controlledObject.Push(transform);
+                    _controlledObject.Pull(transform);
                 }
             }
         }
