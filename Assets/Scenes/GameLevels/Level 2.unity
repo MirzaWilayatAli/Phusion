@@ -240,8 +240,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Level 2
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2e11f158571736040b0b160da8f4d7dd, type: 2}
+  m_sharedMaterial: {fileID: -9191009722283748837, guid: 2e11f158571736040b0b160da8f4d7dd, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -265,13 +265,13 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 28
-  m_fontSizeBase: 28
+  m_fontSize: 42
+  m_fontSizeBase: 42
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 1
   m_VerticalAlignment: 256
   m_textAlignment: 65535
@@ -28736,6 +28736,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 1208395980551030852, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ab777662c738c6f4a8616875cfa02579, type: 3}
     - target: {fileID: 1360228126887794662, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -29207,7 +29211,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 93091370955909539, guid: ce34677674a75da479deb056ebe89957, type: 3}
       propertyPath: fadeDuration
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 1205805813637072705, guid: ce34677674a75da479deb056ebe89957, type: 3}
       propertyPath: m_IsActive
