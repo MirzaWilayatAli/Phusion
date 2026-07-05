@@ -1,4 +1,3 @@
-using System;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
@@ -7,6 +6,7 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
+    private static readonly int Flip = Shader.PropertyToID("_Flip");
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float jumpForce = 7f;
 
@@ -28,9 +28,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Vector2 last;
     [SerializeField] private LayerMask mask;
     private bool _isGrounded;
+    private bool _inAir;
+    private float _airTime = 0;
     private MechanicTag _controlledObject;
     [SerializeField] private FollowTarget followTarget;
     [SerializeField] private GameObject line;
+    [SerializeField] private LineAnimation lineAnimation;
     [SerializeField] private SpriteRenderer renderer;
     [Header("Annihilation")]
     public AnnihilationProgressBar  AnnihilationProgressBar;
@@ -44,10 +47,10 @@ public class PlayerController : MonoBehaviour
     public Animator animator;
     // SFX Event Calls
     public UnityEvent jumpTrigger;
+    public UnityEvent hitGroundTrigger;
     public UnityEvent startMagneticAbilitySFX;
     public UnityEvent stopMagneticAbilitySFX;
     public UnityEvent onMove;
-    public UnityEvent playDeathSFX;
     void Awake()
     {
         if (!abilityCenter)
@@ -145,10 +148,20 @@ public class PlayerController : MonoBehaviour
     {
         // Ground check
         _isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundRadius, groundLayer);
-        
+        if (!_isGrounded && !_inAir)
+        {
+            _inAir = true;
+        } else if(_inAir) _airTime += Time.fixedDeltaTime;
+        if (_isGrounded && _inAir && _rb.linearVelocity.y < 0.8)
+        {
+            _inAir = false;
+            if(_airTime >= 0.65f) hitGroundTrigger?.Invoke();
+            _airTime = 0f;
+        }
+            
         // Horizontal movement
         if(_moveInput.sqrMagnitude > 0) last = _moveInput.normalized;
-        if (last.x == 1) renderer.flipX = false; else renderer.flipX = true;
+        renderer.flipX = !Mathf.Approximately(Mathf.Round(last.x), 1);
         
         if (!psionFormManager.gameObject.activeInHierarchy)
         {
@@ -193,11 +206,13 @@ public class PlayerController : MonoBehaviour
             {
                 if (_controlledObject.charge == activatedAbility)
                 {
-                    _controlledObject.Pull(transform);
+                    if(lineAnimation && lineAnimation.lineMaterial) lineAnimation.lineMaterial.SetFloat(Flip, 1.0f);
+                    _controlledObject.Push(transform);
                 }
                 else
                 {
-                    _controlledObject.Push(transform);
+                    if(lineAnimation && lineAnimation.lineMaterial) lineAnimation.lineMaterial.SetFloat(Flip, 0.0f);
+                    _controlledObject.Pull(transform);
                 }
             }
         }

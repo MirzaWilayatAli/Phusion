@@ -5,30 +5,21 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
   - enabled: 1
     path: Assets/Scenes/GameLevels/MainMenu.unity
     guid: ed7ff04fd0054a246b72826894a65f94
-  - enabled: 0
-    path: Assets/Scenes/PrototypeGameLevel.unity
-    guid: 5ff35793752c79c4ca24db31e2c56361
-  - enabled: 0
-    path: Assets/Scenes/LocalMultiplayerSetup.unity
-    guid: 14ac0ab873feb9d498f7755394015816
-  - enabled: 0
-    path: Assets/Scenes/LocalMultiplayerSetup Phoebe.unity
-    guid: 09727e70145f1480bb6aee5313ffd972
-  - enabled: 0
-    path: Assets/Scenes/PrototypeGameLevel Altered.unity
-    guid: a75a3b91f72c6410d8745e558607e50d
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/Tutorial Level.unity
+    guid: dc49d0dd17ecd9446b3754530193c130
   - enabled: 1
     path: Assets/Scenes/GameLevels/Level 1.unity
     guid: adb26169c8661354f9c2e89f91921857
   - enabled: 1
-    path: Assets/Scenes/GameLevels/Tutorial Level.unity
-    guid: dc49d0dd17ecd9446b3754530193c130
+    path: Assets/Scenes/GameLevels/Level 2.unity
+    guid: 2f24e369aa9d91c4fbb960d5c468d03c
+  - enabled: 1
+    path: Assets/Scenes/GameLevels/Level 3.unity
+    guid: 565e3f98c491899478f82f0a438c9d17
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: cd1a3190aaee100489f04a5968861250, type: 3}
   m_UseUCBPForAssetBundles: 0

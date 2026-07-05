@@ -45,8 +45,7 @@ public class AnnihilationProgressBar : MonoBehaviour
             Debug.Log($"{gameObject.name} TIMER ENDED");
             isTimerCompleted = true;
             isTimerRunning = false;
-
-            // onActivationFailed?.Invoke();
+            onActivationFailed?.Invoke();
         }
     }
     
