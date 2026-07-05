@@ -238,7 +238,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Level 3
+  m_text: 'Level 5
 
 '
   m_isRightToLeft: 0
@@ -3609,7 +3609,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 796084776908361469, guid: 57ed629a871f7204e839755d801e4760, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -2.465
+      value: -2.46
       objectReference: {fileID: 0}
     - target: {fileID: 796084776908361469, guid: 57ed629a871f7204e839755d801e4760, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3649,11 +3649,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2793641314893366842, guid: 57ed629a871f7204e839755d801e4760, type: 3}
       propertyPath: m_Size.y
-      value: 2.64
+      value: 2.9054098
       objectReference: {fileID: 0}
     - target: {fileID: 2793641314893366842, guid: 57ed629a871f7204e839755d801e4760, type: 3}
       propertyPath: m_Offset.y
-      value: 0
+      value: 0.13270473
       objectReference: {fileID: 0}
     - target: {fileID: 3639600450099956248, guid: 57ed629a871f7204e839755d801e4760, type: 3}
       propertyPath: force
@@ -47076,11 +47076,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3790599412373512218, guid: 41929cf98fcad01498d4425de5453515, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 17.38
+      value: 17.11
       objectReference: {fileID: 0}
     - target: {fileID: 3790599412373512218, guid: 41929cf98fcad01498d4425de5453515, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.531
+      value: 6.518
       objectReference: {fileID: 0}
     - target: {fileID: 3790599412373512218, guid: 41929cf98fcad01498d4425de5453515, type: 3}
       propertyPath: m_LocalPosition.z
@@ -47117,14 +47117,6 @@ PrefabInstance:
     - target: {fileID: 3790599412373512218, guid: 41929cf98fcad01498d4425de5453515, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4491297312940275230, guid: 41929cf98fcad01498d4425de5453515, type: 3}
-      propertyPath: m_Size.y
-      value: 2.64
-      objectReference: {fileID: 0}
-    - target: {fileID: 4491297312940275230, guid: 41929cf98fcad01498d4425de5453515, type: 3}
-      propertyPath: m_Offset.y
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7528320636598454686, guid: 41929cf98fcad01498d4425de5453515, type: 3}
       propertyPath: force
