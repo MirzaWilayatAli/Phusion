@@ -453,7 +453,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.75
+  m_fontSize: 58.75
   m_fontSizeBase: 92
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -814,9 +814,9 @@ MonoBehaviour:
   m_Padding:
     m_Left: 200
     m_Right: 200
-    m_Top: 100
-    m_Bottom: 100
-  m_ChildAlignment: 0
+    m_Top: 125
+    m_Bottom: 50
+  m_ChildAlignment: 4
   m_Spacing: 0
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
@@ -938,7 +938,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 72.415}
+  m_SizeDelta: {x: 0, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &390527943
 MonoBehaviour:
@@ -1094,7 +1094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -1015}
+  m_AnchoredPosition: {x: 500, y: -1060}
   m_SizeDelta: {x: 1000, y: 320}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &392476645
@@ -2078,11 +2078,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 621650244}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 592065660}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 5
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &621650244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2620,7 +2632,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.75
+  m_fontSize: 58.75
   m_fontSizeBase: 92
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2711,7 +2723,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 72.415}
+  m_SizeDelta: {x: 0, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &775177904
 MonoBehaviour:
@@ -3406,7 +3418,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 72.415}
+  m_SizeDelta: {x: 0, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1324032280
 MonoBehaviour:
@@ -9053,7 +9065,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.75
+  m_fontSize: 58.75
   m_fontSizeBase: 92
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9282,8 +9294,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 500, y: -415}
-  m_SizeDelta: {x: 1000, y: 780}
+  m_AnchoredPosition: {x: 500, y: -450}
+  m_SizeDelta: {x: 1000, y: 900}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1746180863
 MonoBehaviour:
@@ -9307,10 +9319,11 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Special Thanks\r\n<b>HAYLEY</b>, <b>ANGELA</b>, and the rest of the <b>SAE
     STAFF</b>\r\n\r\nAssets Used\r\n<b>GABRIEL AGUIAR PRODUCTIONS \u2013 \"FREE QUICK
-    EFFECTS VOL. 1\" (UNITY ASSET STORE)</b>\r\n<b>sfxr</b>\n\r\nSound Design\r\n<b>LACHLAN
-    DAFF</b>\r\n<b>WILL ROBINSON</b>\r\n\r\nGame Design, Asset Production, Gameplay
-    Programming\r\n<b>PHOEBE BUNTING</b>\r\n\r\nProject Lead, Game Design, Gameplay
-    Programming, 2D Art & Asset Production, VFX\r\n<b>MIRZA WILAYAT ALI</b>"
+    EFFECTS VOL. 1\" (UNITY ASSET STORE)</b>\n\r\nSound Design\n<size=48><b>LACHLAN
+    DAFF</b>\r\n<b>WILL ROBINSON</b></size>\r\n\r\nGame Design, Asset Production,
+    Gameplay Programming, VFX, Level Designer\r\n<size=48><b>PHOEBE BUNTING</b></size>\r\n\r\nProject
+    Lead, Game Design, Gameplay Programming, 2D Art & Asset Production, VFX, Level
+    Designer\r\n<size=48><b>MIRZA WILAYAT ALI</b></size>"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
@@ -14462,7 +14475,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 56.75
+  m_fontSize: 58.75
   m_fontSizeBase: 49.76
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -14954,11 +14967,23 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 2122097025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 592065660}
+        m_TargetAssemblyTypeName: SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Level 4
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2122097025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15049,7 +15074,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 72.415}
+  m_SizeDelta: {x: 0, y: 75}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2136518599
 MonoBehaviour:
