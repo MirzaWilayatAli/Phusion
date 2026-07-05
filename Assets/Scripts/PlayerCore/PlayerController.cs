@@ -155,7 +155,7 @@ public class PlayerController : MonoBehaviour
         if (_isGrounded && _inAir && _rb.linearVelocity.y < 0.8)
         {
             _inAir = false;
-            if(_airTime >= 0.7f) hitGroundTrigger?.Invoke();
+            if(_airTime >= 0.65f) hitGroundTrigger?.Invoke();
             _airTime = 0f;
         }
             
@@ -207,12 +207,12 @@ public class PlayerController : MonoBehaviour
                 if (_controlledObject.charge == activatedAbility)
                 {
                     if(lineAnimation && lineAnimation.lineMaterial) lineAnimation.lineMaterial.SetFloat(Flip, 1.0f);
-                    _controlledObject.Pull(transform);
+                    _controlledObject.Push(transform);
                 }
                 else
                 {
                     if(lineAnimation && lineAnimation.lineMaterial) lineAnimation.lineMaterial.SetFloat(Flip, 0.0f);
-                    _controlledObject.Push(transform);
+                    _controlledObject.Pull(transform);
                 }
             }
         }
