@@ -29815,6 +29815,10 @@ PrefabInstance:
       propertyPath: hoverOffsetX
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 431807142518759718, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+      propertyPath: rectTransform
+      value: 
+      objectReference: {fileID: 3223258619527293850}
     - target: {fileID: 844411812109733304, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
       propertyPath: moveDistance
       value: 50
@@ -29827,6 +29831,10 @@ PrefabInstance:
       propertyPath: hoverOffsetX
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 953961515116065249, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+      propertyPath: rectTransform
+      value: 
+      objectReference: {fileID: 3223258619527293848}
     - target: {fileID: 987890757044425307, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 2
@@ -30063,6 +30071,10 @@ PrefabInstance:
       propertyPath: hoverOffsetX
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 3979143335393891273, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+      propertyPath: rectTransform
+      value: 
+      objectReference: {fileID: 3223258619527293849}
     - target: {fileID: 4161527151619410254, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
       propertyPath: moveDistance
       value: 50
@@ -30131,6 +30143,10 @@ PrefabInstance:
       propertyPath: hoverOffsetX
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 6379862027789557183, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+      propertyPath: rectTransform
+      value: 
+      objectReference: {fileID: 3223258619527293846}
     - target: {fileID: 6426841495033572228, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
       propertyPath: moveDistance
       value: 50
@@ -30159,6 +30175,10 @@ PrefabInstance:
       propertyPath: hoverOffsetX
       value: 80
       objectReference: {fileID: 0}
+    - target: {fileID: 7252251579676848485, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+      propertyPath: rectTransform
+      value: 
+      objectReference: {fileID: 3223258619527293847}
     - target: {fileID: 7434839200244892445, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
@@ -30235,6 +30255,31 @@ PrefabInstance:
 --- !u!1 &3223258619527293845 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3130556305987785327, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+  m_PrefabInstance: {fileID: 3223258619527293844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3223258619527293846 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1797701753279218098, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+  m_PrefabInstance: {fileID: 3223258619527293844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3223258619527293847 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 1360228126887794662, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+  m_PrefabInstance: {fileID: 3223258619527293844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3223258619527293848 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 7832917543711295919, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+  m_PrefabInstance: {fileID: 3223258619527293844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3223258619527293849 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6193454994523901971, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
+  m_PrefabInstance: {fileID: 3223258619527293844}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &3223258619527293850 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 2056222842224723572, guid: 9b4e77bedec61ac4db2c114ff464cf21, type: 3}
   m_PrefabInstance: {fileID: 3223258619527293844}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3449339807363939905

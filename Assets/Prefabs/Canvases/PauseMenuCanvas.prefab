@@ -1531,9 +1531,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde585282201605449740942b0c1c456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
-  hoverImage: {fileID: 1360228126887794662}
-  hoverOffsetX: 80
-  moveSpeed: 15
+  rectTransform: {fileID: 0}
+  hoverOffsetX: 60
+  moveSpeed: 10
 --- !u!1 &6561324201922892243
 GameObject:
   m_ObjectHideFlags: 0
@@ -1707,9 +1707,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde585282201605449740942b0c1c456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
-  hoverImage: {fileID: 2056222842224723572}
-  hoverOffsetX: 80
-  moveSpeed: 15
+  rectTransform: {fileID: 0}
+  hoverOffsetX: 60
+  moveSpeed: 10
 --- !u!1 &6717132293705058925
 GameObject:
   m_ObjectHideFlags: 0
@@ -1871,9 +1871,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde585282201605449740942b0c1c456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
-  hoverImage: {fileID: 7832917543711295919}
-  hoverOffsetX: 80
-  moveSpeed: 15
+  rectTransform: {fileID: 0}
+  hoverOffsetX: 60
+  moveSpeed: 10
 --- !u!1 &6860094249102081472
 GameObject:
   m_ObjectHideFlags: 0
@@ -2035,9 +2035,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde585282201605449740942b0c1c456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
-  hoverImage: {fileID: 1797701753279218098}
-  hoverOffsetX: 80
-  moveSpeed: 15
+  rectTransform: {fileID: 0}
+  hoverOffsetX: 60
+  moveSpeed: 10
 --- !u!1 &7562107356942227278
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,9 +2199,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bde585282201605449740942b0c1c456, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
-  hoverImage: {fileID: 6193454994523901971}
-  hoverOffsetX: 80
-  moveSpeed: 15
+  rectTransform: {fileID: 0}
+  hoverOffsetX: 60
+  moveSpeed: 10
 --- !u!1 &8810646179427579834
 GameObject:
   m_ObjectHideFlags: 0
