@@ -3,7 +3,7 @@ using UnityEngine.EventSystems;
 
 public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
-    public RectTransform hoverImage;
+    public RectTransform rectTransform;
 
     [Header("Movement")]
     public float hoverOffsetX = 20f;
@@ -11,16 +11,22 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private Vector2 originalPosition;
     private Vector2 targetPosition;
+    
+    private void Awake()
+    {
+        originalPosition = rectTransform.anchoredPosition;
+        targetPosition = originalPosition;
+    }
 
     private void Start()
     {
-        originalPosition = hoverImage.anchoredPosition;
+        originalPosition = rectTransform.anchoredPosition;
         targetPosition = originalPosition;
     }
 
     private void Update()
     {
-        hoverImage.anchoredPosition = Vector2.Lerp(hoverImage.anchoredPosition, targetPosition, Time.deltaTime * moveSpeed);
+        rectTransform.anchoredPosition = Vector2.Lerp(rectTransform.anchoredPosition, targetPosition, Time.deltaTime * moveSpeed);
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -31,5 +37,10 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
     public void OnPointerExit(PointerEventData eventData)
     {
         targetPosition = originalPosition;
+    }
+    private void OnDisable()
+    {
+        targetPosition = originalPosition;
+        rectTransform.anchoredPosition = originalPosition;
     }
 }
