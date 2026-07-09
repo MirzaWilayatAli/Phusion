@@ -45,6 +45,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private PsionFormInitiator psionFormInitiator;
 
     public Animator animator;
+    
+    // DOTween here
+    public PlayerAnimations playerAnimations;
+    
     // SFX Event Calls
     public UnityEvent jumpTrigger;
     public UnityEvent hitGroundTrigger;
@@ -71,6 +75,7 @@ public class PlayerController : MonoBehaviour
         if (context.performed || context.canceled)
         {
             onMove?.Invoke();
+            playerAnimations.MoveBounce();
             _moveInput = context.ReadValue<Vector2>();
         }
     }
@@ -151,11 +156,24 @@ public class PlayerController : MonoBehaviour
         if (!_isGrounded && !_inAir)
         {
             _inAir = true;
-        } else if(_inAir) _airTime += Time.fixedDeltaTime;
-        if (_isGrounded && _inAir && _rb.linearVelocity.y < 0.8)
+
+            if (_rb.linearVelocity.y > 0.1f)
+                playerAnimations.Jump();
+        }
+        else if (_inAir)
+        {
+            _airTime += Time.fixedDeltaTime;
+        }
+
+        if (_isGrounded && _inAir && _rb.linearVelocity.y <= 0.1f)
         {
             _inAir = false;
-            if(_airTime >= 0.65f) hitGroundTrigger?.Invoke();
+
+            playerAnimations.Impact();
+
+            if (_airTime >= 0.65f)
+                hitGroundTrigger?.Invoke();
+
             _airTime = 0f;
         }
             
@@ -167,6 +185,18 @@ public class PlayerController : MonoBehaviour
         {
             if(animator) animator.SetBool("Psion", false);
             HandleNormalMovement();
+            
+            float speed = _rb.linearVelocity.magnitude;
+
+            if (speed > 0.1f)
+            {
+                playerAnimations.MoveBounce();
+            }
+            else
+            {
+                playerAnimations.StopMoveBounce();
+            }
+            
             if(animator) animator.SetFloat("Movement", _moveInput.x);
         }
         else
