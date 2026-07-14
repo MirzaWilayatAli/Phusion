@@ -200,6 +200,17 @@
                 },
                 {
                     "name": "",
+                    "id": "e313011d-e56b-444a-a873-be668fa492ae",
+                    "path": "<Keyboard>/enter",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Arrows",
+                    "action": "Ability",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "70c7c019-0701-45ce-970b-c9b655cd3b37",
                     "path": "<Keyboard>/leftCtrl",
                     "interactions": "",

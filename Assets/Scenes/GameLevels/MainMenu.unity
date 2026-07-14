@@ -216,6 +216,18 @@ MonoBehaviour:
           m_StringArgument: Level 1
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &37055187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -283,6 +295,8 @@ MonoBehaviour:
   rectTransform: {fileID: 37055185}
   hoverOffsetX: 50
   moveSpeed: 15
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &45733056
 GameObject:
   m_ObjectHideFlags: 0
@@ -1013,6 +1027,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 45733056}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1090,8 +1116,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
   rectTransform: {fileID: 390527942}
-  hoverOffsetX: 65
-  moveSpeed: 15
+  hoverOffsetX: 50
+  moveSpeed: 8
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &392476643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1579,6 +1607,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 45733056}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -1658,6 +1698,8 @@ MonoBehaviour:
   rectTransform: {fileID: 500286315}
   hoverOffsetX: 50
   moveSpeed: 15
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &527194210
 GameObject:
   m_ObjectHideFlags: 0
@@ -2296,6 +2338,18 @@ MonoBehaviour:
           m_StringArgument: Level 5
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &621650244
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2363,6 +2417,8 @@ MonoBehaviour:
   rectTransform: {fileID: 621650242}
   hoverOffsetX: 50
   moveSpeed: 15
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &626898178
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,7 +2467,6 @@ GameObject:
   - component: {fileID: 674710798}
   - component: {fileID: 674710797}
   - component: {fileID: 674710800}
-  - component: {fileID: 674710801}
   m_Layer: 5
   m_Name: BackButton
   m_TagString: Untagged
@@ -2507,6 +2562,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &674710798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2560,21 +2627,8 @@ MonoBehaviour:
   rectTransform: {fileID: 674710796}
   hoverOffsetX: -15
   moveSpeed: 12
---- !u!114 &674710801
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 674710795}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bde585282201605449740942b0c1c456, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
-  rectTransform: {fileID: 300640230}
-  hoverOffsetX: -15
-  moveSpeed: 12
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1001 &714887521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3014,6 +3068,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 45733056}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -3091,8 +3157,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
   rectTransform: {fileID: 775177903}
-  hoverOffsetX: 65
-  moveSpeed: 15
+  hoverOffsetX: 50
+  moveSpeed: 8
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &794569691
 GameObject:
   m_ObjectHideFlags: 0
@@ -3168,6 +3236,152 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 794569691}
   m_CullTransparentMesh: 1
+--- !u!1 &807114894
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 807114896}
+  - component: {fileID: 807114895}
+  - component: {fileID: 807114897}
+  m_Layer: 0
+  m_Name: UISFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &807114895
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807114894}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &807114896
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807114894}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 9, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &807114897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 807114894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8be01ffb014bee9db47dac9b476ade, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioSourceManager
+  globalAudioManager: {fileID: 0}
+  audioSource: {fileID: 807114895}
+  audioSourceType: 1
+  playOnInitialise: 0
 --- !u!1 &808381014
 GameObject:
   m_ObjectHideFlags: 0
@@ -3440,6 +3654,18 @@ MonoBehaviour:
           m_StringArgument: Level 2
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &924523630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3507,6 +3733,8 @@ MonoBehaviour:
   rectTransform: {fileID: 924523628}
   hoverOffsetX: 50
   moveSpeed: 15
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &1023806062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3827,8 +4055,20 @@ MonoBehaviour:
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3899,8 +4139,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
   rectTransform: {fileID: 1324032279}
-  hoverOffsetX: 65
-  moveSpeed: 15
+  hoverOffsetX: 50
+  moveSpeed: 8
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &1387752115
 GameObject:
   m_ObjectHideFlags: 0
@@ -14777,6 +15019,18 @@ MonoBehaviour:
           m_StringArgument: Level 3
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1808536754
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14844,6 +15098,8 @@ MonoBehaviour:
   rectTransform: {fileID: 1808536752}
   hoverOffsetX: 50
   moveSpeed: 15
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &1962385098
 GameObject:
   m_ObjectHideFlags: 0
@@ -15109,6 +15365,18 @@ MonoBehaviour:
           m_StringArgument: Tutorial Level
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2025759340
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15176,6 +15444,8 @@ MonoBehaviour:
   rectTransform: {fileID: 2025759338}
   hoverOffsetX: 50
   moveSpeed: 15
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &2032976531
 GameObject:
   m_ObjectHideFlags: 0
@@ -15454,6 +15724,18 @@ MonoBehaviour:
           m_StringArgument: Level 4
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2122097025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15521,6 +15803,8 @@ MonoBehaviour:
   rectTransform: {fileID: 2122097023}
   hoverOffsetX: 50
   moveSpeed: 15
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1 &2136518597
 GameObject:
   m_ObjectHideFlags: 0
@@ -15618,6 +15902,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 807114895}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: PlayOneShot
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2136518600
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15683,8 +15979,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonHoverEffect
   rectTransform: {fileID: 2136518598}
-  hoverOffsetX: 65
-  moveSpeed: 15
+  hoverOffsetX: 50
+  moveSpeed: 8
+  hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+  audioSource: {fileID: 807114895}
 --- !u!1001 &1939999120932768514
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15786,9 +16084,45 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 45733056}
+    - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 807114895}
+    - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: PlayOneShot
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 8300000, guid: 68756f6a0b842f24fbdd2b7533104fb8, type: 3}
+    - target: {fileID: 2355490335880308654, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.AudioClip, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3177076125928709190, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -16218,6 +16552,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 870062942}
     - target: {fileID: 8393149858893585301, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: hoverSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
+    - target: {fileID: 8393149858893585301, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: audioSource
+      value: 
+      objectReference: {fileID: 807114895}
+    - target: {fileID: 8393149858893585301, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: rectTransform
       value: 
       objectReference: {fileID: 870062942}
@@ -16313,3 +16655,4 @@ SceneRoots:
   - {fileID: 403067738}
   - {fileID: 1939999120932768514}
   - {fileID: 2032976535}
+  - {fileID: 807114896}
