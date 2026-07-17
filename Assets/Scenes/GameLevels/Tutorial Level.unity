@@ -2496,6 +2496,10 @@ PrefabInstance:
       propertyPath: charge
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6209517319236007002, guid: 6f4abc6546a583a438fa1f1b2bd4ea8f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 27da070bf87c1104bade6c081d844a54, type: 2}
     - target: {fileID: 6874292175465272498, guid: 6f4abc6546a583a438fa1f1b2bd4ea8f, type: 3}
       propertyPath: newTag
       value: ExitDoorButtonBox
@@ -3157,6 +3161,55 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 57ed629a871f7204e839755d801e4760, type: 3}
+--- !u!1 &434620852
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 434620854}
+  - component: {fileID: 434620853}
+  m_Layer: 0
+  m_Name: Post FX Global Volume
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &434620853
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434620852}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.Volume
+  m_IsGlobal: 1
+  priority: 0
+  blendDistance: 0
+  weight: 1
+  sharedProfile: {fileID: 11400000, guid: b314fd40e56623f429e3cee7696dc03d, type: 2}
+--- !u!4 &434620854
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434620852}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &444835556
 GameObject:
   m_ObjectHideFlags: 0
@@ -12968,6 +13021,10 @@ PrefabInstance:
     - target: {fileID: 4382185158289191, guid: d8cc97619d97e44409fba1bb6d4072cd, type: 3}
       propertyPath: m_Name
       value: Main Camera
+      objectReference: {fileID: 0}
+    - target: {fileID: 1499640971038137839, guid: d8cc97619d97e44409fba1bb6d4072cd, type: 3}
+      propertyPath: m_RenderPostProcessing
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2059364734674986084, guid: d8cc97619d97e44409fba1bb6d4072cd, type: 3}
       propertyPath: maxZoom
@@ -43030,3 +43087,4 @@ SceneRoots:
   - {fileID: 1421608772082010270}
   - {fileID: 1875063552}
   - {fileID: 425614807}
+  - {fileID: 434620854}
