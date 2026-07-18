@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Glow_Blue_MaglevPlate_MAT
+  m_Name: Glow_Orange_TriggerButton_MAT
   m_Shader: {fileID: -6465566751694194690, guid: 570607e26a048604da3bff5033ba50e7, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -54,11 +54,11 @@ Material:
     m_Ints: []
     m_Floats:
     - _EnableExternalAlpha: 0
-    - _GlowAmount: 0.55
+    - _GlowAmount: 2
     - _ZWrite: 0
     m_Colors:
     - White: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.14755781, g: 1.4650108, b: 3.9644089, a: 1}
+    - _Color: {r: 4.4981127, g: 0.3686967, b: 0, a: 1}
     - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []
   m_AllowLocking: 1

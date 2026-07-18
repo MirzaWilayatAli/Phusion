@@ -8,15 +8,6 @@ public class ButtonTrigger : TriggerBase
     public LayerMask mask;
     public bool triggered = false;
     
-    // for visuals so players know they have successfully activated a button
-    public SpriteRenderer sprite;
-    [SerializeField] private Sprite untriggeredButtonSprite;
-    [SerializeField] private Sprite triggeredButtonSprite;
-
-    private void Start()
-    {
-        sprite = GetComponent<SpriteRenderer>();
-    }
 
     private void FixedUpdate()
     {
@@ -28,7 +19,6 @@ public class ButtonTrigger : TriggerBase
             {
                 foreach (Collider2D col in _)
                 {
-                    Debug.Log("button triggered");
                     if (col.TryGetComponent(out TriggerTag ttag))
                     {
                         if (ttag.newTag == triggerTag)
@@ -39,7 +29,6 @@ public class ButtonTrigger : TriggerBase
                             {
                                 rb.linearVelocity = Vector2.zero;
                             }
-                            sprite.sprite = triggeredButtonSprite;
                         }
                         break;
                     }
@@ -50,10 +39,8 @@ public class ButtonTrigger : TriggerBase
         {
             if (triggered)
             {
-                Debug.Log("button untriggered");
                 triggered = false;
                 onTriggerOff.Invoke();
-                sprite.sprite = untriggeredButtonSprite;
             }
         }
     }

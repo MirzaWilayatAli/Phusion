@@ -3927,6 +3927,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1725407817002123893, guid: f8e20447affc14d468a7bcde34729540, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 340c195d03174104ba525ac6b087e24f, type: 2}
     - target: {fileID: 1767758208074123071, guid: f8e20447affc14d468a7bcde34729540, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20.764
@@ -4055,6 +4059,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7264570827461713564, guid: f8e20447affc14d468a7bcde34729540, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eb695b0ae4a7f8f4ebde843cc056367d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -47189,9 +47197,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1073741824
   triggered: 0
-  sprite: {fileID: 0}
-  untriggeredButtonSprite: {fileID: 3757228131192261062, guid: 209497c668781bc4094dac8a02d4c6c3, type: 3}
-  triggeredButtonSprite: {fileID: 21300000, guid: ed59ba78c4cec1f49b4aef89f62acdc6, type: 3}
 --- !u!212 &1152060696
 SpriteRenderer:
   serializedVersion: 2
@@ -47249,7 +47254,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1152060697
 Transform:
@@ -49723,6 +49728,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3031104763317389735, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031104763317389735, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7065215
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031104763317389735, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
+      propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3031104763317389735, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 27da070bf87c1104bade6c081d844a54, type: 2}
     - target: {fileID: 3207960034360630032, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2
@@ -49738,6 +49759,18 @@ PrefabInstance:
     - target: {fileID: 3207960034360630032, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621703115773055709, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621703115773055709, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7065215
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621703115773055709, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
+      propertyPath: m_Color.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7054382521424683264, guid: 1d716a5fcbb1d60498707e91aa69bd92, type: 3}
       propertyPath: m_Name
@@ -49868,6 +49901,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1490623226603910108, guid: 01d17e8f65c2fce488127ade50baa6a3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.26226407
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490623226603910108, guid: 01d17e8f65c2fce488127ade50baa6a3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6557233
+      objectReference: {fileID: 0}
+    - target: {fileID: 1490623226603910108, guid: 01d17e8f65c2fce488127ade50baa6a3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2982579464837347163, guid: 01d17e8f65c2fce488127ade50baa6a3, type: 3}
       propertyPath: m_Name
       value: PosiEnergyBarrier
@@ -49912,6 +49957,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8177971268504313958, guid: 01d17e8f65c2fce488127ade50baa6a3, type: 3}
+      propertyPath: m_Color.b
+      value: 0.26226407
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177971268504313958, guid: 01d17e8f65c2fce488127ade50baa6a3, type: 3}
+      propertyPath: m_Color.g
+      value: 0.6557233
+      objectReference: {fileID: 0}
+    - target: {fileID: 8177971268504313958, guid: 01d17e8f65c2fce488127ade50baa6a3, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -49930,6 +49987,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1725407817002123893, guid: f8e20447affc14d468a7bcde34729540, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 340c195d03174104ba525ac6b087e24f, type: 2}
     - target: {fileID: 1767758208074123071, guid: f8e20447affc14d468a7bcde34729540, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.35
@@ -49994,6 +50055,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7264570827461713564, guid: f8e20447affc14d468a7bcde34729540, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: eb695b0ae4a7f8f4ebde843cc056367d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -50216,9 +50281,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1073741824
   triggered: 0
-  sprite: {fileID: 0}
-  untriggeredButtonSprite: {fileID: 3757228131192261062, guid: 209497c668781bc4094dac8a02d4c6c3, type: 3}
-  triggeredButtonSprite: {fileID: 21300000, guid: ed59ba78c4cec1f49b4aef89f62acdc6, type: 3}
 --- !u!212 &1947694176
 SpriteRenderer:
   serializedVersion: 2
@@ -50276,7 +50338,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1947694177
 Transform:

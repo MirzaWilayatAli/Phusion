@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ed59ba78c4cec1f49b4aef89f62acdc6
+guid: f750a22995d241e4c9c05730ec383a00
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2153363918599022284
-    second: TriggerButtonPressed_0
+      213: 1317616457627871979
+    second: TriggerButton RED_TopSprite_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -51,7 +51,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 128
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -72,7 +72,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: TriggerButtonPressed_0
+      name: TriggerButton RED_TopSprite_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 128
-        height: 37
+        x: 69
+        y: 74
+        width: 359
+        height: 103
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43913cfcce6bd12e0800000000000000
-      internalID: -2153363918599022284
+      spriteID: bea2e1bef2d194210800000000000000
+      internalID: 1317616457627871979
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      TriggerButtonPressed_0: -2153363918599022284
+      TriggerButton RED_TopSprite_0: 1317616457627871979
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
