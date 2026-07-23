@@ -1118,7 +1118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RebindHandler
   rebindAction: {fileID: -5724477366271873121, guid: cd1a3190aaee100489f04a5968861250, type: 3}
-  index: 2
+  groupName: 
 --- !u!114 &160975319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1172,7 +1172,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: WASD
+          m_StringArgument: Gamepad
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &160975320
@@ -1265,8 +1265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d22165a9371de54496b2bb1c10a17e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RebindHandler
-  rebindAction: {fileID: -5724477366271873121, guid: cd1a3190aaee100489f04a5968861250, type: 3}
-  index: 2
+  rebindAction: {fileID: -5724477366271873121, guid: e70686bc24a127241bf697b4e2e02b4f, type: 3}
+  groupName: 
 --- !u!114 &162679873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1320,7 +1320,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Arrows
+          m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &162679874
@@ -16337,6 +16337,10 @@ PrefabInstance:
       propertyPath: playDeathSFX.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 8441701818911182325, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
+      propertyPath: m_Actions
+      value: 
+      objectReference: {fileID: -944628639613478452, guid: e70686bc24a127241bf697b4e2e02b4f, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
