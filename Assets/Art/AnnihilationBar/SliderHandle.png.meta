@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 16ab150b00ef3694ead7a2775056750a
+guid: 040cc0be05be46b46889005d02f223a8
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3259548300371644414
-    second: SliderHandle_0
+      213: 2072555171059551938
+    second: AnnihilationBarSliderHandle_0
   - first:
-      213: 541611438770445402
-    second: SliderHandle_1
+      213: -2273943626131484210
+    second: AnnihilationBarSliderHandle_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -103,13 +103,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SliderHandle_0
+      name: AnnihilationBarSliderHandle_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 360
-        width: 248
-        height: 152
+        y: 241
+        width: 176
+        height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +118,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 200be143712c3c2d0800000000000000
-      internalID: -3259548300371644414
+      spriteID: 2ce476c72f133cc10800000000000000
+      internalID: 2072555171059551938
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SliderHandle_1
+      name: AnnihilationBarSliderHandle_1
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 248
-        height: 152
+        width: 176
+        height: 123
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a5c5336ebb0348700800000000000000
-      internalID: 541611438770445402
+      spriteID: ec15b25e1545170e0800000000000000
+      internalID: -2273943626131484210
       vertices: []
       indices: 
       edges: []
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      SliderHandle_0: -3259548300371644414
-      SliderHandle_1: 541611438770445402
+      AnnihilationBarSliderHandle_0: 2072555171059551938
+      AnnihilationBarSliderHandle_1: -2273943626131484210
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
