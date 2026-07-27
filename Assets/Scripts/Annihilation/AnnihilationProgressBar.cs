@@ -30,6 +30,9 @@ public class AnnihilationProgressBar : MonoBehaviour
     [SerializeField] private bool isTimerRunning;
     [SerializeField] private bool isTimerCompleted;
     
+    [SerializeField] private Image sliderFill;
+    [SerializeField] private Color startColor;
+    [SerializeField] private Color endColor;
 
     private void Update()
     {
@@ -38,7 +41,13 @@ public class AnnihilationProgressBar : MonoBehaviour
 
         timer += Time.deltaTime;
 
-        playerSlider.value = (timer / duration);
+        playerSlider.value = timer / duration;
+
+        // Calculate tint amount
+        float t = Mathf.InverseLerp(0.7f, 1f, playerSlider.value);
+
+        // Smoothly change from white to red
+        sliderFill.color = Color.Lerp(startColor, endColor, t);
 
         if (playerSlider.value >= playerSlider.maxValue)
         {
@@ -66,6 +75,7 @@ public class AnnihilationProgressBar : MonoBehaviour
         isTimerRunning = true;
 
         playerSlider.value = 0f;
+        sliderFill.color = startColor;
 
         GenerateRandomActivationZone();
         UpdateZoneVisual();
@@ -77,6 +87,7 @@ public class AnnihilationProgressBar : MonoBehaviour
         timer = 0f;
         isTimerCompleted = false;
         playerSlider.value = 0f;
+        sliderFill.color = startColor;
     }
 
     public bool IsWithinActivationZone()
