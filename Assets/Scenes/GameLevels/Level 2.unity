@@ -46052,6 +46052,68 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1001 &1765039147
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2281010683081832817, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_Name
+      value: BreakableWall-Debris-SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+--- !u!82 &1765039148 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7024685194572575128, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+  m_PrefabInstance: {fileID: 1765039147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1778079567
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46815,6 +46877,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   unbrokenWall: {fileID: 1919070577}
   brokenWall: {fileID: 478865612}
+  playSfxBrokenWall:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1765039148}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  cameraShake: {fileID: 1254637618168352861}
+  shakeDuration: 0.5
 --- !u!1 &1940151830
 GameObject:
   m_ObjectHideFlags: 0
@@ -48197,6 +48276,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8cc97619d97e44409fba1bb6d4072cd, type: 3}
+--- !u!114 &1254637618168352861 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6610591713634206302, guid: d8cc97619d97e44409fba1bb6d4072cd, type: 3}
+  m_PrefabInstance: {fileID: 1254637618168352860}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bb4d3ee3c774c945b50e7f47250315b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CameraShake
 --- !u!1001 &2063209667277460304
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49170,6 +49260,7 @@ SceneRoots:
   - {fileID: 2063209667277460304}
   - {fileID: 7197970559079408785}
   - {fileID: 1070503693}
+  - {fileID: 1765039147}
   - {fileID: 2006305564}
   - {fileID: 2052418933}
   - {fileID: 2698158577428617033}

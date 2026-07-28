@@ -47,10 +47,9 @@ MonoBehaviour:
   playerOne: {fileID: 0}
   playerTwo: {fileID: 0}
   loader: {fileID: 0}
-  warningImage: {fileID: 0}
   annihilationCanvas: {fileID: 0}
   annihilationDistance: 2
   shakeStartDistance: 2
   annihilationDelay: 4
-  minShakeMagnitude: 0.005
-  maxShakeMagnitude: 0.015
+  minShakeMagnitude: 0.01
+  maxShakeMagnitude: 0.02

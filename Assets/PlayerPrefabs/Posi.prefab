@@ -285,10 +285,10 @@ MonoBehaviour:
   startMagneticAbilitySFX:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6599492446064479369}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4980303384664089572}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -300,10 +300,10 @@ MonoBehaviour:
   stopMagneticAbilitySFX:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6599492446064479369}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
+      - m_Target: {fileID: 4980303384664089572}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Stop
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -5850,7 +5850,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5521824099296056444
 Transform:
   m_ObjectHideFlags: 0
@@ -5878,7 +5878,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: cf458ac6d89595040949c92f6cd9b139, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -5978,4 +5978,4 @@ MonoBehaviour:
   globalAudioManager: {fileID: 0}
   audioSource: {fileID: 4980303384664089572}
   audioSourceType: 1
-  playOnInitialise: 1
+  playOnInitialise: 0

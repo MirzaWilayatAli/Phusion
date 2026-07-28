@@ -5,7 +5,6 @@ public class CameraShake : MonoBehaviour
 {
     [Header("Shake Settings")]
     [SerializeField] private float defaultMagnitude = 0.05f;
-    
     private Coroutine shakeCoroutine;
 
     private void OnEnable()
@@ -21,7 +20,6 @@ public class CameraShake : MonoBehaviour
             shakeCoroutine = null;
         }
     }
-    
 
     private IEnumerator ShakeCoroutine()
     {

@@ -2683,6 +2683,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 255210770}
   m_CullTransparentMesh: 1
+--- !u!82 &269973841 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7024685194572575128, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+  m_PrefabInstance: {fileID: 8435549585955523011}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &301428415
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4051,6 +4056,14 @@ PrefabInstance:
       propertyPath: playerTwo
       value: 
       objectReference: {fileID: 2128314452}
+    - target: {fileID: 8022577120232784239, guid: 71094034562ff7c4d9b34bee15ca3f8a, type: 3}
+      propertyPath: maxShakeMagnitude
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8022577120232784239, guid: 71094034562ff7c4d9b34bee15ca3f8a, type: 3}
+      propertyPath: minShakeMagnitude
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 8022577120232784239, guid: 71094034562ff7c4d9b34bee15ca3f8a, type: 3}
       propertyPath: annihilationCanvas
       value: 
@@ -6709,6 +6722,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BreakableWall
   unbrokenWall: {fileID: 759477021}
   brokenWall: {fileID: 367900636}
+  playSfxBrokenWall:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 269973841}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!66 &759477029
 CompositeCollider2D:
   m_ObjectHideFlags: 0
@@ -13962,6 +13990,10 @@ PrefabInstance:
     - target: {fileID: 2770801925294604169, guid: d8cc97619d97e44409fba1bb6d4072cd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6610591713634206302, guid: d8cc97619d97e44409fba1bb6d4072cd, type: 3}
+      propertyPath: shakeDuration
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -44010,6 +44042,63 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7855f49490fc968488a74e64e48af19d, type: 3}
+--- !u!1001 &8435549585955523011
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2281010683081832817, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_Name
+      value: BreakableWall-Debris-SFX
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8693964091179657217, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 76bc480137a2dc343bab5b54311fbe36, type: 3}
 --- !u!1001 &9123408936698878494
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -44094,6 +44183,7 @@ SceneRoots:
   - {fileID: 557994514}
   - {fileID: 1603432793}
   - {fileID: 1446257104}
+  - {fileID: 8435549585955523011}
   - {fileID: 575144425}
   - {fileID: 1307755712}
   - {fileID: 1998295780}
