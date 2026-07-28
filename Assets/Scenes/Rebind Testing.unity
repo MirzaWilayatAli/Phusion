@@ -179,7 +179,7 @@ MonoBehaviour:
   m_text: This is Posi, and she has a positive charge
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -276,7 +276,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1375,7 +1375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1534551554654575082, guid: e36d7c2ab9a8ad64797820071e5ced65, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1992862257665407369, guid: e36d7c2ab9a8ad64797820071e5ced65, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1421,7 +1421,8 @@ PrefabInstance:
       propertyPath: InitialModule.startLifetime.minMaxState
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2638414732072832367, guid: e36d7c2ab9a8ad64797820071e5ced65, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
@@ -1431,6 +1432,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1534551554654575082, guid: e36d7c2ab9a8ad64797820071e5ced65, type: 3}
   m_PrefabInstance: {fileID: 165225694}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &165225696 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6499092500480857005, guid: e36d7c2ab9a8ad64797820071e5ced65, type: 3}
+  m_PrefabInstance: {fileID: 165225694}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165225695}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19805e4540a941b2afe1456977b97a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnihilationVFXStart
 --- !u!1 &183649895
 GameObject:
   m_ObjectHideFlags: 0
@@ -3180,7 +3192,7 @@ MonoBehaviour:
   m_text: This is Eli, and he has a negative charge
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3277,7 +3289,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5409,7 +5421,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2811996445123353296, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2811996445123353296, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -5434,7 +5446,7 @@ PrefabInstance:
     - target: {fileID: 2811996445123353296, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 165225695}
+      objectReference: {fileID: 165225696}
     - target: {fileID: 2811996445123353296, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -5469,7 +5481,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2811996445123353296, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: StartFX
       objectReference: {fileID: 0}
     - target: {fileID: 2811996445123353296, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -5501,7 +5513,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2811996445123353296, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: AnnihilationVFXStart, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 2811996445123353296, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -5773,7 +5785,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050952503873350912, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 6
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 9050952503873350912, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -5802,7 +5814,7 @@ PrefabInstance:
     - target: {fileID: 9050952503873350912, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 165225695}
+      objectReference: {fileID: 165225696}
     - target: {fileID: 9050952503873350912, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -5841,7 +5853,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050952503873350912, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: SetActive
+      value: StartFX
       objectReference: {fileID: 0}
     - target: {fileID: 9050952503873350912, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
@@ -5881,7 +5893,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9050952503873350912, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: UnityEngine.GameObject, UnityEngine
+      value: AnnihilationVFXStart, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 9050952503873350912, guid: 7380a973b2c43054cbcf34f2534cefe1, type: 3}
       propertyPath: onActivationFailed.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
@@ -6176,7 +6188,7 @@ MonoBehaviour:
   m_text: Jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -6273,7 +6285,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -6357,7 +6369,7 @@ MonoBehaviour:
   m_text: Tutorial
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8040,7 +8052,7 @@ MonoBehaviour:
   m_text: Push/Pull
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8137,7 +8149,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8358,7 +8370,7 @@ MonoBehaviour:
   m_text: Movement
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8455,7 +8467,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -8669,7 +8681,7 @@ MonoBehaviour:
     matching color can pass through them, while all objects can pass through
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -8766,7 +8778,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9050,7 +9062,7 @@ MonoBehaviour:
   m_text: Confirm Psion Form
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9147,7 +9159,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -9622,7 +9634,7 @@ MonoBehaviour:
   m_text: Confirm Psion Form
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -9719,7 +9731,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -11226,7 +11238,7 @@ MonoBehaviour:
   m_text: Movement
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -11323,7 +11335,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -13239,7 +13251,7 @@ MonoBehaviour:
   m_text: Push/Pull
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -13336,7 +13348,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14222,17 +14234,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33e4088ebea9d74448cb3058fe0aef50, type: 3}
---- !u!114 &1659534875 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1635169147253155342, guid: 33e4088ebea9d74448cb3058fe0aef50, type: 3}
-  m_PrefabInstance: {fileID: 1659534874}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fab5edafd3404314ebb334998f0dad65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GlobalAudioManager
 --- !u!1001 &1673867745
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14834,7 +14835,7 @@ PrefabInstance:
     - target: {fileID: 3478741106399262245, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1659534875}
+      objectReference: {fileID: 0}
     - target: {fileID: 3478741106399262245, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_MasterVolume
@@ -14970,7 +14971,7 @@ PrefabInstance:
     - target: {fileID: 5770540530955451333, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1659534875}
+      objectReference: {fileID: 0}
     - target: {fileID: 5770540530955451333, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_SfxVolume
@@ -15174,7 +15175,7 @@ PrefabInstance:
     - target: {fileID: 8836667667855727035, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 1659534875}
+      objectReference: {fileID: 0}
     - target: {fileID: 8836667667855727035, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_OnValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: set_MusicVolume
@@ -15828,7 +15829,7 @@ MonoBehaviour:
   m_text: Jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -15925,7 +15926,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -43414,7 +43415,7 @@ MonoBehaviour:
     field, launching you upward
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
-  m_sharedMaterial: {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -43511,7 +43512,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 7289412566646610093, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
+  - {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
