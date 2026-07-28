@@ -9959,7 +9959,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: a0c1b452cac8fef46b039d1cdaff2931, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -10059,7 +10059,7 @@ MonoBehaviour:
   globalAudioManager: {fileID: 0}
   audioSource: {fileID: 0}
   audioSourceType: 1
-  playOnInitialise: 1
+  playOnInitialise: 0
 --- !u!1 &1350821925160062348
 GameObject:
   m_ObjectHideFlags: 0
@@ -14963,6 +14963,39 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
+--- !u!1 &1471851946905504543
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8547354631377754130}
+  m_Layer: 0
+  m_Name: VFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &8547354631377754130
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1471851946905504543}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 472.6991, y: 290.09473, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2765533225282773284}
+  - {fileID: 3507709351380207750}
+  m_Father: {fileID: 1992862257665407369}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1534551554654575082
 GameObject:
   m_ObjectHideFlags: 0
@@ -14973,6 +15006,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1992862257665407369}
   - component: {fileID: 1964800840832294292}
+  - component: {fileID: 6499092500480857005}
   m_Layer: 0
   m_Name: AnnihilationVFX
   m_TagString: Untagged
@@ -14993,9 +15027,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 2765533225282773284}
-  - {fileID: 3507709351380207750}
   - {fileID: 3105505452607695053}
+  - {fileID: 8547354631377754130}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1964800840832294292
@@ -15011,6 +15044,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CenterOnEnable
   targetCamera: {fileID: 0}
+--- !u!114 &6499092500480857005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1534551554654575082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19805e4540a941b2afe1456977b97a04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnihilationVFXStart
+  annihilationVfx: {fileID: 1471851946905504543}
+  annihilationSfx: {fileID: 7228572520080401415}
 --- !u!1 &1638912071301039416
 GameObject:
   m_ObjectHideFlags: 0
@@ -30154,14 +30201,14 @@ Transform:
   m_GameObject: {fileID: 5862221166138615918}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.40000004, z: 0.40000004}
+  m_LocalPosition: {x: -472.6991, y: -290.09473, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.40000007, z: 0.40000007}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1187719768916453326}
   - {fileID: 6361953145056237654}
   - {fileID: 88864940156088952}
-  m_Father: {fileID: 1992862257665407369}
+  m_Father: {fileID: 8547354631377754130}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &1139473276586788324
 ParticleSystem:
@@ -35060,15 +35107,15 @@ Transform:
   m_GameObject: {fileID: 7059921852178587288}
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.4, y: 0.40000004, z: 0.40000004}
+  m_LocalPosition: {x: -472.6991, y: -290.09473, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.40000007, z: 0.40000007}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4246485441924898904}
   - {fileID: 4826098111369009937}
   - {fileID: 1550459352059409567}
   - {fileID: 4224315456180863103}
-  m_Father: {fileID: 1992862257665407369}
+  m_Father: {fileID: 8547354631377754130}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!198 &5610932155614131628
 ParticleSystem:

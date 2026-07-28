@@ -52,11 +52,11 @@ public class AudioSourceManager : MonoBehaviour
 
     private void OnDisable()
     {
-        globalAudioManager.VolumeChanged -= VolumeChanged;
+        if(globalAudioManager) globalAudioManager.VolumeChanged -= VolumeChanged;
     }
 
     private void OnDestroy()
     {
-        globalAudioManager.VolumeChanged -= VolumeChanged;
+        if(globalAudioManager) globalAudioManager.VolumeChanged -= VolumeChanged;
     }
 }
