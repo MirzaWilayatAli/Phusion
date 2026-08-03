@@ -1,6 +1,5 @@
 using System;
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.Users;
 
@@ -17,13 +16,20 @@ public class DeviceAssigner : MonoBehaviour
     [Header("Player References")]
     public PlayerInput player1;
     public PlayerInput player2;
-    
+
     [Header("Misc")]
     public ControlType controlType = ControlType.Unknown;
     public Action onTypeChange;
-    
+
     private void OnEnable()
     {
+        // Completely disable mouse input
+        if (Mouse.current != null)
+            InputSystem.DisableDevice(Mouse.current);
+
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+
         InputSystem.onDeviceChange += OnDeviceChange;
         AutoAssignDevices();
     }
@@ -31,6 +37,9 @@ public class DeviceAssigner : MonoBehaviour
     private void OnDisable()
     {
         InputSystem.onDeviceChange -= OnDeviceChange;
+
+        if (Mouse.current != null)
+            InputSystem.EnableDevice(Mouse.current);
     }
 
     private void OnDeviceChange(InputDevice device, InputDeviceChange change)
@@ -51,8 +60,6 @@ public class DeviceAssigner : MonoBehaviour
         int gamepadCount = Gamepad.all.Count;
         bool keyboardExists = Keyboard.current != null;
 
-        Debug.Log($"Keyboard: {keyboardExists}, Gamepads: {gamepadCount}");
-
         if (keyboardExists && gamepadCount == 0)
         {
             controlType = ControlType.SharedKeyboard;
@@ -70,9 +77,9 @@ public class DeviceAssigner : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("No valid control setup found.");
             controlType = ControlType.Unknown;
         }
+
         onTypeChange?.Invoke();
     }
 
@@ -92,8 +99,6 @@ public class DeviceAssigner : MonoBehaviour
 
         player1.SwitchCurrentControlScheme("WASD", keyboard);
         player2.SwitchCurrentControlScheme("Arrows", keyboard);
-
-        Debug.Log("Shared Keyboard Assigned");
     }
 
     // ----------------------------
@@ -109,8 +114,6 @@ public class DeviceAssigner : MonoBehaviour
 
         player1.SwitchCurrentControlScheme("WASD", keyboard);
         player2.SwitchCurrentControlScheme("Gamepad", gamepad);
-
-        Debug.Log("Keyboard + Gamepad Assigned");
     }
 
     // ----------------------------
@@ -128,7 +131,5 @@ public class DeviceAssigner : MonoBehaviour
 
         player1.SwitchCurrentControlScheme("Gamepad", gamepads[0]);
         player2.SwitchCurrentControlScheme("Gamepad", gamepads[1]);
-
-        Debug.Log("Two Gamepads Assigned");
     }
 }

@@ -243,6 +243,65 @@
                     "isPartOfComposite": false
                 }
             ]
+        },
+        {
+            "name": "UIControl",
+            "id": "13ef0cf8-8756-435f-98f9-326528d6b18f",
+            "actions": [
+                {
+                    "name": "PauseMenuOpenClose",
+                    "type": "Button",
+                    "id": "1811f6af-6daf-4951-b31f-6fc903d9a5b7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "RestartLevel",
+                    "type": "Button",
+                    "id": "c66260a1-7c0f-4bae-b2eb-2a1fdc59ecc7",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8d4273c0-e93d-443b-a04e-dfd2164f1f3e",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";UIControls",
+                    "action": "PauseMenuOpenClose",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a1e1cd5a-e7d3-4355-8882-ff1ce9fa9207",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";UIControls",
+                    "action": "PauseMenuOpenClose",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "dd7b397a-a169-4faf-a3a2-26ef1cce6198",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";UIControls",
+                    "action": "RestartLevel",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
         }
     ],
     "controlSchemes": [
@@ -272,6 +331,22 @@
             "name": "Arrows",
             "bindingGroup": "Arrows",
             "devices": [
+                {
+                    "devicePath": "<Keyboard>",
+                    "isOptional": true,
+                    "isOR": false
+                }
+            ]
+        },
+        {
+            "name": "UIControls",
+            "bindingGroup": "UIControls",
+            "devices": [
+                {
+                    "devicePath": "<Gamepad>",
+                    "isOptional": true,
+                    "isOR": false
+                },
                 {
                     "devicePath": "<Keyboard>",
                     "isOptional": true,

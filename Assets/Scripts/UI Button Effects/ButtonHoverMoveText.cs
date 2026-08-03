@@ -1,16 +1,20 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class ButtonHoverMoveText : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ButtonHoverMoveText : MonoBehaviour,
+    IPointerEnterHandler,
+    IPointerExitHandler,
+    ISelectHandler,
+    IDeselectHandler
 {
-    public RectTransform buttonText;
-    public float moveDistance = 20f;
+    [SerializeField] private RectTransform buttonText;
+    [SerializeField] private float moveDistance = 20f;
+    [SerializeField] private float moveSpeed = 8f;
 
     private Vector2 originalPosition;
-
     private Vector2 targetPosition;
 
-    private void Start()
+    private void Awake()
     {
         originalPosition = buttonText.anchoredPosition;
         targetPosition = originalPosition;
@@ -21,22 +25,43 @@ public class ButtonHoverMoveText : MonoBehaviour, IPointerEnterHandler, IPointer
         buttonText.anchoredPosition = Vector2.Lerp(
             buttonText.anchoredPosition,
             targetPosition,
-            Time.deltaTime * 8f
+            Time.deltaTime * moveSpeed
         );
     }
-
+    
     public void OnPointerEnter(PointerEventData eventData)
     {
-        targetPosition = originalPosition + Vector2.right * moveDistance;
+        HoverEnter();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        targetPosition = originalPosition;
+        HoverExit();
     }
-    private void OnDisable()
+    
+    public void OnSelect(BaseEventData eventData)
+    {
+        HoverEnter();
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        HoverExit();
+    }
+    
+    public void HoverEnter()
+    {
+        targetPosition = originalPosition + Vector2.right * moveDistance;
+    }
+
+    public void HoverExit()
     {
         targetPosition = originalPosition;
+    }
+
+    private void OnDisable()
+    {
+        HoverExit();
         buttonText.anchoredPosition = originalPosition;
     }
 }
