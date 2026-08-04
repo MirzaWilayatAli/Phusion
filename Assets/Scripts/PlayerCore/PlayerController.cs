@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
         {
             _ability = true;
             
+            RumbleManager.Instance.StartRumble(playerID, 0.1f, 0.3f);
             startMagneticAbilitySFX.Invoke();
             
             if(animator) animator.SetBool("Ability", true);
@@ -112,6 +113,7 @@ public class PlayerController : MonoBehaviour
             
             _ability = false;
             
+            RumbleManager.Instance.StopRumble(playerID);
             stopMagneticAbilitySFX.Invoke();
             
             if (_controlledObject)
@@ -172,8 +174,11 @@ public class PlayerController : MonoBehaviour
             playerAnimations.Impact();
 
             if (_airTime >= 0.65f)
+            {
+                RumbleManager.Instance.RumblePulse(playerID, 0.25f, 0.75f);
                 hitGroundTrigger?.Invoke();
-
+            }
+            
             _airTime = 0f;
         }
             

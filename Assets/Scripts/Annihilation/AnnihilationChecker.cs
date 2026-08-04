@@ -91,6 +91,10 @@ public class AnnihilationChecker : MonoBehaviour
         if (cameraShake == null) return;
 
         cameraShake.enabled = true;
+        
+        // start rumble on any gamepads that are connected
+        RumbleManager.Instance.StartRumble(0, 0.1f, 0.3f);
+        RumbleManager.Instance.StartRumble(1, 0.1f, 0.3f);
 
         float t = 1f - Mathf.Clamp01((distance - annihilationDistance) / (shakeStartDistance - annihilationDistance));
 
@@ -109,6 +113,10 @@ public class AnnihilationChecker : MonoBehaviour
 
     private void DisableEffects()
     {
+        // stop rumble on any connected gamepads
+        RumbleManager.Instance.StopRumble(0);
+        RumbleManager.Instance.StopRumble(1);
+        
         if(annihilationCanvas) annihilationCanvas.SetActive(false);
 
         if (cameraShake != null)
