@@ -2830,7 +2830,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1149071005}
+      - m_Target: {fileID: 2698158577428617036}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -2845,6 +2845,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1814876041}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Stop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 6
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2698158577428617035}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -45822,6 +45834,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 190544db560673f4bb94ede8491540a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PsionOrbiter
+--- !u!1 &1052410627
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1052410629}
+  - component: {fileID: 1052410628}
+  m_Layer: 0
+  m_Name: RumbleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1052410628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052410627}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a1321593b9c5944f9845c7bf20dcffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RumbleManager
+  defaultDuration: 0.1
+--- !u!4 &1052410629
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1052410627}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1070503690
 GameObject:
   m_ObjectHideFlags: 0
@@ -52576,6 +52633,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 19805e4540a941b2afe1456977b97a04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AnnihilationVFXStart
+--- !u!82 &2698158577428617035 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 7228572520080401415, guid: e36d7c2ab9a8ad64797820071e5ced65, type: 3}
+  m_PrefabInstance: {fileID: 2698158577428617033}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2698158577428617036 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1471851946905504543, guid: e36d7c2ab9a8ad64797820071e5ced65, type: 3}
+  m_PrefabInstance: {fileID: 2698158577428617033}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3223258619527293844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -53502,3 +53569,4 @@ SceneRoots:
   - {fileID: 2052418933}
   - {fileID: 2698158577428617033}
   - {fileID: 1778079567}
+  - {fileID: 1052410629}

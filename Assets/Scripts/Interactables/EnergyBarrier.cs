@@ -28,5 +28,11 @@ public class EnergyBarrier : MonoBehaviour
             lastPlayTime = Time.time;
             globalEventCalls.energyBarrierImpact.Invoke();
         }
+        
+        PlayerController player = collision.gameObject.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            RumbleManager.Instance.RumblePulse(player.playerID,0.25f,0.75f);
+        }
     }
 }

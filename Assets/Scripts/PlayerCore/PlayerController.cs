@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     public AnnihilationChecker  AnnihilationChecker;
     
     [Header("Psion Form")]
-    [SerializeField] private int playerID; // assign 0 to Posi and 1 to Eli
+    [SerializeField] public int playerID; // assign 0 to Posi and 1 to Eli
     [SerializeField] private PsionFormManager psionFormManager;
     [SerializeField] private PsionFormInitiator psionFormInitiator;
 
@@ -175,7 +175,7 @@ public class PlayerController : MonoBehaviour
 
             if (_airTime >= 0.65f)
             {
-                RumbleManager.Instance.RumblePulse(playerID, 0.25f, 0.75f);
+                RumbleManager.Instance.RumblePulse(playerID, 0.5f, 1f);
                 hitGroundTrigger?.Invoke();
             }
             
