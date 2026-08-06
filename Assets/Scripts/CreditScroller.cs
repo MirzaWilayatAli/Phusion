@@ -1,37 +1,32 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
-public class CreditScroller : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class CreditScroller : MonoBehaviour
 {
-        public float step = 60f;
-        public Transform startPos;
-        public Transform endPos;
+    [Header("Scrolling")]
+    [SerializeField] private float autoScrollSpeed = 60f;
 
-        private bool _paused;
-        private float _step;
+    private void Update()
+    {
+        if (IsPauseHeld())
+            return;
 
-        public void OnPointerEnter(PointerEventData eventData)
+        transform.position += Vector3.down * autoScrollSpeed * Time.deltaTime;
+    }
+
+    private bool IsPauseHeld()
+    {
+        // Keyboard Space
+        if (Keyboard.current != null && Keyboard.current.spaceKey.isPressed)
+            return true;
+
+        // Any connected gamepad X button
+        foreach (Gamepad gamepad in Gamepad.all)
         {
-                _paused = true;
+            if (gamepad.buttonWest.isPressed)
+                return true;
         }
 
-        public void OnPointerExit(PointerEventData eventData)
-        {
-                _paused = false;
-        }
-
-        private void Awake()
-        {
-                transform.position = startPos.position;
-        }
-
-        private void OnDisable()
-        {
-                transform.position = startPos.position;
-        }
-
-        private void FixedUpdate()
-        {
-                if (!_paused) transform.position = Vector3.Distance(transform.position, endPos.position) <= 0.15f ? startPos.position : Vector3.MoveTowards(transform.position, endPos.position, step * Time.fixedDeltaTime);
-        }
+        return false;
+    }
 }
