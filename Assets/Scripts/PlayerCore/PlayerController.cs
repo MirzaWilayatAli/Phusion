@@ -150,6 +150,14 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Please move closer to begin Annihilation");
     }
+    
+    public void Pause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            PauseMenuManager.Instance.TogglePause();
+        }
+    }
 
     void FixedUpdate()
     {

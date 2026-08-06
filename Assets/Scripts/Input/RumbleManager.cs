@@ -9,6 +9,7 @@ public class RumbleManager : MonoBehaviour
     [Header("Default Settings")]
     [SerializeField] private float defaultDuration = 0.25f;
 
+    private bool rumbleEnabled = true;
     private readonly Gamepad[] playerPads = new Gamepad[2];
     private readonly Coroutine[] rumbleCoroutines = new Coroutine[2];
 
@@ -21,6 +22,21 @@ public class RumbleManager : MonoBehaviour
         }
 
         Instance = this;
+        
+        DontDestroyOnLoad(gameObject);
+    }
+    
+    public bool RumbleEnabled => rumbleEnabled;
+    
+
+    public void SetRumbleEnabled(bool enabled)
+    {
+        Debug.Log($"Rumble set to {enabled}");
+
+        rumbleEnabled = enabled;
+
+        if (!enabled)
+            StopAllRumble();
     }
     
     // Called by your DeviceAssigner whenever a player gets assigned a controller.
@@ -45,6 +61,9 @@ public class RumbleManager : MonoBehaviour
 
     public void StartRumble(int playerID, float lowFrequency, float highFrequency)
     {
+        if (!rumbleEnabled)
+            return;
+
         if (!IsValidPlayer(playerID))
             return;
 
@@ -82,6 +101,9 @@ public class RumbleManager : MonoBehaviour
 
     public void RumblePulse(int playerID, float lowFrequency, float highFrequency, float duration)
     {
+        if (!rumbleEnabled)
+            return;
+
         if (!IsValidPlayer(playerID))
             return;
 

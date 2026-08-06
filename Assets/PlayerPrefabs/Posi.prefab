@@ -196,13 +196,37 @@ MonoBehaviour:
     m_ActionId: a944a210-a7ff-4fb7-8be2-417ec765c15c
     m_ActionName: 'Gameplay/PsionForm[/Keyboard/e,/Keyboard/enter]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 1811f6af-6daf-4951-b31f-6fc903d9a5b7
-    m_ActionName: 'UIControl/PauseMenuOpenClose[/Keyboard/escape,/XInputControllerWindows/start]'
+      m_Calls:
+      - m_Target: {fileID: 6846171359095035236}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 635c7b3b-9ae7-4faf-9d11-a321654ab32d
+    m_ActionName: 'Gameplay/PauseMenuOpenClose[/Keyboard/escape,/XInputControllerWindows/start]'
   - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c66260a1-7c0f-4bae-b2eb-2a1fdc59ecc7
-    m_ActionName: 'UIControl/RestartLevel[/Keyboard/r]'
+      m_Calls:
+      - m_Target: {fileID: 6846171359095035236}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c917f1d3-0b72-4d84-ade1-14aacfc55c6d
+    m_ActionName: 'PauseUI/ClosePauseMenu[/Keyboard/escape,/XInputControllerWindows/start]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
   m_DefaultActionMap: Gameplay

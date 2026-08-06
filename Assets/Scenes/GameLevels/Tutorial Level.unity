@@ -5539,51 +5539,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &632746945
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 632746947}
-  - component: {fileID: 632746946}
-  m_Layer: 0
-  m_Name: RumbleManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &632746946
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632746945}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2a1321593b9c5944f9845c7bf20dcffa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::RumbleManager
-  defaultDuration: 0.1
---- !u!4 &632746947
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 632746945}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &678203597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10829,7 +10784,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1297199031}
   - component: {fileID: 1297199032}
-  - component: {fileID: 1297199033}
   m_Layer: 0
   m_Name: PAUSEMENU
   m_TagString: Untagged
@@ -10866,43 +10820,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f2eddc4abdc7d4098e5edc15528858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuManager
-  pauseAction: {fileID: -1126211563328113861, guid: cd1a3190aaee100489f04a5968861250, type: 3}
   pauseMenu: {fileID: 1449908283}
   settingsMenu: {fileID: 1821902172}
   player1Input: {fileID: 2128314453}
   player2Input: {fileID: 2022703968}
   pauseMenuFirstSelected: {fileID: 686566993}
   settingsMenuFirstSelected: {fileID: 1821902174}
---- !u!114 &1297199033
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297199030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: cd1a3190aaee100489f04a5968861250, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: UIControls
-  m_DefaultActionMap: UIControl
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1001 &1301712275
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11064,11 +10987,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 6099572391220928662, guid: ce34677674a75da479deb056ebe89957, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 960
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6099572391220928662, guid: ce34677674a75da479deb056ebe89957, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 540
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6099572391220928662, guid: ce34677674a75da479deb056ebe89957, type: 3}
       propertyPath: m_LocalPosition.z
@@ -15313,6 +15236,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -46
       objectReference: {fileID: 0}
+    - target: {fileID: 6932017739037907179, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932017739037907179, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932017739037907179, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1821902175}
+    - target: {fileID: 6932017739037907179, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932017739037907179, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetRumble
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932017739037907179, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: FetchControllerVibrationSettings, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6932017739037907179, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+      propertyPath: onValueChanged.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7186553188863806576, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -15492,6 +15443,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6873190301578622107, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
   m_PrefabInstance: {fileID: 1821902170}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1821902175 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8165538735906613345, guid: 38e76421e386d4a48af2ece160235bb1, type: 3}
+  m_PrefabInstance: {fileID: 1821902170}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1821902172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eba31c689db1fda45807f67d2eeddd8d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FetchControllerVibrationSettings
 --- !u!1 &1858928159
 GameObject:
   m_ObjectHideFlags: 0
@@ -58206,7 +58168,6 @@ SceneRoots:
   - {fileID: 1138655422}
   - {fileID: 8435549585955523011}
   - {fileID: 575144425}
-  - {fileID: 632746947}
   - {fileID: 1307755712}
   - {fileID: 1998295780}
   - {fileID: 488033217}
