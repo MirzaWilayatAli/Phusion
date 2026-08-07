@@ -13,84 +13,94 @@ public class AnnihilationChecker : MonoBehaviour
     [Header("Distance Settings")]
     [SerializeField] private float annihilationDistance = 1f;
     [SerializeField] private float shakeStartDistance = 2f;
-    [SerializeField] private float annihilationDelay = 1f;
 
     [Header("Camera Shake")]
     [SerializeField] private float minShakeMagnitude = 0.01f;
     [SerializeField] private float maxShakeMagnitude = 0.08f;
 
     private CameraShake cameraShake;
-    private float annihilationTimer;
+
+    // Cached state
+    private bool effectsEnabled;
 
     private void Awake()
     {
-        annihilationCanvas.SetActive(false);
+        if (annihilationCanvas != null)
+            annihilationCanvas.SetActive(false);
 
         if (Camera.main != null)
-        {
             cameraShake = Camera.main.GetComponent<CameraShake>();
-        }
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        if (playerOne.gameObject.activeInHierarchy == false || playerTwo.gameObject.activeInHierarchy == false)
+        if (!playerOne.gameObject.activeInHierarchy || !playerTwo.gameObject.activeInHierarchy)
         {
-            annihilationCanvas.SetActive(false);
+            DisableEffects();
             enabled = false;
             return;
         }
 
-        float distance = GetPlayerDistance();
-
+        float distance = Vector2.Distance(playerOne.position, playerTwo.position);
         
-        HandleAnnihilation(distance);
-        HandleVisualEffects(distance);
-        HandleTimeSlowdown(distance);
+        HandleEffects(distance);
     }
 
-    private float GetPlayerDistance()
+    private void HandleEffects(float distance)
     {
-        return Vector3.Distance(playerOne.position, playerTwo.position);
-    }
+        bool insideWarningRange = distance <= shakeStartDistance;
 
-    private void HandleAnnihilation(float distance)
-    {
-        if (distance > annihilationDistance)
+        if (insideWarningRange)
         {
-            annihilationTimer = 0f;
-            return;
+            if (!effectsEnabled)
+                EnableEffects();
+
+            UpdateCameraShake(distance);
         }
-
-        annihilationTimer += Time.deltaTime;
-
-        if (annihilationTimer >= annihilationDelay)
-        {
-            //loader.ReloadScene();
-            
-            // This logic was transferred to Annihilation Progress Bars
-            // it is no longer needed here but leaving it here in case it might break if we temper
-        }
-    }
-
-    private void HandleVisualEffects(float distance)
-    {
-        if (distance > shakeStartDistance)
+        else if (effectsEnabled)
         {
             DisableEffects();
+        }
+    }
+
+    private void EnableEffects()
+    {
+        effectsEnabled = true;
+
+        if (annihilationCanvas != null)
+            annihilationCanvas.SetActive(true);
+
+        if (cameraShake != null)
+            cameraShake.enabled = true;
+
+        RumbleManager.Instance.StartRumble(0, 0.1f, 0.3f); // Posi
+        RumbleManager.Instance.StartRumble(1, 0.1f, 0.3f); // Eli
+    }
+
+    private void DisableEffects()
+    {
+        if (!effectsEnabled)
             return;
+
+        effectsEnabled = false;
+
+        if (annihilationCanvas != null)
+            annihilationCanvas.SetActive(false);
+
+        if (cameraShake != null)
+        {
+            cameraShake.SetMagnitude(0f);
+            cameraShake.enabled = false;
         }
 
-        annihilationCanvas.SetActive(true);
-
-        UpdateCameraShake(distance);
+        RumbleManager.Instance.StopRumble(0);
+        RumbleManager.Instance.StopRumble(1);
     }
 
     private void UpdateCameraShake(float distance)
     {
-        if (cameraShake == null) return;
-
-        cameraShake.enabled = true;
+        if (cameraShake == null)
+            return;
 
         float t = 1f - Mathf.Clamp01((distance - annihilationDistance) / (shakeStartDistance - annihilationDistance));
 
@@ -99,35 +109,13 @@ public class AnnihilationChecker : MonoBehaviour
         cameraShake.SetMagnitude(magnitude);
     }
 
-    private void HandleTimeSlowdown(float distance)
-    {
-        float proximity = 1f - Mathf.Clamp(distance / shakeStartDistance, 0f, 1f);
-
-        Time.timeScale = Mathf.Lerp(1f, 0.1f, proximity);
-        Time.fixedDeltaTime = 0.02f * Time.timeScale;
-    }
-
-    private void DisableEffects()
-    {
-        if(annihilationCanvas) annihilationCanvas.SetActive(false);
-
-        if (cameraShake != null)
-        {
-            cameraShake.enabled = false;
-            cameraShake.SetMagnitude(0f);
-        }
-    }
-
     private void OnEnable()
     {
-        annihilationTimer = 0;
+        effectsEnabled = false;
     }
 
     private void OnDisable()
     {
         DisableEffects();
-
-        Time.timeScale = 1f;
-        Time.fixedDeltaTime = 0.02f;
     }
 }

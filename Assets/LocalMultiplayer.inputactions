@@ -41,6 +41,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "PauseMenuOpenClose",
+                    "type": "Button",
+                    "id": "635c7b3b-9ae7-4faf-9d11-a321654ab32d",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -241,26 +250,39 @@
                     "action": "PsionForm",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "aa4584e3-3f16-443d-8b0b-e7e5a8604c6f",
+                    "path": "<Keyboard>/escape",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";WASD;Arrows",
+                    "action": "PauseMenuOpenClose",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "14157682-26c2-4b53-9a8b-524a58f9a9de",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Gamepad",
+                    "action": "PauseMenuOpenClose",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         },
         {
-            "name": "UIControl",
-            "id": "13ef0cf8-8756-435f-98f9-326528d6b18f",
+            "name": "PauseUI",
+            "id": "406400b5-371f-4e65-99ba-d24a0b01d967",
             "actions": [
                 {
-                    "name": "PauseMenuOpenClose",
+                    "name": "ClosePauseMenu",
                     "type": "Button",
-                    "id": "1811f6af-6daf-4951-b31f-6fc903d9a5b7",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": false
-                },
-                {
-                    "name": "RestartLevel",
-                    "type": "Button",
-                    "id": "c66260a1-7c0f-4bae-b2eb-2a1fdc59ecc7",
+                    "id": "c917f1d3-0b72-4d84-ade1-14aacfc55c6d",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -270,34 +292,23 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "8d4273c0-e93d-443b-a04e-dfd2164f1f3e",
+                    "id": "df1cc7ec-7bde-4bfb-bbda-86d15644e760",
                     "path": "<Keyboard>/escape",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";UIControls",
-                    "action": "PauseMenuOpenClose",
+                    "groups": ";Arrows;WASD;Gamepad",
+                    "action": "ClosePauseMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "a1e1cd5a-e7d3-4355-8882-ff1ce9fa9207",
+                    "id": "112d932c-16bd-49c7-9311-9a82e7ad614a",
                     "path": "<Gamepad>/start",
                     "interactions": "",
                     "processors": "",
-                    "groups": ";UIControls",
-                    "action": "PauseMenuOpenClose",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "dd7b397a-a169-4faf-a3a2-26ef1cce6198",
-                    "path": "<Keyboard>/r",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";UIControls",
-                    "action": "RestartLevel",
+                    "groups": ";Gamepad;WASD;Arrows",
+                    "action": "ClosePauseMenu",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
@@ -331,22 +342,6 @@
             "name": "Arrows",
             "bindingGroup": "Arrows",
             "devices": [
-                {
-                    "devicePath": "<Keyboard>",
-                    "isOptional": true,
-                    "isOR": false
-                }
-            ]
-        },
-        {
-            "name": "UIControls",
-            "bindingGroup": "UIControls",
-            "devices": [
-                {
-                    "devicePath": "<Gamepad>",
-                    "isOptional": true,
-                    "isOR": false
-                },
                 {
                     "devicePath": "<Keyboard>",
                     "isOptional": true,

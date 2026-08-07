@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
     public AnnihilationChecker  AnnihilationChecker;
     
     [Header("Psion Form")]
-    [SerializeField] private int playerID; // assign 0 to Posi and 1 to Eli
+    [SerializeField] public int playerID; // assign 0 to Posi and 1 to Eli
     [SerializeField] private PsionFormManager psionFormManager;
     [SerializeField] private PsionFormInitiator psionFormInitiator;
 
@@ -101,6 +101,7 @@ public class PlayerController : MonoBehaviour
         {
             _ability = true;
             
+            RumbleManager.Instance.StartRumble(playerID, 0.1f, 0.3f);
             startMagneticAbilitySFX.Invoke();
             
             if(animator) animator.SetBool("Ability", true);
@@ -112,6 +113,7 @@ public class PlayerController : MonoBehaviour
             
             _ability = false;
             
+            RumbleManager.Instance.StopRumble(playerID);
             stopMagneticAbilitySFX.Invoke();
             
             if (_controlledObject)
@@ -148,6 +150,14 @@ public class PlayerController : MonoBehaviour
 
         Debug.Log("Please move closer to begin Annihilation");
     }
+    
+    public void Pause(InputAction.CallbackContext context)
+    {
+        if (context.performed)
+        {
+            PauseMenuManager.Instance.TogglePause();
+        }
+    }
 
     void FixedUpdate()
     {
@@ -172,8 +182,11 @@ public class PlayerController : MonoBehaviour
             playerAnimations.Impact();
 
             if (_airTime >= 0.65f)
+            {
+                RumbleManager.Instance.RumblePulse(playerID, 0.5f, 1f);
                 hitGroundTrigger?.Invoke();
-
+            }
+            
             _airTime = 0f;
         }
             

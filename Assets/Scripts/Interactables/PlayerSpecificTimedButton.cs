@@ -55,6 +55,12 @@ public class PlayerSpecificTimedButton : TriggerBase
         timerSlider.value = delay;
 
         onTriggerOn.Invoke();
+        
+        PlayerController player = other.gameObject.GetComponent<PlayerController>();
+        if (player != null)
+        {
+            RumbleManager.Instance.RumblePulse(player.playerID,0.25f,0.75f);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

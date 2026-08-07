@@ -3782,7 +3782,6 @@ GameObject:
   m_Component:
   - component: {fileID: 370846466}
   - component: {fileID: 370846465}
-  - component: {fileID: 370846464}
   m_Layer: 0
   m_Name: PAUSEMENU
   m_TagString: Untagged
@@ -3790,36 +3789,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &370846464
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 370846463}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: cd1a3190aaee100489f04a5968861250, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: UIControls
-  m_DefaultActionMap: UIControl
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &370846465
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3832,7 +3801,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 63f2eddc4abdc7d4098e5edc15528858, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PauseMenuManager
-  pauseAction: {fileID: -1126211563328113861, guid: cd1a3190aaee100489f04a5968861250, type: 3}
   pauseMenu: {fileID: 3223258619527293845}
   settingsMenu: {fileID: 540930342}
   player1Input: {fileID: 957615427}
@@ -4918,6 +4886,51 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7187105dfed8b1d4483bb678fde1891f, type: 3}
+--- !u!1 &676141171
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 676141173}
+  - component: {fileID: 676141172}
+  m_Layer: 0
+  m_Name: RumbleManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &676141172
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676141171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a1321593b9c5944f9845c7bf20dcffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RumbleManager
+  defaultDuration: 0.1
+--- !u!4 &676141173
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 676141171}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &687044963 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 93091370955909539, guid: ce34677674a75da479deb056ebe89957, type: 3}
@@ -53394,3 +53407,4 @@ SceneRoots:
   - {fileID: 331716079}
   - {fileID: 2052418933}
   - {fileID: 1874034370}
+  - {fileID: 676141173}

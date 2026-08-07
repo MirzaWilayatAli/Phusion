@@ -4,9 +4,6 @@ using UnityEngine.EventSystems;
 
 public class PauseMenuManager : MonoBehaviour
 {
-    [Header("Input")]
-    [SerializeField] private InputActionReference pauseAction;
-
     [Header("Canvas References")]
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject settingsMenu;
@@ -18,32 +15,21 @@ public class PauseMenuManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenuFirstSelected;
     [SerializeField] private GameObject settingsMenuFirstSelected;
     
-    private bool isPaused;
+    private bool isPaused = false;
+    public static PauseMenuManager Instance { get; private set; }
 
-    private void OnEnable()
+    
+    private void Awake()
     {
-        pauseAction.action.Enable();
+        Instance = this;
     }
 
-    private void OnDisable()
+    public void TogglePause()
     {
-        pauseAction.action.Disable();
-    }
-
-    private void Start()
-    {
-        pauseMenu.SetActive(false);
-    }
-
-    private void Update()
-    {
-        if (pauseAction.action.WasPressedThisFrame())
-        {
-            if (isPaused)
-                Unpause();
-            else
-                Pause();
-        }
+        if (isPaused)
+            Unpause();
+        else
+            Pause();
     }
 
     public void Pause()
@@ -52,8 +38,8 @@ public class PauseMenuManager : MonoBehaviour
 
         OpenPauseMenu();
 
-        player1Input.DeactivateInput();
-        player2Input.DeactivateInput();
+        player1Input.SwitchCurrentActionMap("PauseUI");
+        player2Input.SwitchCurrentActionMap("PauseUI");
     }
 
     public void Unpause()
@@ -62,8 +48,8 @@ public class PauseMenuManager : MonoBehaviour
 
         CloseAllMenus();
 
-        player1Input.ActivateInput();
-        player2Input.ActivateInput();
+        player1Input.SwitchCurrentActionMap("Gameplay");
+        player2Input.SwitchCurrentActionMap("Gameplay");
     }
 
     public void OpenPauseMenu()

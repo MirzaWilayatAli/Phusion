@@ -223,8 +223,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c69e66bf0853a894b9a04a79fa54cd53, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneLoader
+  circleTransition: {fileID: 0}
+  circleScale: 40
   fadeImage: {fileID: 5836746345382096622}
-  fadeDuration: 1
+  fadeDuration: 0.75
 --- !u!114 &1603850299988666170
 MonoBehaviour:
   m_ObjectHideFlags: 0

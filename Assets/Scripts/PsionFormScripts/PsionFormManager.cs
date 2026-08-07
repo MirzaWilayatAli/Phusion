@@ -34,6 +34,7 @@ public class PsionFormManager : MonoBehaviour
 
     private void OnDisable()
     {
+        activationLocation = transform.position;
         ExitPsionForm();
     }
 
