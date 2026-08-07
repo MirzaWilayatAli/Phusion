@@ -1,8 +1,8 @@
+using System;
 using UnityEngine;
 using System.Collections;
 using TMPro;
 
-[RequireComponent(typeof(AudioSource))]
 public class SequentialAudioPlayer : MonoBehaviour
 {
     [Header("Playlist")]
@@ -16,18 +16,9 @@ public class SequentialAudioPlayer : MonoBehaviour
 
     private AudioSource audioSource;
     private Coroutine playlistRoutine;
+    private Coroutine fadeRoutine;
 
     private int playlistIndex;
-
-    private AudioClip overrideClip;
-    private bool playOverride;
-    private bool stopOverride;
-
-    // Resume data
-    private AudioClip savedClip;
-    private float savedTime;
-    
-    private Coroutine fadeRoutine;
 
     private void Awake()
     {
@@ -36,6 +27,12 @@ public class SequentialAudioPlayer : MonoBehaviour
 
     private void Start()
     {
+        // Show the first track immediately.
+        if (audioClips != null && audioClips.Length > 0 && nowPlayingText != null)
+        {
+            nowPlayingText.text = audioClips[0].name;
+        }
+
         playlistRoutine = StartCoroutine(PlaylistRoutine());
     }
 
@@ -43,69 +40,23 @@ public class SequentialAudioPlayer : MonoBehaviour
     {
         while (true)
         {
-            // ---------- Override music ----------
-            if (playOverride)
+            if (audioClips == null || audioClips.Length == 0)
             {
-                playOverride = false;
-
-                // Save current playlist position
-                if (audioSource.isPlaying)
-                {
-                    savedClip = audioSource.clip;
-                    savedTime = audioSource.time;
-
-                    if (fadeRoutine != null)
-                        StopCoroutine(fadeRoutine);
-
-                    fadeRoutine = StartCoroutine(Fade(0f));
-                    yield return fadeRoutine;
-
-                    audioSource.Stop();
-                }
-
-                PlayClip(overrideClip);
-
-                // Wait until it finishes or StopCurrentTrack() is called
-                while (audioSource.isPlaying && !stopOverride)
-                    yield return null;
-
-                stopOverride = false;
-
-                if (fadeRoutine != null)
-                    StopCoroutine(fadeRoutine);
-
-                fadeRoutine = StartCoroutine(Fade(0f));
-                yield return fadeRoutine;
-
-                audioSource.Stop();
-
-                // Resume playlist
-                if (savedClip != null)
-                {
-                    audioSource.clip = savedClip;
-                    audioSource.time = savedTime;
-
-                    if (nowPlayingText != null)
-                        nowPlayingText.text = savedClip.name;
-
-                    audioSource.volume = 0f;
-                    audioSource.Play();
-
-                    yield return Fade(maxVolume);
-                }
-
+                yield return null;
                 continue;
             }
 
-            // ---------- Playlist ----------
+            // Make sure the index is valid.
+            if (playlistIndex >= audioClips.Length)
+                playlistIndex = 0;
+
+            // Start the next track if nothing is playing.
             if (!audioSource.isPlaying)
             {
-                if (playlistIndex >= audioClips.Length)
-                    playlistIndex = 0;
-
                 PlayClip(audioClips[playlistIndex]);
             }
 
+            // Fade out near the end of the track.
             float remaining = audioSource.clip.length - audioSource.time;
 
             if (remaining <= fadeOutTime)
@@ -122,16 +73,26 @@ public class SequentialAudioPlayer : MonoBehaviour
 
     private void PlayClip(AudioClip clip)
     {
+        if (clip == null)
+            return;
+
         audioSource.clip = clip;
         audioSource.time = 0f;
         audioSource.volume = 0f;
+
+        // Update the text
+        if (nowPlayingText != null)
+        {
+            nowPlayingText.text = clip.name;
+        }
+
         audioSource.Play();
 
-        if (nowPlayingText != null)
-            nowPlayingText.text = clip.name;
-
+        // Fade in the new track
         if (fadeRoutine != null)
+        {
             StopCoroutine(fadeRoutine);
+        }
 
         fadeRoutine = StartCoroutine(Fade(maxVolume));
     }
@@ -141,33 +102,25 @@ public class SequentialAudioPlayer : MonoBehaviour
         float start = audioSource.volume;
         float duration = targetVolume > start ? fadeInTime : fadeOutTime;
 
+        if (duration <= 0f)
+        {
+            audioSource.volume = targetVolume;
+            fadeRoutine = null;
+            yield break;
+        }
+
         float t = 0f;
 
         while (t < duration)
         {
             t += Time.deltaTime;
+
             audioSource.volume = Mathf.Lerp(start, targetVolume, t / duration);
+
             yield return null;
         }
 
         audioSource.volume = targetVolume;
         fadeRoutine = null;
-    }
-    
-    // Interrupt the playlist and play this clip.
-    // Playlist resumes where it left off afterwards.
-    public void PlayTrack(AudioClip clip)
-    {
-        if (clip == null)
-            return;
-
-        overrideClip = clip;
-        playOverride = true;
-    }
-    
-    // Stop the currently playing override track.
-    public void StopCurrentTrack()
-    {
-        stopOverride = true;
     }
 }
