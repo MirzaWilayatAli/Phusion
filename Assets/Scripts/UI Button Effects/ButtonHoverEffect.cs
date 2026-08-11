@@ -18,6 +18,10 @@ public class ButtonHoverEffect : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
     private void Awake()
     {
+        if (rectTransform == null)
+        {
+            rectTransform = GetComponent<RectTransform>();
+        }
         originalPosition = rectTransform.anchoredPosition;
         targetPosition = originalPosition;
     }

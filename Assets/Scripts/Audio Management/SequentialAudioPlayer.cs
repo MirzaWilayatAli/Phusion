@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using System.Collections;
 using TMPro;
@@ -9,14 +8,8 @@ public class SequentialAudioPlayer : MonoBehaviour
     [SerializeField] private AudioClip[] audioClips;
     [SerializeField] private TextMeshProUGUI nowPlayingText;
 
-    [Header("Fade Settings")]
-    [SerializeField] private float fadeInTime = 1f;
-    [SerializeField] private float fadeOutTime = 1f;
-    [SerializeField] private float maxVolume = 1f;
-
     private AudioSource audioSource;
     private Coroutine playlistRoutine;
-    private Coroutine fadeRoutine;
 
     private int playlistIndex;
 
@@ -56,13 +49,9 @@ public class SequentialAudioPlayer : MonoBehaviour
                 PlayClip(audioClips[playlistIndex]);
             }
 
-            // Fade out near the end of the track.
-            float remaining = audioSource.clip.length - audioSource.time;
-
-            if (remaining <= fadeOutTime)
+            // Wait until the current track finishes.
+            if (audioSource.clip != null && audioSource.time >= audioSource.clip.length)
             {
-                yield return Fade(0f);
-
                 audioSource.Stop();
                 playlistIndex++;
             }
@@ -78,7 +67,7 @@ public class SequentialAudioPlayer : MonoBehaviour
 
         audioSource.clip = clip;
         audioSource.time = 0f;
-        audioSource.volume = 0f;
+        audioSource.volume = 1f;
 
         // Update the text
         if (nowPlayingText != null)
@@ -87,40 +76,5 @@ public class SequentialAudioPlayer : MonoBehaviour
         }
 
         audioSource.Play();
-
-        // Fade in the new track
-        if (fadeRoutine != null)
-        {
-            StopCoroutine(fadeRoutine);
-        }
-
-        fadeRoutine = StartCoroutine(Fade(maxVolume));
-    }
-
-    private IEnumerator Fade(float targetVolume)
-    {
-        float start = audioSource.volume;
-        float duration = targetVolume > start ? fadeInTime : fadeOutTime;
-
-        if (duration <= 0f)
-        {
-            audioSource.volume = targetVolume;
-            fadeRoutine = null;
-            yield break;
-        }
-
-        float t = 0f;
-
-        while (t < duration)
-        {
-            t += Time.deltaTime;
-
-            audioSource.volume = Mathf.Lerp(start, targetVolume, t / duration);
-
-            yield return null;
-        }
-
-        audioSource.volume = targetVolume;
-        fadeRoutine = null;
     }
 }

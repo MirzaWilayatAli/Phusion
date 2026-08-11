@@ -8,6 +8,9 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject mainMenu;
     [SerializeField] private GameObject levelSelectMenu;
     [SerializeField] private GameObject settingsMenu;
+    [SerializeField] private GameObject audioSettingsMenu;
+    [SerializeField] private GameObject keyboardSettingsMenu;
+    [SerializeField] private GameObject controllerSettingsMenu;
     [SerializeField] private GameObject creditsMenu;
     [SerializeField] private GameObject congratsMenu;
     
@@ -15,8 +18,11 @@ public class MainMenuManager : MonoBehaviour
     [SerializeField] private GameObject mainMenuFirstSelected;
     [SerializeField] private GameObject levelSelectFirstSelected;
     [SerializeField] private GameObject settingsMenuFirstSelected;
+    [SerializeField] private GameObject audioSettingsMenuFirstSelected;
     [SerializeField] private GameObject creditsMenuFirstSelected;
     [SerializeField] private GameObject congratsMenuFirstSelected;
+    [SerializeField] private GameObject keyboardSettingsMenuFirstSelected;
+    [SerializeField] private GameObject controllerSettingsMenuFirstSelected;
     
     private bool isPaused;
 
@@ -50,8 +56,11 @@ public class MainMenuManager : MonoBehaviour
         mainMenu.SetActive(false);
         levelSelectMenu.SetActive(false);
         settingsMenu.SetActive(true);
+        audioSettingsMenu.SetActive(true);
         creditsMenu.SetActive(false);
         congratsMenu.SetActive(false);
+        keyboardSettingsMenu.SetActive(false);
+        controllerSettingsMenu.SetActive(false);
         EventSystem.current.SetSelectedGameObject(settingsMenuFirstSelected);
     }
 
@@ -63,6 +72,45 @@ public class MainMenuManager : MonoBehaviour
         creditsMenu.SetActive(true);
         congratsMenu.SetActive(false);
         EventSystem.current.SetSelectedGameObject(creditsMenuFirstSelected);
+    }
+
+    public void OpenAudioSettingsMenu()
+    {
+        mainMenu.SetActive(false);
+        levelSelectMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+        creditsMenu.SetActive(false);
+        congratsMenu.SetActive(false);
+        audioSettingsMenu.SetActive(true);
+        keyboardSettingsMenu.SetActive(false);
+        controllerSettingsMenu.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(audioSettingsMenuFirstSelected);
+    }
+    
+    public void OpenKeyboardSettingsMenu()
+    {
+        mainMenu.SetActive(false);
+        levelSelectMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+        audioSettingsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+        congratsMenu.SetActive(false);
+        keyboardSettingsMenu.SetActive(true);
+        controllerSettingsMenu.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(keyboardSettingsMenuFirstSelected);
+    }
+
+    public void OpenControllerSettingsMenu()
+    {
+        mainMenu.SetActive(false);
+        levelSelectMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+        audioSettingsMenu.SetActive(false);
+        creditsMenu.SetActive(false);
+        congratsMenu.SetActive(false);
+        keyboardSettingsMenu.SetActive(false);
+        controllerSettingsMenu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(controllerSettingsMenuFirstSelected);
     }
 
     public void OpenCongratsMenu()
