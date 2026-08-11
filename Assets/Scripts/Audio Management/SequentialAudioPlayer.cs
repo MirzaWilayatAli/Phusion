@@ -20,7 +20,7 @@ public class SequentialAudioPlayer : MonoBehaviour
 
     private void Start()
     {
-        // Show the first track immediately.
+        // This will force show the first track immediately
         if (audioClips != null && audioClips.Length > 0 && nowPlayingText != null)
         {
             nowPlayingText.text = audioClips[0].name;
@@ -39,17 +39,17 @@ public class SequentialAudioPlayer : MonoBehaviour
                 continue;
             }
 
-            // Make sure the index is valid.
+            // this should reset the index count so that this remains valid
             if (playlistIndex >= audioClips.Length)
                 playlistIndex = 0;
 
-            // Start the next track if nothing is playing.
+            // Start the next track if nothing is playing
             if (!audioSource.isPlaying)
             {
                 PlayClip(audioClips[playlistIndex]);
             }
 
-            // Wait until the current track finishes.
+            // Wait until the current track finishes
             if (audioSource.clip != null && audioSource.time >= audioSource.clip.length)
             {
                 audioSource.Stop();
@@ -67,9 +67,7 @@ public class SequentialAudioPlayer : MonoBehaviour
 
         audioSource.clip = clip;
         audioSource.time = 0f;
-        audioSource.volume = 1f;
-
-        // Update the text
+        
         if (nowPlayingText != null)
         {
             nowPlayingText.text = clip.name;

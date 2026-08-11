@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 // Handle SFX manually, instead of via GameObject on/off so AudioSourceManager can run
 public class AnnihilationChargeSfx : MonoBehaviour
@@ -13,6 +12,13 @@ public class AnnihilationChargeSfx : MonoBehaviour
 
     private void Update()
     {
-        if(annihilationCanvas.activeSelf && !annihilationSfx.isPlaying) annihilationSfx.Play(); else if(!annihilationCanvas.activeSelf) annihilationSfx.Stop();
+        if (annihilationCanvas.activeSelf && !annihilationSfx.isPlaying)
+        {
+            annihilationSfx.Play();
+        } 
+        else if (!annihilationCanvas.activeSelf)
+        {
+            annihilationSfx.Stop();
+        }
     }
 }
