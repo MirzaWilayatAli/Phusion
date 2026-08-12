@@ -30,6 +30,12 @@ public class PauseMenuManager : MonoBehaviour
     {
         Instance = this;
     }
+    
+    public bool IsPaused
+    {
+        get => isPaused;
+        private set => isPaused = value;
+    }
 
     public void TogglePause()
     {

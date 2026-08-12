@@ -320,7 +320,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player 2 Controls
+  m_text: Eli Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
@@ -839,7 +839,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player 1 (Xbox Controller)
+  m_text: Posi Controls (Gamepad)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
@@ -10289,7 +10289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player 1 Controls
+  m_text: Posi Controls
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
@@ -11663,7 +11663,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Player 2 (Xbox Controller)
+  m_text: Eli Controls (Gamepad)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
   m_sharedMaterial: {fileID: -6043706654973254132, guid: 18789a0b21edaf44dbe3ef52e018c06d, type: 2}
