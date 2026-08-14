@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ExitDoor
   - PsionForm
+  - NavbarButton
   layers:
   - Default
   - TransparentFX

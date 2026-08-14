@@ -34,9 +34,15 @@ public class AnnihilationProgressBar : MonoBehaviour
     [SerializeField] private Color startColor;
     [SerializeField] private Color endColor;
 
+    private bool wasPaused;
+    
     private void Update()
     {
         if (!isTimerRunning || isTimerCompleted)
+            return;
+
+        // Don't advance the annihilation timer while paused.
+        if (PauseMenuManager.Instance != null && PauseMenuManager.Instance.IsPaused)
             return;
 
         timer += Time.deltaTime;
@@ -60,11 +66,23 @@ public class AnnihilationProgressBar : MonoBehaviour
     
     private void OnEnable()
     {
+        if (wasPaused)
+        {
+            wasPaused = false;
+            return;
+        }
+
         StartAnnihilationSequence();
     }
 
     private void OnDisable()
     {
+        if (PauseMenuManager.Instance != null && PauseMenuManager.Instance.IsPaused)
+        {
+            wasPaused = true;
+            return;
+        }
+
         ResetAnnihilationSequence();
     }
     

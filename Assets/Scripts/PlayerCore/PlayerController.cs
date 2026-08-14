@@ -100,8 +100,12 @@ public class PlayerController : MonoBehaviour
         if (context.performed)
         {
             _ability = true;
+
+            if (RumbleManager.Instance != null)
+            {
+                RumbleManager.Instance.StartRumble(playerID, 0.1f, 0.3f);
+            }
             
-            RumbleManager.Instance.StartRumble(playerID, 0.1f, 0.3f);
             startMagneticAbilitySFX.Invoke();
             
             if(animator) animator.SetBool("Ability", true);
@@ -113,7 +117,11 @@ public class PlayerController : MonoBehaviour
             
             _ability = false;
             
-            RumbleManager.Instance.StopRumble(playerID);
+            if (RumbleManager.Instance != null)
+            {
+                RumbleManager.Instance.StopRumble(playerID);
+            }
+            
             stopMagneticAbilitySFX.Invoke();
             
             if (_controlledObject)

@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class AnnihilationChecker : MonoBehaviour
 {
@@ -19,8 +17,7 @@ public class AnnihilationChecker : MonoBehaviour
     [SerializeField] private float maxShakeMagnitude = 0.08f;
 
     private CameraShake cameraShake;
-
-    // Cached state
+    private PauseMenuManager pauseMenu;
     private bool effectsEnabled;
 
     private void Awake()
@@ -30,10 +27,18 @@ public class AnnihilationChecker : MonoBehaviour
 
         if (Camera.main != null)
             cameraShake = Camera.main.GetComponent<CameraShake>();
+
+        pauseMenu = PauseMenuManager.Instance;
     }
 
     private void Update()
     {
+        if (pauseMenu != null && PauseMenuManager.Instance.IsPaused)
+        {
+            DisableEffects();
+            return;
+        }
+
         if (!playerOne.gameObject.activeInHierarchy || !playerTwo.gameObject.activeInHierarchy)
         {
             DisableEffects();
@@ -42,7 +47,7 @@ public class AnnihilationChecker : MonoBehaviour
         }
 
         float distance = Vector2.Distance(playerOne.position, playerTwo.position);
-        
+
         HandleEffects(distance);
     }
 

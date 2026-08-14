@@ -23,23 +23,17 @@ public class DeviceAssigner : MonoBehaviour
 
     private void OnEnable()
     {
-        // Completely disable mouse input
-        if (Mouse.current != null)
-            InputSystem.DisableDevice(Mouse.current);
-
+        InputSystem.DisableDevice(Mouse.current);
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-
         InputSystem.onDeviceChange += OnDeviceChange;
         AutoAssignDevices();
     }
 
     private void OnDisable()
     {
+        InputSystem.EnableDevice(Mouse.current);
         InputSystem.onDeviceChange -= OnDeviceChange;
-
-        if (Mouse.current != null)
-            InputSystem.EnableDevice(Mouse.current);
     }
 
     private void OnDeviceChange(InputDevice device, InputDeviceChange change)
@@ -60,6 +54,9 @@ public class DeviceAssigner : MonoBehaviour
         int gamepadCount = Gamepad.all.Count;
         bool keyboardExists = Keyboard.current != null;
 
+        player1.user.UnpairDevices();
+        player2.user.UnpairDevices();
+
         if (keyboardExists && gamepadCount == 0)
         {
             controlType = ControlType.SharedKeyboard;
@@ -78,14 +75,15 @@ public class DeviceAssigner : MonoBehaviour
         else
         {
             controlType = ControlType.Unknown;
+            player1.DeactivateInput();
+            player2.DeactivateInput();
         }
 
         onTypeChange?.Invoke();
     }
 
-    // ----------------------------
+    
     // Shared Keyboard
-    // ----------------------------
     private void AssignSharedKeyboard()
     {
         var keyboard = Keyboard.current;
@@ -103,10 +101,8 @@ public class DeviceAssigner : MonoBehaviour
         RumbleManager.Instance.RegisterPlayerPad(0, null);
         RumbleManager.Instance.RegisterPlayerPad(1, null);
     }
-
-    // ----------------------------
+    
     // Keyboard + Gamepad
-    // ----------------------------
     private void AssignKeyboardAndGamepad()
     {
         var keyboard = Keyboard.current;
@@ -121,10 +117,8 @@ public class DeviceAssigner : MonoBehaviour
         RumbleManager.Instance.RegisterPlayerPad(0, null);
         RumbleManager.Instance.RegisterPlayerPad(1, gamepad);
     }
-
-    // ----------------------------
+    
     // Two Gamepads
-    // ----------------------------
     private void AssignTwoGamepads()
     {
         var gamepads = Gamepad.all;

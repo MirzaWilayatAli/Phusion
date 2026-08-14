@@ -4,16 +4,23 @@ using UnityEngine.EventSystems;
 
 public class PauseMenuManager : MonoBehaviour
 {
+    [Header("Player Input References")]
+    [SerializeField] private PlayerInput posiPlayerInput;
+    [SerializeField] private PlayerInput eliPlayerInput;
+    
     [Header("Canvas References")]
     [SerializeField] private GameObject pauseMenu;
     [SerializeField] private GameObject settingsMenu;
-    
-    [SerializeField] private PlayerInput player1Input;
-    [SerializeField] private PlayerInput player2Input;
+    [SerializeField] private GameObject audioSettingsMenu;
+    [SerializeField] private GameObject keyboardSettingsMenu;
+    [SerializeField] private GameObject controllerSettingsMenu;
 
     [Header("First Selected Options")]
     [SerializeField] private GameObject pauseMenuFirstSelected;
     [SerializeField] private GameObject settingsMenuFirstSelected;
+    [SerializeField] private GameObject audioSettingsMenuFirstSelected;
+    [SerializeField] private GameObject keyboardSettingsMenuFirstSelected;
+    [SerializeField] private GameObject controllerSettingsMenuFirstSelected;
     
     private bool isPaused = false;
     public static PauseMenuManager Instance { get; private set; }
@@ -22,6 +29,12 @@ public class PauseMenuManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+    
+    public bool IsPaused
+    {
+        get => isPaused;
+        private set => isPaused = value;
     }
 
     public void TogglePause()
@@ -38,8 +51,8 @@ public class PauseMenuManager : MonoBehaviour
 
         OpenPauseMenu();
 
-        player1Input.SwitchCurrentActionMap("PauseUI");
-        player2Input.SwitchCurrentActionMap("PauseUI");
+        posiPlayerInput.SwitchCurrentActionMap("PauseUI");
+        eliPlayerInput.SwitchCurrentActionMap("PauseUI");
     }
 
     public void Unpause()
@@ -48,8 +61,8 @@ public class PauseMenuManager : MonoBehaviour
 
         CloseAllMenus();
 
-        player1Input.SwitchCurrentActionMap("Gameplay");
-        player2Input.SwitchCurrentActionMap("Gameplay");
+        posiPlayerInput.SwitchCurrentActionMap("Posi");
+        eliPlayerInput.SwitchCurrentActionMap("Eli");
     }
 
     public void OpenPauseMenu()
@@ -62,14 +75,49 @@ public class PauseMenuManager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         settingsMenu.SetActive(true);
+        audioSettingsMenu.SetActive(true);
+        keyboardSettingsMenu.SetActive(false);
+        controllerSettingsMenu.SetActive(false);
         EventSystem.current.SetSelectedGameObject(settingsMenuFirstSelected);
     }
-    
+
+    public void OpenAudioSettingsMenu()
+    {
+        pauseMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+        audioSettingsMenu.SetActive(true);
+        keyboardSettingsMenu.SetActive(false);
+        controllerSettingsMenu.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(audioSettingsMenuFirstSelected);
+    }
+
+    public void OpenKeyBoardSettingsMenu()
+    {
+        pauseMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+        audioSettingsMenu.SetActive(false);
+        keyboardSettingsMenu.SetActive(true);
+        controllerSettingsMenu.SetActive(false);
+        EventSystem.current.SetSelectedGameObject(keyboardSettingsMenuFirstSelected);
+    }
+
+    public void OpenControllerSettingsMenu()
+    {
+        pauseMenu.SetActive(false);
+        settingsMenu.SetActive(true);
+        audioSettingsMenu.SetActive(false);
+        keyboardSettingsMenu.SetActive(false);
+        controllerSettingsMenu.SetActive(true);
+        EventSystem.current.SetSelectedGameObject(controllerSettingsMenuFirstSelected);
+    }
     
     public void CloseAllMenus()
     {
         pauseMenu.SetActive(false);
         settingsMenu.SetActive(false);
+        audioSettingsMenu.SetActive(false);
+        keyboardSettingsMenu.SetActive(false);
+        controllerSettingsMenu.SetActive(false);
         EventSystem.current.SetSelectedGameObject(null);
     }
 }

@@ -275,7 +275,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: cd1a3190aaee100489f04a5968861250, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 5df9dde34068db443a23cbc0fb814d84, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -292,6 +292,22 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 6846171359095035236}
         m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: Pause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c917f1d3-0b72-4d84-ade1-14aacfc55c6d
+    m_ActionName: 'PauseUI/ClosePauseMenu[/Keyboard/escape,/XInputControllerWindows/start]'
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6846171359095035236}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
         m_MethodName: Move
         m_Mode: 0
         m_Arguments:
@@ -302,8 +318,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 66ca8e8f-f342-4788-aa5b-33d200533f18
-    m_ActionName: 'Gameplay/Move[/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d,/Keyboard/upArrow,/Keyboard/downArrow,/Keyboard/leftArrow,/Keyboard/rightArrow]'
+    m_ActionId: 32501608-1795-48cb-8b1b-b9a9d90bde49
+    m_ActionName: 'Eli/Move[/Keyboard/leftArrow,/Keyboard/rightArrow]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6846171359095035236}
@@ -318,8 +334,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: dd1041a8-3783-4f6a-bd1f-f278d8a2cd50
-    m_ActionName: 'Gameplay/Jump[/XInputControllerWindows/buttonSouth,/Keyboard/space]'
+    m_ActionId: 7dd8cd54-ff29-42a6-b461-0248c5f9b36d
+    m_ActionName: 'Eli/Jump[/Keyboard/upArrow]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6846171359095035236}
@@ -334,8 +350,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 305c9d58-6bf2-468a-896f-541d275a1b12
-    m_ActionName: 'Gameplay/Ability[/Keyboard/leftShift,/Keyboard/rightShift]'
+    m_ActionId: c18a2cff-2d8f-4fcf-8e0f-c48b0a17d784
+    m_ActionName: 'Eli/Ability[/Keyboard/rightShift]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6846171359095035236}
@@ -350,8 +366,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: a944a210-a7ff-4fb7-8be2-417ec765c15c
-    m_ActionName: 'Gameplay/PsionForm[/Keyboard/e,/Keyboard/enter]'
+    m_ActionId: 3ae030ff-cc4e-441e-b557-1882a5ff4446
+    m_ActionName: 'Eli/PsionForm[/Keyboard/rightCtrl]'
   - m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 6846171359095035236}
@@ -366,27 +382,11 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 635c7b3b-9ae7-4faf-9d11-a321654ab32d
-    m_ActionName: 'Gameplay/PauseMenuOpenClose[/Keyboard/escape,/XInputControllerWindows/start]'
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6846171359095035236}
-        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
-        m_MethodName: Pause
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: c917f1d3-0b72-4d84-ade1-14aacfc55c6d
-    m_ActionName: 'PauseUI/ClosePauseMenu[/Keyboard/escape,/XInputControllerWindows/start]'
+    m_ActionId: b08e03fd-9340-479d-8a2a-5c3999df0cda
+    m_ActionName: 'Eli/PauseMenuOpenClose[/Keyboard/escape]'
   m_NeverAutoSwitchControlSchemes: 1
   m_DefaultControlScheme: 
-  m_DefaultActionMap: Gameplay
+  m_DefaultActionMap: Eli
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &6846171359095035236
