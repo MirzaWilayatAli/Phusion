@@ -191,11 +191,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 134736018277775462, guid: 89f1a9c371644bd41b3bb5bf76d084e4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -19.252
+      value: 9.94
       objectReference: {fileID: 0}
     - target: {fileID: 134736018277775462, guid: 89f1a9c371644bd41b3bb5bf76d084e4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 13
+      value: 14.27
       objectReference: {fileID: 0}
     - target: {fileID: 134736018277775462, guid: 89f1a9c371644bd41b3bb5bf76d084e4, type: 3}
       propertyPath: m_LocalPosition.z
@@ -235,7 +235,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2961297407706499949, guid: 89f1a9c371644bd41b3bb5bf76d084e4, type: 3}
       propertyPath: newTag
-      value: Button2
+      value: Button1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -252,7 +252,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: triggerTag
-      value: Button2
+      value: Button1
       objectReference: {fileID: 0}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.size
@@ -1018,12 +1018,12 @@ GameObject:
   - component: {fileID: 537994935}
   - component: {fileID: 537994934}
   m_Layer: 31
-  m_Name: Tilemap_Toggle3
+  m_Name: Door3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &537994933
 Transform:
   m_ObjectHideFlags: 0
@@ -1037,7 +1037,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1862723304}
+  m_Father: {fileID: 2145528462}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!19719996 &537994934
 TilemapCollider2D:
@@ -33207,9 +33207,9 @@ Transform:
   - {fileID: 918826833}
   - {fileID: 1844950683}
   - {fileID: 1046494675}
-  - {fileID: 537994933}
   - {fileID: 213225857}
   - {fileID: 1416764681}
+  - {fileID: 2145528462}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1940151830
@@ -33306,7 +33306,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: triggerTag
-      value: Button2
+      value: Button1
       objectReference: {fileID: 0}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.size
@@ -33317,13 +33317,21 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.data[3].m_Mode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: onTriggerOff.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 537994932}
+      objectReference: {fileID: 2145528464}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -33339,7 +33347,7 @@ PrefabInstance:
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOff.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 537994932}
+      objectReference: {fileID: 2145528464}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOff.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -33353,12 +33361,28 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: DisableDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.data[3].m_MethodName
       value: PlayOneShot
       objectReference: {fileID: 0}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: onTriggerOff.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: EnableDoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Door, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.data[3].m_TargetAssemblyTypeName
       value: UnityEngine.AudioSource, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: onTriggerOff.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Door, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_BoolArgument
@@ -33644,6 +33668,105 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2145528461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2145528462}
+  - component: {fileID: 2145528464}
+  - component: {fileID: 2145528463}
+  m_Layer: 0
+  m_Name: Door3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2145528462
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145528461}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 537994933}
+  m_Father: {fileID: 1862723304}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &2145528463
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145528461}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -15.5, y: 25.5}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1, y: 5}
+  m_EdgeRadius: 0
+--- !u!114 &2145528464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145528461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a879385889a82949b27ac8cdf87f84f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Door
+  detectionZone: {fileID: 2145528463}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 738197504
+  pushSpeed: 8
+  horizontalDoor: 0
+  doorVisuals: {fileID: 537994932}
 --- !u!1001 &517556248797477680
 PrefabInstance:
   m_ObjectHideFlags: 0
