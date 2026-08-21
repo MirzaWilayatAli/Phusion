@@ -66,11 +66,6 @@ public class ButtonTrigger : TriggerBase
         if (_triggerDisable)
         {
             Collider2D[] colliders = Physics2D.OverlapBoxAll(playerCheckCenter.position, playerCheckBoxSize, 0f, playerCheckMask);
-            Debug.Log(colliders.Length);
-            foreach (Collider2D col in colliders)
-            {
-                Debug.Log(col.gameObject.name);
-            }
             if (colliders.Length <= 0)
             {
                 _triggerDisable = false;
