@@ -98,8 +98,8 @@ public class DeviceAssigner : MonoBehaviour
         player1.SwitchCurrentControlScheme("WASD", keyboard);
         player2.SwitchCurrentControlScheme("Arrows", keyboard);
         
-        RumbleManager.Instance.RegisterPlayerPad(0, null);
-        RumbleManager.Instance.RegisterPlayerPad(1, null);
+        if(RumbleManager.Instance)RumbleManager.Instance.RegisterPlayerPad(0, null);
+        if(RumbleManager.Instance)RumbleManager.Instance.RegisterPlayerPad(1, null);
     }
     
     // Keyboard + Gamepad
@@ -114,8 +114,8 @@ public class DeviceAssigner : MonoBehaviour
         player1.SwitchCurrentControlScheme("WASD", keyboard);
         player2.SwitchCurrentControlScheme("Gamepad", gamepad);
         
-        RumbleManager.Instance.RegisterPlayerPad(0, null);
-        RumbleManager.Instance.RegisterPlayerPad(1, gamepad);
+        if(RumbleManager.Instance)RumbleManager.Instance.RegisterPlayerPad(0, null);
+        if(RumbleManager.Instance)RumbleManager.Instance.RegisterPlayerPad(1, gamepad);
     }
     
     // Two Gamepads
@@ -132,7 +132,7 @@ public class DeviceAssigner : MonoBehaviour
         player1.SwitchCurrentControlScheme("Gamepad", gamepads[0]);
         player2.SwitchCurrentControlScheme("Gamepad", gamepads[1]);
         
-        RumbleManager.Instance.RegisterPlayerPad(0, gamepads[0]);
-        RumbleManager.Instance.RegisterPlayerPad(1, gamepads[1]);
+        if(RumbleManager.Instance)RumbleManager.Instance.RegisterPlayerPad(0, gamepads[0]);
+        if(RumbleManager.Instance)RumbleManager.Instance.RegisterPlayerPad(1, gamepads[1]);
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,10 @@ public class PlayerSpecificTimedButton : TriggerBase
     private float timer;
 
     private bool isPlayerOnButton;
-
+    [SerializeField] private Transform playerCheckCenter;
+    [SerializeField] private Vector2 playerCheckBoxSize = Vector2.one;
+    public LayerMask playerCheckMask; 
+    private bool _triggerDisable;
     private void Update()
     {
         if (!activated)
@@ -34,8 +38,17 @@ public class PlayerSpecificTimedButton : TriggerBase
             timer = 0f;
 
             timerSlider.value = 0f;
-
-            onTriggerOff.Invoke();
+            _triggerDisable = true;
+        }
+        
+        if (_triggerDisable)
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(playerCheckCenter.position, playerCheckBoxSize, 0f, playerCheckMask);
+            if (colliders.Length <= 0)
+            {
+                _triggerDisable = false;
+                onTriggerOff.Invoke();
+            }
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
@@ -59,7 +72,7 @@ public class PlayerSpecificTimedButton : TriggerBase
         PlayerController player = other.gameObject.GetComponent<PlayerController>();
         if (player != null)
         {
-            RumbleManager.Instance.RumblePulse(player.playerID,0.25f,0.75f);
+            if(RumbleManager.Instance) RumbleManager.Instance.RumblePulse(player.playerID,0.25f,0.75f);
         }
     }
 
@@ -69,5 +82,14 @@ public class PlayerSpecificTimedButton : TriggerBase
             return;
 
         isPlayerOnButton = false;
+    }
+
+    private void OnDrawGizmos()
+    {
+        if (playerCheckCenter)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(playerCheckCenter.position, playerCheckBoxSize);
+        }
     }
 }

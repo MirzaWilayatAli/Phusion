@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class TimedButtonTrigger : TriggerBase
 {
@@ -13,30 +14,51 @@ public class TimedButtonTrigger : TriggerBase
     private bool triggered;
     private bool timerRanOver;
     private float timer;
-
+    [SerializeField] private Transform playerCheckCenter;
+    [SerializeField] private Vector2 playerCheckBoxSize = Vector2.one;
+    public LayerMask playerCheckMask; 
+    private bool _triggerDisable;
     private void Start()
     {
         sprite = GetComponent<SpriteRenderer>();
     }
-
+    
     private void Update()
     {
         if (!triggered)
             return;
 
+        if (PauseMenuManager.Instance && PauseMenuManager.Instance.IsPaused) return;
+        
         timer += Time.deltaTime;
 
         if (timer >= delay)
         {
             triggered = false;
             timerRanOver = true;
-
-            onTriggerOff.Invoke();
+            _triggerDisable = true;
 
             sprite.color = Color.softRed;
         }
-    }
 
+        if (_triggerDisable)
+        {
+            Collider2D[] colliders = Physics2D.OverlapBoxAll(playerCheckCenter.position, playerCheckBoxSize, 0f, playerCheckMask);
+            if (colliders.Length <= 0)
+            {
+                _triggerDisable = false;
+                onTriggerOff.Invoke();
+            }
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        if (playerCheckCenter)
+        {
+            Gizmos.color = Color.green;
+            Gizmos.DrawWireCube(playerCheckCenter.position, playerCheckBoxSize);
+        }
+    }
     private void FixedUpdate()
     {
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, 0.5f, mask);
@@ -88,7 +110,7 @@ public class TimedButtonTrigger : TriggerBase
                 triggered = false;
                 timer = 0f;
 
-                onTriggerOff.Invoke();
+                _triggerDisable = true;
 
                 sprite.color = Color.softRed;
             }

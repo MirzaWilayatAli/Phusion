@@ -127,8 +127,11 @@ public class PlayerController : MonoBehaviour
             if (_controlledObject)
             {
                 bool current = _controlledObject.neg || _controlledObject.pos;
-                if(current)
-                    _controlledObject.rb.linearVelocity = Vector2.zero;
+                if (current)
+                {
+                    if(Vector3.Distance(_controlledObject.transform.position, transform.position) <= 0.2f) _controlledObject.rb.linearVelocity = Vector2.zero;
+                    
+                }
                 
                 _controlledObject.Release(activatedAbility);
                 _controlledObject = null;
@@ -191,7 +194,7 @@ public class PlayerController : MonoBehaviour
 
             if (_airTime >= 0.65f)
             {
-                RumbleManager.Instance.RumblePulse(playerID, 0.5f, 1f);
+                if(RumbleManager.Instance) RumbleManager.Instance.RumblePulse(playerID, 0.5f, 1f);
                 hitGroundTrigger?.Invoke();
             }
             

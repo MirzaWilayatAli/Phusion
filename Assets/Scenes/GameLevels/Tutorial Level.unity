@@ -1639,6 +1639,8 @@ Transform:
   - {fileID: 208672330}
   - {fileID: 491254406}
   - {fileID: 477201392}
+  - {fileID: 1785502437}
+  - {fileID: 2085879065}
   - {fileID: 1552566664}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11623,6 +11625,22 @@ PrefabInstance:
       value: Door1
       objectReference: {fileID: 0}
     - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: playerCheckCenter
+      value: 
+      objectReference: {fileID: 2085879065}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: playerCheckBoxSize.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: playerCheckBoxSize.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
+      propertyPath: playerCheckMask.m_Bits
+      value: 201326592
+      objectReference: {fileID: 0}
+    - target: {fileID: 149660895197580410, guid: 2f5d15292381fcb4886274450493494a, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -14926,6 +14944,37 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1 &1785502436
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1785502437}
+  m_Layer: 31
+  m_Name: Door2Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1785502437
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1785502436}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.5, y: -0.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 190950903}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1792915237
 GameObject:
   m_ObjectHideFlags: 0
@@ -57133,6 +57182,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2085746436}
   m_CullTransparentMesh: 1
+--- !u!1 &2085879064
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2085879065}
+  m_Layer: 31
+  m_Name: Door1Check
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2085879065
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2085879064}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 6, y: 6.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 190950903}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2097443416
 GameObject:
   m_ObjectHideFlags: 0
@@ -58141,6 +58221,22 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 312491100}
     - target: {fileID: 3162566553384499734, guid: 45aac1eacf0827d408a41986f0f14821, type: 3}
+      propertyPath: playerCheckCenter
+      value: 
+      objectReference: {fileID: 1785502437}
+    - target: {fileID: 3162566553384499734, guid: 45aac1eacf0827d408a41986f0f14821, type: 3}
+      propertyPath: playerCheckBoxSize.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162566553384499734, guid: 45aac1eacf0827d408a41986f0f14821, type: 3}
+      propertyPath: playerCheckBoxSize.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162566553384499734, guid: 45aac1eacf0827d408a41986f0f14821, type: 3}
+      propertyPath: playerCheckMask.m_Bits
+      value: 201326592
+      objectReference: {fileID: 0}
+    - target: {fileID: 3162566553384499734, guid: 45aac1eacf0827d408a41986f0f14821, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.size
       value: 5
       objectReference: {fileID: 0}
@@ -58350,6 +58446,22 @@ PrefabInstance:
       propertyPath: allowedPlayer
       value: 
       objectReference: {fileID: 2022703971}
+    - target: {fileID: 2433327231784596161, guid: f8e20447affc14d468a7bcde34729540, type: 3}
+      propertyPath: playerCheckCenter
+      value: 
+      objectReference: {fileID: 1785502437}
+    - target: {fileID: 2433327231784596161, guid: f8e20447affc14d468a7bcde34729540, type: 3}
+      propertyPath: playerCheckBoxSize.x
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433327231784596161, guid: f8e20447affc14d468a7bcde34729540, type: 3}
+      propertyPath: playerCheckBoxSize.y
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 2433327231784596161, guid: f8e20447affc14d468a7bcde34729540, type: 3}
+      propertyPath: playerCheckMask.m_Bits
+      value: 201326592
+      objectReference: {fileID: 0}
     - target: {fileID: 2433327231784596161, guid: f8e20447affc14d468a7bcde34729540, type: 3}
       propertyPath: onTriggerOn.m_PersistentCalls.m_Calls.Array.size
       value: 5
