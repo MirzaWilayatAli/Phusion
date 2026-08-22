@@ -43,6 +43,12 @@ public class PlayerSpecificTimedButton : TriggerBase
         
         if (_triggerDisable)
         {
+            if (!playerCheckCenter)
+            {
+                _triggerDisable = false;
+                onTriggerOff.Invoke();
+                return;
+            }
             Collider2D[] colliders = Physics2D.OverlapBoxAll(playerCheckCenter.position, playerCheckBoxSize, 0f, playerCheckMask);
             if (colliders.Length <= 0)
             {

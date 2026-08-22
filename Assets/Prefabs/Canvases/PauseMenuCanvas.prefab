@@ -2018,6 +2018,7 @@ GameObject:
   - component: {fileID: 7434839200244892445}
   - component: {fileID: 6426841495033572228}
   - component: {fileID: 3979143335393891273}
+  - component: {fileID: 151453549538698854}
   m_Layer: 5
   m_Name: RestartLevelButton
   m_TagString: Untagged
@@ -2151,6 +2152,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 151453549538698854}
+        m_TargetAssemblyTypeName: MenuReset, Assembly-CSharp
+        m_MethodName: ResetPhysics
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &6426841495033572228
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2183,6 +2196,18 @@ MonoBehaviour:
   moveSpeed: 10
   hoverSound: {fileID: 8300000, guid: 12019d47b36a3754391b794c9d148422, type: 3}
   audioSource: {fileID: 9070111865747813140}
+--- !u!114 &151453549538698854
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7562107356942227278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3bce80792904e168cc514159016ba81, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuReset
 --- !u!1 &8810646179427579834
 GameObject:
   m_ObjectHideFlags: 0

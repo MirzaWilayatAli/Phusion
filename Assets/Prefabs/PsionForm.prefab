@@ -90,7 +90,7 @@ CircleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 738197504
+    m_Bits: 1811939328
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
