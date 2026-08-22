@@ -68,4 +68,26 @@ public class Door : MonoBehaviour
         if (enableRoutine != null) StopCoroutine(enableRoutine);
         doorVisuals.SetActive(false);
     }
+    
+    private void OnDrawGizmos()
+    {
+        if (detectionZone == null)
+            return;
+
+        Gizmos.color = Color.darkCyan;
+
+        Vector2 center = (Vector2)transform.TransformPoint(detectionZone.offset);
+        Vector2 size = Vector2.Scale(detectionZone.size, transform.lossyScale);
+
+        Matrix4x4 rotationMatrix = Matrix4x4.TRS(
+            center,
+            Quaternion.Euler(0f, 0f, transform.eulerAngles.z),
+            Vector3.one
+        );
+
+        Gizmos.matrix = rotationMatrix;
+        Gizmos.DrawWireCube(Vector3.zero, size);
+
+        Gizmos.matrix = Matrix4x4.identity;
+    }
 }
