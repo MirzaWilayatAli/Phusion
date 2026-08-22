@@ -15,6 +15,7 @@ public class PsionFormMovement : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (PauseMenuManager.Instance && PauseMenuManager.Instance.IsPaused) return;
         Vector2 netForce = Vector2.zero;
 
         // Eli

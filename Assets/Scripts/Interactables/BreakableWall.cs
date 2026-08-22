@@ -16,8 +16,8 @@ public class BreakableWall : MonoBehaviour
             unbrokenWall.SetActive(false);
             brokenWall.SetActive(true);
 
-            RumbleManager.Instance.RumblePulse(0, 0.3f, 0.8f); // Posi
-            RumbleManager.Instance.RumblePulse(1, 0.3f, 0.8f); // Eli
+            if(RumbleManager.Instance) RumbleManager.Instance.RumblePulse(0, 0.3f, 0.8f); // Posi
+            if(RumbleManager.Instance) RumbleManager.Instance.RumblePulse(1, 0.3f, 0.8f); // Eli
             playSfxBrokenWall.Invoke();
 
             Vector2 hitDirection = other.contacts[0].normal;

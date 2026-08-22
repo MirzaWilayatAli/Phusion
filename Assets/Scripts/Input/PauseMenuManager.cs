@@ -24,11 +24,11 @@ public class PauseMenuManager : MonoBehaviour
     
     private bool isPaused = false;
     public static PauseMenuManager Instance { get; private set; }
-
     
     private void Awake()
     {
         Instance = this;
+        Physics2D.simulationMode = SimulationMode2D.FixedUpdate;
     }
     
     public bool IsPaused
