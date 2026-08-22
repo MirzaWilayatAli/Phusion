@@ -2988,6 +2988,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1073741824
   triggered: 0
+  playerCheckCenter: {fileID: 0}
+  playerCheckBoxSize: {x: 1, y: 1}
+  playerCheckMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!212 &679986708
 SpriteRenderer:
   serializedVersion: 2
@@ -30482,10 +30487,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 559788794}
     - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 3221225472
-      objectReference: {fileID: 0}
-    - target: {fileID: 6846171359095035236, guid: f0ce38215ef423c4fa645d81f8940dc6, type: 3}
       propertyPath: psionFormInitiator
       value: 
       objectReference: {fileID: 770419803}
@@ -31141,6 +31142,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1073741824
   triggered: 0
+  playerCheckCenter: {fileID: 0}
+  playerCheckBoxSize: {x: 1, y: 1}
+  playerCheckMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!212 &1152060696
 SpriteRenderer:
   serializedVersion: 2
@@ -32577,10 +32583,6 @@ PrefabInstance:
       propertyPath: psionFormManager
       value: 
       objectReference: {fileID: 559788794}
-    - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 3221225472
-      objectReference: {fileID: 0}
     - target: {fileID: 6846171359095035236, guid: 37d0caab2ca487648949b1819ba8d645, type: 3}
       propertyPath: psionFormInitiator
       value: 
