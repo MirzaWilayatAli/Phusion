@@ -1,0 +1,871 @@
+fileFormatVersion: 2
+guid: ab0d437a01269b74a94c0eb470c49820
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3051886674980235232
+    second: SAE LOGO_white_text_0
+  - first:
+      213: 5924868704473394376
+    second: SAE LOGO_white_text_1
+  - first:
+      213: 1794120957134152257
+    second: SAE LOGO_white_text_2
+  - first:
+      213: 8572018084064491152
+    second: SAE LOGO_white_text_3
+  - first:
+      213: -8471507632002256955
+    second: SAE LOGO_white_text_4
+  - first:
+      213: 1552660692351019340
+    second: SAE LOGO_white_text_5
+  - first:
+      213: -2781244943949698971
+    second: SAE LOGO_white_text_6
+  - first:
+      213: 1433080876467394582
+    second: SAE LOGO_white_text_7
+  - first:
+      213: -7133916415475890813
+    second: SAE LOGO_white_text_8
+  - first:
+      213: -2089570052408153798
+    second: SAE LOGO_white_text_9
+  - first:
+      213: -7705488179251734396
+    second: SAE LOGO_white_text_10
+  - first:
+      213: -589339004432771056
+    second: SAE LOGO_white_text_11
+  - first:
+      213: 9183618428047129616
+    second: SAE LOGO_white_text_12
+  - first:
+      213: 2883885336094350493
+    second: SAE LOGO_white_text_13
+  - first:
+      213: -700183159213916904
+    second: SAE LOGO_white_text_14
+  - first:
+      213: 4008437531652181502
+    second: SAE LOGO_white_text_15
+  - first:
+      213: 978011596101223911
+    second: SAE LOGO_white_text_16
+  - first:
+      213: 3806144337596468950
+    second: SAE LOGO_white_text_17
+  - first:
+      213: -1218827048300117390
+    second: SAE LOGO_white_text_18
+  - first:
+      213: -3065475447030498847
+    second: SAE LOGO_white_text_19
+  - first:
+      213: 7028130135919087438
+    second: SAE LOGO_white_text_20
+  - first:
+      213: 4824456125124502285
+    second: SAE LOGO_white_text_21
+  - first:
+      213: -1877332763569404581
+    second: SAE LOGO_white_text_22
+  - first:
+      213: 5463398552848341317
+    second: SAE LOGO_white_text_23
+  - first:
+      213: -3669473457582170813
+    second: SAE LOGO_white_text_24
+  - first:
+      213: -702977589508817282
+    second: SAE LOGO_white_text_25
+  - first:
+      213: -4853395214784630406
+    second: SAE LOGO_white_text_26
+  - first:
+      213: 5871065444474741592
+    second: SAE LOGO_white_text_27
+  - first:
+      213: -1986720290012247377
+    second: SAE LOGO_white_text_28
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_0
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 69
+        width: 145
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0e7e1f4e2ca7a5a20800000000000000
+      internalID: 3051886674980235232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_1
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 63
+        width: 26
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cc27f602bc593250800000000000000
+      internalID: 5924868704473394376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 63
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 142a01e318ff5e810800000000000000
+      internalID: 1794120957134152257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_3
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 63
+        width: 48
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09673ece70de5f670800000000000000
+      internalID: 8572018084064491152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_4
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 52
+        width: 22
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5cfae7251b82f6a80800000000000000
+      internalID: -8471507632002256955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_5
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 53
+        width: 22
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c496b406ca82c8510800000000000000
+      internalID: 1552660692351019340
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_6
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 53
+        width: 9
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 568e68a85780769d0800000000000000
+      internalID: -2781244943949698971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_7
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 53
+        width: 26
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6189e30e67353e310800000000000000
+      internalID: 1433080876467394582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_8
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 53
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3854b3631dc3ffc90800000000000000
+      internalID: -7133916415475890813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_9
+      rect:
+        serializedVersion: 2
+        x: 289
+        y: 53
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a39eaecbb1b5003e0800000000000000
+      internalID: -2089570052408153798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_10
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 52
+        width: 22
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4889abe835b901590800000000000000
+      internalID: -7705488179251734396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_11
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 53
+        width: 8
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01890844c4f32d7f0800000000000000
+      internalID: -589339004432771056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_12
+      rect:
+        serializedVersion: 2
+        x: 343
+        y: 53
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01cfa7cad44c27f70800000000000000
+      internalID: 9183618428047129616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_13
+      rect:
+        serializedVersion: 2
+        x: 365
+        y: 53
+        width: 24
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9c9cd60f6e950820800000000000000
+      internalID: 2883885336094350493
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_14
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 24
+        width: 78
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 81df75d50237846f0800000000000000
+      internalID: -700183159213916904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_15
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 56
+        width: 32
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: efdc87a82b4d0a730800000000000000
+      internalID: 4008437531652181502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_16
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 56
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e583db6d58929d00800000000000000
+      internalID: 978011596101223911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_17
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 56
+        width: 15
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6de4d46fb1422d430800000000000000
+      internalID: 3806144337596468950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_18
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 24
+        width: 15
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2720f67d14bd51fe0800000000000000
+      internalID: -1218827048300117390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_19
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 24
+        width: 52
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e9b010925e3575d0800000000000000
+      internalID: -3065475447030498847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_20
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 56
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4fccaa3f1fe88160800000000000000
+      internalID: 7028130135919087438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_21
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 56
+        width: 17
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d03e084e849e3f240800000000000000
+      internalID: 4824456125124502285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_22
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 24
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b554e3e4ccf52f5e0800000000000000
+      internalID: -1877332763569404581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_23
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 24
+        width: 25
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 54998e89904e1db40800000000000000
+      internalID: 5463398552848341317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_24
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 24
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 34d17100559631dc0800000000000000
+      internalID: -3669473457582170813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_25
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 24
+        width: 17
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7e344c5b958e36f0800000000000000
+      internalID: -702977589508817282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_26
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 24
+        width: 18
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a717e2c34c645acb0800000000000000
+      internalID: -4853395214784630406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_27
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 24
+        width: 24
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 853ecfe5ae63a7150800000000000000
+      internalID: 5871065444474741592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SAE LOGO_white_text_28
+      rect:
+        serializedVersion: 2
+        x: 317
+        y: 24
+        width: 19
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: faa42cd1c60cd64e0800000000000000
+      internalID: -1986720290012247377
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      SAE LOGO_white_text_0: 3051886674980235232
+      SAE LOGO_white_text_1: 5924868704473394376
+      SAE LOGO_white_text_10: -7705488179251734396
+      SAE LOGO_white_text_11: -589339004432771056
+      SAE LOGO_white_text_12: 9183618428047129616
+      SAE LOGO_white_text_13: 2883885336094350493
+      SAE LOGO_white_text_14: -700183159213916904
+      SAE LOGO_white_text_15: 4008437531652181502
+      SAE LOGO_white_text_16: 978011596101223911
+      SAE LOGO_white_text_17: 3806144337596468950
+      SAE LOGO_white_text_18: -1218827048300117390
+      SAE LOGO_white_text_19: -3065475447030498847
+      SAE LOGO_white_text_2: 1794120957134152257
+      SAE LOGO_white_text_20: 7028130135919087438
+      SAE LOGO_white_text_21: 4824456125124502285
+      SAE LOGO_white_text_22: -1877332763569404581
+      SAE LOGO_white_text_23: 5463398552848341317
+      SAE LOGO_white_text_24: -3669473457582170813
+      SAE LOGO_white_text_25: -702977589508817282
+      SAE LOGO_white_text_26: -4853395214784630406
+      SAE LOGO_white_text_27: 5871065444474741592
+      SAE LOGO_white_text_28: -1986720290012247377
+      SAE LOGO_white_text_3: 8572018084064491152
+      SAE LOGO_white_text_4: -8471507632002256955
+      SAE LOGO_white_text_5: 1552660692351019340
+      SAE LOGO_white_text_6: -2781244943949698971
+      SAE LOGO_white_text_7: 1433080876467394582
+      SAE LOGO_white_text_8: -7133916415475890813
+      SAE LOGO_white_text_9: -2089570052408153798
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

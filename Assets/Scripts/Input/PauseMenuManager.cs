@@ -50,7 +50,8 @@ public class PauseMenuManager : MonoBehaviour
         isPaused = true;
 
         OpenPauseMenu();
-
+        Physics2D.simulationMode = SimulationMode2D.Script;
+        
         posiPlayerInput.SwitchCurrentActionMap("PauseUI");
         eliPlayerInput.SwitchCurrentActionMap("PauseUI");
     }
@@ -60,6 +61,7 @@ public class PauseMenuManager : MonoBehaviour
         isPaused = false;
 
         CloseAllMenus();
+        Physics2D.simulationMode = SimulationMode2D.FixedUpdate;
 
         posiPlayerInput.SwitchCurrentActionMap("Posi");
         eliPlayerInput.SwitchCurrentActionMap("Eli");

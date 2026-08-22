@@ -78,8 +78,8 @@ public class AnnihilationChecker : MonoBehaviour
         if (cameraShake != null)
             cameraShake.enabled = true;
 
-        RumbleManager.Instance.StartRumble(0, 0.1f, 0.3f); // Posi
-        RumbleManager.Instance.StartRumble(1, 0.1f, 0.3f); // Eli
+        if(RumbleManager.Instance) RumbleManager.Instance.StartRumble(0, 0.1f, 0.3f); // Posi
+        if(RumbleManager.Instance) RumbleManager.Instance.StartRumble(1, 0.1f, 0.3f); // Eli
     }
 
     private void DisableEffects()
@@ -98,8 +98,8 @@ public class AnnihilationChecker : MonoBehaviour
             cameraShake.enabled = false;
         }
 
-        RumbleManager.Instance.StopRumble(0);
-        RumbleManager.Instance.StopRumble(1);
+        if(RumbleManager.Instance) RumbleManager.Instance.StopRumble(0);
+        if(RumbleManager.Instance) RumbleManager.Instance.StopRumble(1);
     }
 
     private void UpdateCameraShake(float distance)
