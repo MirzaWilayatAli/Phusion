@@ -30,6 +30,9 @@ public class PsionFormManager : MonoBehaviour
     private void OnEnable()
     {
         transform.position = activationLocation;
+        psionFormInitiated = true;
+        AnnihilationChecker.SetActive(false);
+        StartCoroutine(EnterRoutine());
     }
 
     private void OnDisable()
@@ -59,16 +62,6 @@ public class PsionFormManager : MonoBehaviour
         Vector2 targetPosition = (Vector2)nucleus.position + offset;
 
         psionOrbiter.rb.MovePosition(targetPosition);
-    }
-    
-    // Entering Psion Form
-
-    public void EnterPsionForm()
-    {
-        psionFormInitiated = true;
-        AnnihilationChecker.SetActive(false);
-        
-        StartCoroutine(EnterRoutine());
     }
 
     IEnumerator EnterRoutine()

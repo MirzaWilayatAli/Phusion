@@ -25,7 +25,7 @@ public class PsionFormInitiator : MonoBehaviour
         
         if (player1ReadyForPsionForm && player2ReadyForPsionForm && !psionFormManager.psionFormInitiated)
         {
-            psionFormManager.EnterPsionForm();
+            psionFormManager.gameObject.SetActive(true);
         }
     }
     public void TerminateQuantumHandshake(int playerID)
